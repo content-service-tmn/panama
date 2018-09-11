@@ -47,7 +47,7 @@ $config->defaultAdminTheme = 'AdminThemeUikit';
  * Installer: Database Configuration
  * 
  */
-$config->dbHost = 'localhost';
+$config->dbHost = ( gethostname() == "vh130.timeweb.ru" ) ? 'localhost':'92.53.96.195';
 $config->dbName = 'cw40247_panama';
 $config->dbUser = 'cw40247_panama';
 $config->dbPass = 'j4zzV8Hy';

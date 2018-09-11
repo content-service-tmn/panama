@@ -6,15 +6,15 @@
  * Copyright (c) 2004 David Grudl (https://davidgrudl.com)
  */
 
- require(\ProcessWire\wire('files')->compile(\ProcessWire\wire("config")->paths->root . 'site/modules/TracyDebugger/tracy-master/src' . '/Tracy/IBarPanel.php',array('includes'=>true,'namespace'=>true,'modules'=>false,'skipIfNamespace'=>false)));
- require(\ProcessWire\wire('files')->compile(\ProcessWire\wire("config")->paths->root . 'site/modules/TracyDebugger/tracy-master/src' . '/Tracy/Bar.php',array('includes'=>true,'namespace'=>true,'modules'=>false,'skipIfNamespace'=>false)));
- require(\ProcessWire\wire('files')->compile(\ProcessWire\wire("config")->paths->root . 'site/modules/TracyDebugger/tracy-master/src' . '/Tracy/BlueScreen.php',array('includes'=>true,'namespace'=>true,'modules'=>false,'skipIfNamespace'=>false)));
- require(\ProcessWire\wire('files')->compile(\ProcessWire\wire("config")->paths->root . 'site/modules/TracyDebugger/tracy-master/src' . '/Tracy/DefaultBarPanel.php',array('includes'=>true,'namespace'=>true,'modules'=>false,'skipIfNamespace'=>false)));
- require(\ProcessWire\wire('files')->compile(\ProcessWire\wire("config")->paths->root . 'site/modules/TracyDebugger/tracy-master/src' . '/Tracy/Dumper.php',array('includes'=>true,'namespace'=>true,'modules'=>false,'skipIfNamespace'=>false)));
- require(\ProcessWire\wire('files')->compile(\ProcessWire\wire("config")->paths->root . 'site/modules/TracyDebugger/tracy-master/src' . '/Tracy/ILogger.php',array('includes'=>true,'namespace'=>true,'modules'=>false,'skipIfNamespace'=>false)));
- require(\ProcessWire\wire('files')->compile(\ProcessWire\wire("config")->paths->root . 'site/modules/TracyDebugger/tracy-master/src' . '/Tracy/FireLogger.php',array('includes'=>true,'namespace'=>true,'modules'=>false,'skipIfNamespace'=>false)));
- require(\ProcessWire\wire('files')->compile(\ProcessWire\wire("config")->paths->root . 'site/modules/TracyDebugger/tracy-master/src' . '/Tracy/Helpers.php',array('includes'=>true,'namespace'=>true,'modules'=>false,'skipIfNamespace'=>false)));
- require(\ProcessWire\wire('files')->compile(\ProcessWire\wire("config")->paths->root . 'site/modules/TracyDebugger/tracy-master/src' . '/Tracy/Logger.php',array('includes'=>true,'namespace'=>true,'modules'=>false,'skipIfNamespace'=>false)));
- require(\ProcessWire\wire('files')->compile(\ProcessWire\wire("config")->paths->root . 'site/modules/TracyDebugger/tracy-master/src' . '/Tracy/Debugger.php',array('includes'=>true,'namespace'=>true,'modules'=>false,'skipIfNamespace'=>false)));
- require(\ProcessWire\wire('files')->compile(\ProcessWire\wire("config")->paths->root . 'site/modules/TracyDebugger/tracy-master/src' . '/Tracy/OutputDebugger.php',array('includes'=>true,'namespace'=>true,'modules'=>false,'skipIfNamespace'=>false)));
- require(\ProcessWire\wire('files')->compile(\ProcessWire\wire("config")->paths->root . 'site/modules/TracyDebugger/tracy-master/src' . '/shortcuts.php',array('includes'=>true,'namespace'=>true,'modules'=>false,'skipIfNamespace'=>false)));
+require __DIR__ . '/Tracy/IBarPanel.php';
+require __DIR__ . '/Tracy/Bar.php';
+require __DIR__ . '/Tracy/BlueScreen.php';
+require __DIR__ . '/Tracy/DefaultBarPanel.php';
+require __DIR__ . '/Tracy/Dumper.php';
+require __DIR__ . '/Tracy/ILogger.php';
+require __DIR__ . '/Tracy/FireLogger.php';
+require __DIR__ . '/Tracy/Helpers.php';
+require __DIR__ . '/Tracy/Logger.php';
+require __DIR__ . '/Tracy/Debugger.php';
+require __DIR__ . '/Tracy/OutputDebugger.php';
+require __DIR__ . '/shortcuts.php';
