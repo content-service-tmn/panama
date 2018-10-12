@@ -34,9 +34,9 @@ class BlueScreen
 
 	public function __construct()
 	{
-		$this->collapsePaths[] = preg_match('#(.+/vendor)/tracy/tracy/src/Tracy$#', strtr(\ProcessWire\wire("config")->paths->root . 'site/modules/TracyDebugger/tracy-master/src/Tracy', '\\', '/'), $m)
+		$this->collapsePaths[] = preg_match('#(.+/vendor)/tracy/tracy/src/Tracy$#', strtr(__DIR__, '\\', '/'), $m)
 			? $m[1]
-			: \ProcessWire\wire("config")->paths->root . 'site/modules/TracyDebugger/tracy-master/src/Tracy';
+			: __DIR__;
 	}
 
 
@@ -75,12 +75,12 @@ class BlueScreen
 	{
 		if (Helpers::isAjax() && session_status() === PHP_SESSION_ACTIVE) {
 			ob_start(function () {});
-			$this->renderTemplate($exception, \ProcessWire\wire("config")->paths->root . 'site/modules/TracyDebugger/tracy-master/src/Tracy' . '/assets/BlueScreen/content.phtml');
+			$this->renderTemplate($exception, __DIR__ . '/assets/BlueScreen/content.phtml');
 			$contentId = $_SERVER['HTTP_X_TRACY_AJAX'];
 			$_SESSION['_tracy']['bluescreen'][$contentId] = ['content' => ob_get_clean(), 'dumps' => Dumper::fetchLiveData(), 'time' => time()];
 
 		} else {
-			$this->renderTemplate($exception, \ProcessWire\wire("config")->paths->root . 'site/modules/TracyDebugger/tracy-master/src/Tracy' . '/assets/BlueScreen/page.phtml');
+			$this->renderTemplate($exception, __DIR__ . '/assets/BlueScreen/page.phtml');
 		}
 	}
 
@@ -96,7 +96,7 @@ class BlueScreen
 		if ($handle = @fopen($file, 'x')) {
 			ob_start(); // double buffer prevents sending HTTP headers in some PHP
 			ob_start(function ($buffer) use ($handle) { fwrite($handle, $buffer); }, 4096);
-			$this->renderTemplate($exception, \ProcessWire\wire("config")->paths->root . 'site/modules/TracyDebugger/tracy-master/src/Tracy' . '/assets/BlueScreen/page.phtml');
+			$this->renderTemplate($exception, __DIR__ . '/assets/BlueScreen/page.phtml');
 			ob_end_flush();
 			ob_end_clean();
 			fclose($handle);
@@ -128,12 +128,12 @@ class BlueScreen
 		};
 		$nonce = Helpers::getNonce();
 		$css = array_map('file_get_contents', array_merge([
-			\ProcessWire\wire("config")->paths->root . 'site/modules/TracyDebugger/tracy-master/src/Tracy' . '/assets/BlueScreen/bluescreen.css',
+			__DIR__ . '/assets/BlueScreen/bluescreen.css',
 		], Debugger::$customCssFiles));
 		$css = preg_replace('#\s+#u', ' ', implode($css));
 		$actions = $this->renderActions($exception);
 
- require(\ProcessWire\wire('files')->compile($template,array('includes'=>true,'namespace'=>true,'modules'=>false,'skipIfNamespace'=>false)));
+		require $template;
 	}
 
 

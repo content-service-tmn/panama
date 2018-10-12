@@ -1,0 +1,55 @@
+.about {
+  padding:60px 0;
+  background-color:#06ABE0;
+  color:white;
+  &__grid {
+    display:flex;
+    flex-wrap: wrap;
+    margin-left: -60px;
+    margin-top:-60px;
+  }
+  &__cell {
+    box-sizing: border-box;
+    padding-left: 60px;
+    padding-top:60px;
+    width:33.3333%;
+  }
+  &__title {
+    font-size:72px;
+    line-height: 1.2;
+    span {
+      color:#ffef52;
+    }
+  }
+  &__description {
+    margin-top:60px;
+    font-weight: 500;
+  }
+  &__item+&__item {
+    margin-top:60px;
+  }
+}
+
+.about-item {
+  padding-top:60%;
+  position:relative;
+  background: 50% 0 no-repeat;
+  background-size:contain;
+  transition:all 0.5s;
+  &:hover {
+    transform:scale(1.05) rotate(1deg);
+  }
+  &__title {
+    font-size:50px;
+    line-height: 1.2;
+    text-align: center;
+  }
+  &__link {
+    position:absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    z-index:1;
+  }
+}
