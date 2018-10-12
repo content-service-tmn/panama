@@ -1,0 +1,86 @@
+.uk-offcanvas-page {
+  position: fixed;
+}
+.uk-offcanvas {
+  display: block;
+  z-index: 9999;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  -webkit-transform: translateZ(1000px);
+  transform: translateZ(1000px);
+  visibility: hidden;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    background-color: rgba(0,0,0,0.4);
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    -webkit-transition-delay: .3s;
+    transition-delay: .3s;
+  }
+  &.uk-active {
+    visibility: visible;
+    &:before {
+      opacity: .9;
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease;
+    }
+  }
+}
+.uk-offcanvas-bar {
+  //max-width: 330px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10000;
+  background-color: white;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-scroll-chaining: none;
+  &.uk-offcanvas-bar-show {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    -webkit-transition-delay: .3s;
+    transition-delay: .3s;
+  }
+}
+.uk-offcanvas-bar-inner {
+
+}
+.uk-offcanvas-close {
+  display: block;
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    background-color: gray;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%) rotate(45deg);
+  }
+  &:before {
+    width: 21px;
+    height: 2px;
+  }
+  &:after {
+    width: 2px;
+    height: 21px;
+  }
+}

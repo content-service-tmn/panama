@@ -1,0 +1,108 @@
+// Name:            Accordion
+// Description:     Defines styles for the accordion
+//
+// Component:       `uk-accordion`
+//
+// Sub-objects:     `uk-accordion-title`
+//                  `uk-accordion-content`
+//
+// Markup:
+//
+// <!-- uk-accordion -->
+// <div class="uk-accordion" data-uk-accordion>
+//     <h3 class="uk-accordion-title"></h3>
+//     <div class="uk-accordion-content">
+//         <p></p>
+//     </div>
+// </div>
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@accordion-title-margin-bottom:                 0;
+@accordion-title-padding-vertical:              0;
+@accordion-title-padding-horizontal:            0;
+@accordion-title-font-size:                     18px;
+@accordion-title-line-height:                   22px;
+@accordion-title-background:                    transparent;
+
+@accordion-content-padding-horizontal:          @accordion-title-padding-horizontal;
+@accordion-content-padding-bottom:              15px;
+
+
+/* ========================================================================
+   Component: Accordion
+ ========================================================================== */
+
+.uk-accordion {
+    .hook-accordion;
+}
+
+/* Sub-object: `uk-accordion-title`
+ ========================================================================== */
+
+.uk-accordion-title {
+    margin-top: 15px;
+    margin-bottom: @accordion-title-margin-bottom;
+    padding: @accordion-title-padding-vertical @accordion-title-padding-horizontal;
+    background: @accordion-title-background;
+    font-size: @accordion-title-font-size;
+    line-height: @accordion-title-line-height;
+    color:white;
+    text-shadow: 1px 1px black, 1px -1px black, -1px -1px black, -1px 1px black;
+    cursor: pointer;
+    @media(min-width: 1440px) {
+      font-size:24px;
+      line-height:30px;
+    }
+    &.uk-active {
+      color:black;
+      text-shadow: none;
+    }
+    &:hover {
+      color:black;
+      text-shadow: none;
+    }
+    .hook-accordion-title;
+}
+
+
+/* Sub-object: `uk-accordion-content`
+ ========================================================================== */
+
+.uk-accordion-content {
+    padding: 0 @accordion-content-padding-horizontal @accordion-content-padding-bottom @accordion-content-padding-horizontal;
+    .hook-accordion-content;
+}
+
+/*
+ * Micro clearfix to make panels more robust
+ */
+
+.uk-accordion-content:before,
+.uk-accordion-content:after {
+    content: "";
+    display: table;
+}
+
+.uk-accordion-content:after { clear: both; }
+
+/*
+ * Remove margin from the last-child
+ */
+
+ .uk-accordion-content > :last-child { margin-bottom: 0; }
+
+
+// Hooks
+// ========================================================================
+
+.hook-accordion-misc;
+
+.hook-accordion() {}
+.hook-accordion-title() {}
+.hook-accordion-content() {}
+.hook-accordion-misc() {}
