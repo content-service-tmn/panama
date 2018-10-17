@@ -8,10 +8,10 @@
 
 <body>
 
-
-
 <?= $templateRender; ?>
 
+<script src=<?= $config->urls->templates . 'assets/js/slick.js'?>></script>
+<script src=<?= $config->urls->templates . 'assets/js/script.js'?>></script>
 
 </body>
 

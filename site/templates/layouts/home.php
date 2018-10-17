@@ -1,3 +1,50 @@
+<section class="stocks">
+  <div class="container">
+    <h1 class="stocks__title">акции магазинов</h1>
+    <div class="stocks__slider">
+      <div class="stocks__item stocks-item">
+        <div class="stocks-item__img" style="background-image:url(<?=$config->urls->templates . 'assets/img/pic.jpg';?>)"></div>
+        <p class="stocks-item__type">акция</p>
+        <p class="stocks-item__date">С 9.06 по 15.06</p>
+        <p class="stocks-item__title">СКИДКИ НА ПРОШЛУЮ КОЛЛЕКцию</p>
+        <p class="stocks-item__description">Увлекательное шоу роботов, которые оставят бурю незабываемых эмоций для гостей любого возраста</p>
+        <p class="stocks-item__shop">LEVIS STORE</p>
+        <a href="" class="stocks-item__link">подробнее</a>
+      </div>
+      <div class="stocks__item stocks-item">
+        <div class="stocks-item__img" style="background-image:url(<?=$config->urls->templates . 'assets/img/pic.jpg';?>)"></div>
+        <p class="stocks-item__type">акция</p>
+        <p class="stocks-item__date">С 9.06 по 15.06</p>
+        <p class="stocks-item__title">СКИДКИ НА ПРОШЛУЮ КОЛЛЕКцию</p>
+        <p class="stocks-item__description">Увлекательное шоу роботов, которые оставят бурю незабываемых эмоций для гостей любого возраста</p>
+        <p class="stocks-item__shop">LEVIS STORE</p>
+        <a href="" class="stocks-item__link">подробнее</a>
+      </div>
+      <div class="stocks__item stocks-item">
+        <div class="stocks-item__img" style="background-image:url(<?=$config->urls->templates . 'assets/img/pic.jpg';?>)"></div>
+        <p class="stocks-item__type">акция</p>
+        <p class="stocks-item__date">С 9.06 по 15.06</p>
+        <p class="stocks-item__title">СКИДКИ НА ПРОШЛУЮ КОЛЛЕКцию</p>
+        <p class="stocks-item__description">Увлекательное шоу роботов, которые оставят бурю незабываемых эмоций для гостей любого возраста</p>
+        <p class="stocks-item__shop">LEVIS STORE</p>
+        <a href="" class="stocks-item__link">подробнее</a>
+      </div>
+      <div class="stocks__item stocks-item">
+        <div class="stocks-item__img" style="background-image:url(<?=$config->urls->templates . 'assets/img/pic.jpg';?>)"></div>
+        <p class="stocks-item__type">акция</p>
+        <p class="stocks-item__date">С 9.06 по 15.06</p>
+        <p class="stocks-item__title">СКИДКИ НА ПРОШЛУЮ КОЛЛЕКцию</p>
+        <p class="stocks-item__description">Увлекательное шоу роботов, которые оставят бурю незабываемых эмоций для гостей любого возраста</p>
+        <p class="stocks-item__shop">LEVIS STORE</p>
+        <a href="" class="stocks-item__link">подробнее</a>
+      </div>
+    </div>
+  </div>
+  <div class="stocks__button-wrapper">
+    <a href="" class="stocks__button">все акции</a>
+  </div>
+</section>
+
 <section class="about">
   <div class="container">
     <div class="about__grid">
@@ -36,5 +83,11 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="cinema">
+  <div class="container">
+
   </div>
 </section>

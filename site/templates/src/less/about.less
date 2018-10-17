@@ -1,5 +1,5 @@
 .about {
-  padding:60px 0;
+  padding:120px 0;
   background-color:#06ABE0;
   color:white;
   &__grid {
@@ -31,18 +31,21 @@
 }
 
 .about-item {
-  padding-top:60%;
+  padding-top:85%;
   position:relative;
   background: 50% 0 no-repeat;
   background-size:contain;
   transition:all 0.5s;
   &:hover {
-    transform:scale(1.05) rotate(1deg);
+    
   }
   &__title {
+    position:absolute;
+    bottom:0;
+    left:50%;
     font-size:50px;
     line-height: 1.2;
-    text-align: center;
+    transform:translateX(-50%);
   }
   &__link {
     position:absolute;

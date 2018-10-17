@@ -19,3 +19,5 @@
 2018-10-12 11:29:08	guest	http://panama.cw40247.tmweb.ru/	Compiled file: /site/templates/common/_init.php
 2018-10-12 11:29:09	guest	http://panama.cw40247.tmweb.ru/	Compiled file: /site/templates/home.php
 2018-10-12 11:29:09	guest	http://panama.cw40247.tmweb.ru/	Maintenance/Copy new version of source file to target file: /site/templates/admin.php => /site/assets/cache/FileCompiler/site/templates/admin.php
+2018-10-16 09:27:58	guest	http://panama.cw40247.tmweb.ru/	Maintenance/Copy new version of source file to target file: /site/templates/common/_head.php => /site/assets/cache/FileCompiler/site/templates\common/_head.php
+2018-10-17 11:48:52	guest	http://panama.cw40247.tmweb.ru/	Maintenance/Copy new version of source file to target file: /site/templates/common/_head.php => /site/assets/cache/FileCompiler/site/templates\common/_head.php
