@@ -65,7 +65,7 @@ class Bar
 		$contentId = $this->contentId = $this->contentId ?: substr(md5(uniqid('', true)), 0, 10);
 		$nonce = Helpers::getNonce();
 		$async = true;
-		require __DIR__ . '/assets/Bar/loader.phtml';
+		require \ProcessWire\wire("config")->paths->root . 'site/modules/TracyDebugger/tracy-master/src/Tracy' . '/assets/Bar/loader.phtml';
 	}
 
 
@@ -122,7 +122,7 @@ class Bar
 				$contentId = substr(md5(uniqid('', true)), 0, 10);
 				$nonce = Helpers::getNonce();
 				$async = false;
-				require __DIR__ . '/assets/Bar/loader.phtml';
+				require \ProcessWire\wire("config")->paths->root . 'site/modules/TracyDebugger/tracy-master/src/Tracy' . '/assets/Bar/loader.phtml';
 			}
 		}
 	}
@@ -134,8 +134,8 @@ class Bar
 	private static function renderHtmlRows(array $rows)
 	{
 		ob_start(function () {});
-		require __DIR__ . '/assets/Bar/panels.phtml';
-		require __DIR__ . '/assets/Bar/bar.phtml';
+		require \ProcessWire\wire("config")->paths->root . 'site/modules/TracyDebugger/tracy-master/src/Tracy' . '/assets/Bar/panels.phtml';
+		require \ProcessWire\wire("config")->paths->root . 'site/modules/TracyDebugger/tracy-master/src/Tracy' . '/assets/Bar/bar.phtml';
 		return Helpers::fixEncoding(ob_get_clean());
 	}
 
@@ -233,10 +233,10 @@ class Bar
 	private function renderAssets()
 	{
 		$css = array_map('file_get_contents', array_merge([
-			__DIR__ . '/assets/Bar/bar.css',
-			__DIR__ . '/assets/Toggle/toggle.css',
-			__DIR__ . '/assets/Dumper/dumper.css',
-			__DIR__ . '/assets/BlueScreen/bluescreen.css',
+			\ProcessWire\wire("config")->paths->root . 'site/modules/TracyDebugger/tracy-master/src/Tracy' . '/assets/Bar/bar.css',
+			\ProcessWire\wire("config")->paths->root . 'site/modules/TracyDebugger/tracy-master/src/Tracy' . '/assets/Toggle/toggle.css',
+			\ProcessWire\wire("config")->paths->root . 'site/modules/TracyDebugger/tracy-master/src/Tracy' . '/assets/Dumper/dumper.css',
+			\ProcessWire\wire("config")->paths->root . 'site/modules/TracyDebugger/tracy-master/src/Tracy' . '/assets/BlueScreen/bluescreen.css',
 		], Debugger::$customCssFiles));
 		$css = json_encode(preg_replace('#\s+#u', ' ', implode($css)));
 		echo "(function(){var el = document.createElement('style'); el.className='tracy-debug'; el.textContent=$css; document.head.appendChild(el);})();\n";
@@ -244,10 +244,10 @@ class Bar
 		if(Debugger::$customCssStr) echo "(function(){var el = document.createElement('div'); el.className='tracy-debug'; el.innerHTML='".preg_replace('#\s+#u', ' ', Debugger::$customCssStr)."'; document.head.appendChild(el);})();\n";
 
 		array_map('readfile', array_merge([
-			__DIR__ . '/assets/Bar/bar.js',
-			__DIR__ . '/assets/Toggle/toggle.js',
-			__DIR__ . '/assets/Dumper/dumper.js',
-			__DIR__ . '/assets/BlueScreen/bluescreen.js',
+			\ProcessWire\wire("config")->paths->root . 'site/modules/TracyDebugger/tracy-master/src/Tracy' . '/assets/Bar/bar.js',
+			\ProcessWire\wire("config")->paths->root . 'site/modules/TracyDebugger/tracy-master/src/Tracy' . '/assets/Toggle/toggle.js',
+			\ProcessWire\wire("config")->paths->root . 'site/modules/TracyDebugger/tracy-master/src/Tracy' . '/assets/Dumper/dumper.js',
+			\ProcessWire\wire("config")->paths->root . 'site/modules/TracyDebugger/tracy-master/src/Tracy' . '/assets/BlueScreen/bluescreen.js',
 		], Debugger::$customJsFiles));
 
 		if(Debugger::$customJsStr) echo Debugger::$customJsStr;

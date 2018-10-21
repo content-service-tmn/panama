@@ -1,3 +1,22 @@
+<div class="menu">
+  <div class="container container_big">
+    <div class="menu__grid">
+      <div class="menu__nav">
+        <img src="<?= $config->urls->templates . 'assets/img/logo-white.png'?>" alt="" class="menu__logo">
+        <a href="" class="menu__link">Афиша</a>
+        <a href="" class="menu__link">Акции</a>
+        <a href="" class="menu__link">Схема ТРЦ</a>
+        <a href="" class="menu__link">Аренда</a>
+        <a href="" class="menu__link">Контакты</a>
+      </div>
+      <div class="menu__navigation">
+        Навигация
+        <a href="" class="menu__toggle"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <section class="stocks">
   <div class="container">
     <h1 class="stocks__title">акции магазинов</h1>
@@ -88,6 +107,26 @@
 
 <section class="cinema">
   <div class="container">
-
+    <div class="cinema__grid">
+      <div class="cinema__cell">
+        <div class="cinema__item">
+          <div class="cinema__img"></div>
+          <h1 class="cinema__title">кинотеатр</h1>
+        </div>
+      </div>
+      <div class="cinema__cell">
+        <div class="cinema__slider">
+          <div class="cinema__element" style="background-image:url(<?=$config->urls->templates . 'assets/img/pic.jpg';?>)"></div>
+          <div class="cinema__element" style="background-image:url(<?=$config->urls->templates . 'assets/img/pic.jpg';?>)"></div>
+          <div class="cinema__element" style="background-image:url(<?=$config->urls->templates . 'assets/img/pic.jpg';?>)"></div>
+          <div class="cinema__element" style="background-image:url(<?=$config->urls->templates . 'assets/img/pic.jpg';?>)"></div>
+        </div>
+        <p class="cinema__text">причём уровень контроля над Силой различен в зависимости от врождённых способностей и тренированности. Сила описана в фильме Оби-Ваном Кеноби как «энергетическое поле, создаваемое всеми живыми существами, которое окружает нас, находится</p>
+        <ul class="cinema__links">
+          <li><a href="" class="cinema__link">Перейти на сайт кинотеатра</a></li>
+          <li><a href="" class="cinema__link">Показать на схеме</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>

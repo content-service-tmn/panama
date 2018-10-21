@@ -1,0 +1,90 @@
+.footer {
+  position:relative;
+  color:#fff;
+  &__bg {
+    width:100%;
+    display:block;
+  }
+  &__grid {
+    position:absolute;
+    left:150px;
+    bottom:90px;
+    right:150px;
+    display:flex;
+    justify-content: space-between;
+    margin:0 -30px;
+  }
+  &__cell {
+    padding:0 30px;
+    width:370px;
+  }
+  &__list {
+    font-size:18px;
+    line-height: 1.5;
+    font-weight: 700;
+    &_schedule {
+      font-weight: 500;
+      span {
+        font-weight:600;
+      }
+      b {
+        font-weight: 700;
+      }
+    }
+  }
+  &__how {
+    font-family: @title-font;
+    font-size:2vw;
+    text-align: center;
+    display:block;
+    position:relative;
+    &:before {
+      content:"";
+      position:absolute;
+      top:0;
+      left:50%;
+      width:5vw;
+      height:8vw;
+      background:url(../img/marker.svg) 50% 50% no-repeat;
+      background-size:contain;
+      transform:translate(-50%,-150%);
+    }
+    &:after {
+      content:"";
+      position:absolute;
+      top:0;
+      left:50%;
+      width:4vw;
+      height:4vw;
+      background:url(../img/logo.png) 50% 50% no-repeat;
+      background-size:contain;
+      transform:translate(-50%,-275%);
+    }
+  }
+  &__socials {
+    display:flex;
+    margin-left: -15px;
+    justify-content: center;
+  }
+  &__social {
+    margin:15px 8px 0 8px;
+    position:relative;
+    display:inline-block;
+    width:44px;
+    height:44px;
+    border-radius: 50%;
+    background-color:#27ACE0;
+    &:after {
+      font-family: "FontAwesome";
+      position:absolute;
+      left:50%;
+      top:50%;
+      font-size:24px;
+      transform:translate(-50%,-50%);
+    }
+    &_vk:after { content:"\f189"; }
+    &_fb:after { content:"\f09a"; }
+    &_inst:after { content:"\f16d"; }
+    &_ok:after { content:"\f263"; }
+  }
+}

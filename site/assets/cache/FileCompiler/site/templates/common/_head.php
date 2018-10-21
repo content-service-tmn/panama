@@ -7,5 +7,5 @@
 src="https://code.jquery.com/jquery-3.3.1.min.js"
 integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 crossorigin="anonymous"></script>
-<link href="https://fonts.googleapis.com/css?family=Montserrat:500,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
 <link rel="stylesheet" href=<?=$config->urls->templates . "assets/css/template.css";?> />

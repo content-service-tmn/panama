@@ -1,0 +1,88 @@
+.promotions {
+  padding:90px 0;
+  &__subtitle {
+    font-family: "Sugo Pro Display",arial,sans-serif;
+    font-size:36px;
+    line-height: 1.2;
+    color:#258931;
+  }
+  &__title {
+    font-family: @title-font;
+    font-size:64px;
+    line-height: 1.2;
+    color:#FF8207;
+    text-transform: uppercase;
+  }
+  &__grid {
+    display:flex;
+    flex-wrap: wrap;
+    margin-left: -40px;
+  }
+  &__cell {
+    box-sizing: border-box;
+    width:33.3333%;
+    padding-left: 40px;
+    padding-top:90px;
+  }
+}
+
+.promotion {
+  color:#258931;
+  &__img {
+    padding-top:100%;
+    background: 50% 50% no-repeat;
+    background-size:cover;
+  }
+  &__type {
+    font-size:16px;
+    font-weight: 700;
+    color:#FF8207;
+    padding:15px 0;
+    margin-top:60px;
+    border-top:2px solid #FF8207;
+    border-bottom:2px solid #FF8207;
+    text-transform: uppercase;
+  }
+  &__date {
+    margin-top:15px;
+    font-family: "Sugo Pro Display",arial,sans-serif;
+    font-size:48px;
+    line-height: 1.2;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  &__title {
+    margin-top:15px;
+    font-size:18px;
+    line-height: 1.2;
+    font-weight: 700;
+    color:#FF8207;
+    text-transform: uppercase;
+  }
+  &__description {
+    margin-top:30px;
+    font-size:18px;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+  &__shop {
+    margin-top:30px;
+    font-size:16px;
+    line-height: 1.2;
+    font-weight: 700;
+    color:#FF8207;
+    text-transform: uppercase;
+  }
+  &__link {
+    display:inline-block;
+    margin-top:15px;
+    font-size:18px;
+    line-height: 1.2;
+    font-weight: 700;
+    color:#FF8207;
+    text-transform: uppercase;
+    &:after {
+      content:" >";
+    }
+  }
+}

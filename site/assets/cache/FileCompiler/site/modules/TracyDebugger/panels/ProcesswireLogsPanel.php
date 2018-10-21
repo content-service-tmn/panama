@@ -73,7 +73,7 @@ class ProcesswireLogsPanel extends BasePanel {
 
             //display most recent entries from all log files
             foreach(array_slice($entriesArr, 0, \TracyDebugger::getDataValue("numLogEntries")) as $item) {
-                $logInstance = new FileLog($this->wire('config')->paths->logs . $item['log'].'.txt');
+                $logInstance = new \ProcessWire\FileLog($this->wire('config')->paths->logs . $item['log'].'.txt');
                 $trimmedText = trim(htmlspecialchars($item['text'], ENT_QUOTES, 'UTF-8'));
                 $this->logEntries .= "
                 \n<tr>

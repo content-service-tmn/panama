@@ -1,3 +1,119 @@
 .cinema {
-  
+  color:white;
+  padding:120px 0;
+  background-color:#06ABE0;
+  &__grid {
+    display:flex;
+    flex-wrap: wrap;
+    margin-left: -60px;
+    margin-top:-60px;
+  }
+  &__cell {
+    box-sizing: border-box;
+    padding-left: 60px;
+    padding-top:60px;
+    &:nth-child(1) { width:45%; }
+    &:nth-child(2) { width:55%; }
+  }
+  &__item {
+    position:relative;
+    z-index: 1;
+  }
+  &__img {
+    position:absolute;
+    z-index:-1;
+    width:130%;
+    top:0;
+    right:0;
+    background:url(../img/popcorn.png) 50% 50% no-repeat;
+    background-size:contain;
+    &:before {
+      display:block;
+      content:"";
+      padding-top:100%;
+    }
+  }
+  &__title {
+    padding-top:120%;
+    font-size:4vw;
+    line-height: 1.2;
+  }
+  &__slider {
+    margin:60px 90px 0 90px;
+    box-sizing: border-box;
+    .slick-prev,.slick-next {
+      position:absolute;
+      height:60px;
+      width:60px;
+      border: none;
+      outline: none;
+      background:transparent;
+      color:transparent;
+      cursor: pointer;
+      top:50%;
+      &:before {
+        position:absolute;
+        content:"";
+        top:50%;
+        width:86px;
+        height:86px;
+        background:url(../img/leaf.png) 50% 50% no-repeat;
+        background-size:contain;
+        transform:translateY(-50%);
+      }
+      &:after {
+        position:absolute;
+        border-radius: 50%;
+        background-color:#27CAFF;
+        font-family: "icomoon";
+        content:"";
+        left:0;
+        top:0;
+        right:0;
+        bottom:0;
+        font-weight: 400;
+        font-size:28px;
+        line-height: 60px;
+        color:white;
+      }
+    }
+    .slick-prev {
+      &:before { right: 0; }
+      &:after { content:"\f104"; }
+      left:0;
+      transform:translate(-100%,-50%) translateX(-30px);
+    }
+    .slick-next {
+      &:before { left: 0; transform:scaleX(-1) translateY(-50%);;}
+      &:after { content:"\f105"; }
+      right:0;
+      transform:translate(100%,-50%) translateX(30px);
+    }
+    .slick-slide {
+      margin: 0 15px;
+    }
+    .slick-list {
+      margin: 0 -15px;
+    }
+  }
+  &__element {
+    padding-top:100%;
+    border-radius: 50%;
+    background: 50% 50% no-repeat;
+    background-size:cover;
+  }
+  &__text {
+    margin-top:30px;
+    padding-left: 90px;
+    font-weight: 500;
+    font-size:18px;
+  }
+  &__links {
+    margin-top:30px;
+    padding-left: 90px;
+    font-weight: 700;
+  }
+  &__link {
+    display:inline-block;
+  }
 }

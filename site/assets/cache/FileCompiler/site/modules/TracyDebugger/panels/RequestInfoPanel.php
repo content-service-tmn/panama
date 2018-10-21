@@ -318,7 +318,7 @@ class RequestInfoPanel extends BasePanel {
                 </tr>
                 <tr>
                     <td>Locked (status)</td>
-                    <td>'. ($p->is(Page::statusLocked) ? "&#10004;" : "&#x2718;") .'</td>
+                    <td>'. ($p->is(\ProcessWire\Page::statusLocked) ? "&#10004;" : "&#x2718;") .'</td>
                 </tr>
             </table>';
         }
@@ -610,7 +610,7 @@ class RequestInfoPanel extends BasePanel {
     }
 
 
-    private function getFieldArray(Page $p, $f) {
+    private function getFieldArray(\ProcessWire\Page $p, $f) {
         $of = $p->of();
         $p->of(false);
         $fieldArray = '';
@@ -620,16 +620,16 @@ class RequestInfoPanel extends BasePanel {
            || $f->type == "FieldtypePassword"
            || $f->type == "FieldtypeFieldsetClose") return false;
 
-        if($f->type instanceof FieldtypeRepeater) {
+        if($f->type instanceof \ProcessWire\FieldtypeRepeater) {
             if(is_object($p->$f) && count($p->$f)) {
                 $fieldArray = array();
                 foreach($p->$f as $o) $fieldArray[$o->id] = $o->getIterator();
             }
         }
-        elseif($f->type instanceof FieldtypePage) {
+        elseif($f->type instanceof \ProcessWire\FieldtypePage) {
             if(is_object($p->$f) && count($p->$f)) {
                 $fieldArray = array();
-                if($p->$f instanceof PageArray) {
+                if($p->$f instanceof \ProcessWire\PageArray) {
                     foreach($p->$f as $o) $fieldArray[$o->id] = $o->getIterator();
                 }
                 else {
@@ -641,7 +641,7 @@ class RequestInfoPanel extends BasePanel {
                 $fieldArray = $p->$f;
             }
         }
-        elseif($f->type instanceof FieldtypeFile) {
+        elseif($f->type instanceof \ProcessWire\FieldtypeFile) {
             $fieldArray = array();
             $fieldArray = $p->$f->getIterator();
         }
@@ -660,17 +660,17 @@ class RequestInfoPanel extends BasePanel {
         $imagePreview = '';
         $inputfield = \TracyDebugger::getDataValue('imagesInFieldListValues') ? $f->getInputfield($p) : null;
 
-        if($f->type instanceof FieldtypeRepeater) {
+        if($f->type instanceof \ProcessWire\FieldtypeRepeater) {
             if(is_object($p->$f) && count($p->$f)) {
                 foreach($p->$f as $subpage) {
                     $imageStr .= $this->getImages($subpage);
                 }
             }
         }
-        elseif($f->type instanceof FieldtypePage) {
+        elseif($f->type instanceof \ProcessWire\FieldtypePage) {
             if(is_object($p->$f)) {
                 $fieldArray = array();
-                if($p->$f instanceof PageArray) {
+                if($p->$f instanceof \ProcessWire\PageArray) {
                     foreach($p->$f as $subpage) {
                         $imageStr .= $this->getImages($subpage);
                     }
@@ -680,7 +680,7 @@ class RequestInfoPanel extends BasePanel {
                 }
             }
         }
-        elseif($f->type instanceof FieldtypeImage) {
+        elseif($f->type instanceof \ProcessWire\FieldtypeImage) {
             foreach($p->$f as $image) {
                 $imageStr .= $this->imageStr($inputfield, $image);
             }
@@ -697,12 +697,12 @@ class RequestInfoPanel extends BasePanel {
         foreach($p as $field => $item) {
             $f = $this->wire('fields')->get($field);
             // this is for nested repeaters
-            if($item && $f && $f->type instanceof FieldTypeRepeater) {
+            if($item && $f && $f->type instanceof \ProcessWire\FieldtypeRepeater) {
                 foreach($p->$f as $subpage) {
                     $imageStr .= $this->getImages($subpage);
                 }
             }
-            elseif($item && $f && $f->type instanceof FieldTypeImage) {
+            elseif($item && $f && $f->type instanceof \ProcessWire\FieldtypeImage) {
                 $inputfield = \TracyDebugger::getDataValue('imagesInFieldListValues') ? $f->getInputfield($p) : null;
                 foreach($item as $image) {
                     $imageStr .= $this->imageStr($inputfield, $image);

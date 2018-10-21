@@ -179,7 +179,7 @@ class TracyLogsPanel extends BasePanel {
      */
     public function getFilename($name) {
         if($name !== $this->wire('sanitizer')->pageName($name)) {
-            throw new WireException("Log name must contain only [-_.a-z0-9] with no extension");
+            throw new \ProcessWire\WireException("Log name must contain only [-_.a-z0-9] with no extension");
         }
         return $this->wire('config')->paths->logs.'tracy/' . $name . '.log';
     }
@@ -273,7 +273,7 @@ class TracyLogsPanel extends BasePanel {
 }
 
 
-class TracyFileLog extends FileLog {
+class TracyFileLog extends \ProcessWire\FileLog {
 
     /**
      * Returns whether the given log line is valid to be considered a log entry

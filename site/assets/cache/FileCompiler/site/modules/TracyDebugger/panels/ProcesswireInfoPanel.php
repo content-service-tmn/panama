@@ -9,9 +9,9 @@ class ProcesswireInfoPanel extends BasePanel {
     protected $newTab;
 
     public function __construct() {
-        if(wire('modules')->isInstalled('ProcessWireAPI')) {
-            $ApiModuleId = wire('modules')->getModuleID("ProcessWireAPI");
-            $this->apiBaseUrl = wire('pages')->get("process=$ApiModuleId")->url.'methods/';
+        if(\ProcessWire\wire('modules')->isInstalled('ProcessWireAPI')) {
+            $ApiModuleId = \ProcessWire\wire('modules')->getModuleID("ProcessWireAPI");
+            $this->apiBaseUrl = \ProcessWire\wire('pages')->get("process=$ApiModuleId")->url.'methods/';
         }
         else {
             $this->apiBaseUrl = 'https://processwire.com/api/ref/';
@@ -629,7 +629,7 @@ class ProcesswireInfoPanel extends BasePanel {
 
 
     private function addRoot($value) {
-        return wire('config')->paths->root . $value;
+        return \ProcessWire\wire('config')->paths->root . $value;
     }
 
 }
