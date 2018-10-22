@@ -1,21 +1,34 @@
-<div class="menu">
-  <div class="container container_big">
-    <div class="menu__grid">
-      <div class="menu__nav">
-        <img src="<?= $config->urls->templates . 'assets/img/logo-white.png'?>" alt="" class="menu__logo">
-        <a href="" class="menu__link">Афиша</a>
-        <a href="" class="menu__link">Акции</a>
-        <a href="" class="menu__link">Схема ТРЦ</a>
-        <a href="" class="menu__link">Аренда</a>
-        <a href="" class="menu__link">Контакты</a>
-      </div>
-      <div class="menu__navigation">
-        Навигация
-        <a href="" class="menu__toggle"></a>
+<section class="header">
+  <img src="<?= $config->urls->templates . 'assets/img/frame.png'?>" alt="" class="header__frame">
+  <div class="header__slider">
+    <div class="header__item">
+      <img src="<?= $config->urls->templates . 'assets/img/image.png'?>" alt="">
+    </div>
+    <div class="header__item">
+      <img src="<?= $config->urls->templates . 'assets/img/image.png'?>" alt="">
+    </div>
+  </div>
+  <div class="header__bottom">
+    <div class="container container_big">
+      <div class="header__grid">
+        <div class="header__socials">
+          <a href="" class="header__social header__social_vk"></a>
+          <a href="" class="header__social header__social_fb"></a>
+          <a href="" class="header__social header__social_inst"></a>
+          <a href="" class="header__social header__social_ok"></a>
+        </div>
+        <ul class="header__contacts">
+          <li>Тюмень, ул. 2-я Луговая, 30</li>
+          <li><a href="">+7 (3452) 520-779</a></li>
+        </ul>
+        <ul class="header__schedule">
+          <li><span>ЕЖЕДНЕВНО</span> с <span>10:00</span> до <span>21:00</span></li>
+          <li><a href="">Как добраться?</a></li>
+        </ul>
       </div>
     </div>
   </div>
-</div>
+</section>
 
 <section class="stocks">
   <div class="container">
@@ -127,6 +140,34 @@
           <li><a href="" class="cinema__link">Показать на схеме</a></li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="gallery__wrapper">
+    <div class="gallery__slider-wrapper">
+      <div class="gallery__container">
+        <h1 class="gallery__title">галерея торгового центра</h1>
+      </div>
+      <div class="gallery__slider">
+        <div class="gallery__item" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
+        <div class="gallery__item" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
+        <div class="gallery__item" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
+        <div class="gallery__item" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
+        <div class="gallery__item" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
+        <div class="gallery__item" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="gallery__bottom-slider">
+      <div class="gallery__bottom-item" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
+      <div class="gallery__bottom-item" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
+      <div class="gallery__bottom-item" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
+      <div class="gallery__bottom-item" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
+      <div class="gallery__bottom-item" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
+      <div class="gallery__bottom-item" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
     </div>
   </div>
 </section>

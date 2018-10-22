@@ -8,6 +8,45 @@
 
 <body class="<?= $page->template->name; ?>">
 
+<div class="menu">
+  <div class="container container_big">
+    <div class="menu__grid">
+      <div class="menu__nav">
+        <img src="<?= $config->urls->templates . 'assets/img/logo-white.png'?>" alt="" class="menu__logo">
+        <a href="" class="menu__link">Афиша</a>
+        <a href="" class="menu__link">Акции</a>
+        <a href="" class="menu__link">Схема ТРЦ</a>
+        <a href="" class="menu__link">Аренда</a>
+        <a href="" class="menu__link">Контакты</a>
+      </div>
+      <div class="menu__navigation">
+        <a href="">Навигация</a>
+        <a href="" class="menu__toggle"></a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="menu-wrapper">
+  <div class="menu">
+    <div class="container container_big">
+      <div class="menu__grid">
+        <div class="menu__nav">
+          <img src="<?= $config->urls->templates . 'assets/img/logo-white.png'?>" alt="" class="menu__logo">
+          <a href="" class="menu__link">Афиша</a>
+          <a href="" class="menu__link">Акции</a>
+          <a href="" class="menu__link">Схема ТРЦ</a>
+          <a href="" class="menu__link">Аренда</a>
+          <a href="" class="menu__link">Контакты</a>
+        </div>
+        <div class="menu__navigation">
+          <a href="">Навигация</a>
+          <a href="" class="menu__toggle"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <?= $templateRender; ?>
 
 <section class="footer">

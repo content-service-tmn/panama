@@ -35,3 +35,4 @@
 2018-10-19 14:41:56	developer	http://panama.cw40247.tmweb.ru/processwire/?login=1	Compiled file: /site/modules/TracyDebugger/panels/DumpsPanel.php
 2018-10-19 14:54:59	developer	http://panama.cw40247.tmweb.ru/promotions/	Compiled file: /site/templates/layout_promotions.php
 2018-10-21 13:12:33	guest	http://panama.cw40247.tmweb.ru/	Maintenance/Copy new version of source file to target file: /site/templates/common/_head.php => /site/assets/cache/FileCompiler/site/templates\common/_head.php
+2018-10-23 00:25:36	developer	http://panama.cw40247.tmweb.ru/events/	Compiled file: /site/templates/layout_events.php
