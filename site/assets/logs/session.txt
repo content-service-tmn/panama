@@ -2,3 +2,6 @@
 2018-10-19 14:41:45	developer	http://panama.cw40247.tmweb.ru/processwire/login/	Successful login for 'developer'
 2018-10-21 13:12:33	?	?	User 'developer' - Session timed out (session older than 86400 seconds) (IP: 127.0.0.1)
 2018-10-23 00:19:13	developer	http://panama.cw40247.tmweb.ru/processwire/login/	Successful login for 'developer'
+2018-10-23 20:34:25	?	?	User 'developer' - Error: Session fingerprint changed (IP address or useragent) (IP: 127.0.0.1)
+2018-10-24 12:12:06	developer	http://panama.cw40247.tmweb.ru/processwire/login/	Successful login for 'developer'
+2018-10-24 13:57:41	?	?	User 'developer' - Error: Session fingerprint changed (IP address or useragent) (IP: 127.0.0.1)

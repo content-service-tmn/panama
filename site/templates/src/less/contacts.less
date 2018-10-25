@@ -1,0 +1,63 @@
+.contacts {
+  color:white;
+  background-color:#FF861A;
+  &__info {
+    padding:90px 0;
+    position: relative;
+    z-index:1;
+    &:before {
+      pointer-events: none;
+      z-index:-1;
+      content:"";
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:0;
+      padding-top:20%;
+      background:url(../img/orange-layer.svg) 50% 0% no-repeat;
+      background-size:contain;
+      transform:translateY(100%);
+    }
+  }
+  &__title {
+    color:#FFEF52;
+    font-size:72px;
+    line-height: 1.2;
+  }
+  &__grid {
+    margin-left: -60px;
+    display:flex;
+    flex-wrap: wrap;
+  }
+  &__cell {
+    padding-left: 60px;
+    padding-top:60px;
+    width:33.3333%;
+    box-sizing: border-box;
+  }
+  &__subtitle {
+    font-family: "Sugo Pro Display",arial,sans-serif;
+    font-size:36px;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+  &__list {
+    margin-top:30px;
+    font-size:18px;
+    line-height: 1.5;
+    font-weight: 700;
+    &_schedule {
+      font-weight: 500;
+      span {
+        font-weight:600;
+      }
+      b {
+        font-weight: 700;
+      }
+    }
+  }
+  &__map {
+    height:540px;
+    background-color:black;
+  }
+}

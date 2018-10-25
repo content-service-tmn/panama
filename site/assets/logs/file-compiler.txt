@@ -36,3 +36,5 @@
 2018-10-19 14:54:59	developer	http://panama.cw40247.tmweb.ru/promotions/	Compiled file: /site/templates/layout_promotions.php
 2018-10-21 13:12:33	guest	http://panama.cw40247.tmweb.ru/	Maintenance/Copy new version of source file to target file: /site/templates/common/_head.php => /site/assets/cache/FileCompiler/site/templates\common/_head.php
 2018-10-23 00:25:36	developer	http://panama.cw40247.tmweb.ru/events/	Compiled file: /site/templates/layout_events.php
+2018-10-23 20:13:15	developer	http://panama.cw40247.tmweb.ru/contacts/	Compiled file: /site/templates/layout_contacts.php
+2018-10-24 12:55:15	developer	http://panama.cw40247.tmweb.ru/promotions/aktciia/	Compiled file: /site/templates/layout_article.php

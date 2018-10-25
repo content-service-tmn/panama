@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  $('.menu').clone().appendTo('.menu-wrapper');
   if ($(window).scrollTop() > 500) {
     $('.menu-wrapper').addClass('js-active');
   }

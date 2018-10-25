@@ -5,9 +5,15 @@
   right:0;
   top:0;
   height:0;
-  background-color:#27ACE0;
+  background-color:white;
   overflow:hidden;
   transition:all 0.2s;
+  &.blue {
+    background-color:#27ACE0;
+  }
+  &.orange {
+    background-color:#FF861A;
+  }
   &>* {
     position:relative;
     z-index:0;
@@ -27,10 +33,19 @@
 .menu {
   z-index:999;
   position:absolute;
-  color:white;
+  color:#000;
   top:0;
   left:0;
   right:0;
+  a:hover {
+    color:#F88011;
+  }
+  &.contrast {
+    color:#fff;
+    a:hover {
+      color:#fff;
+    }
+  }
   &__grid {
     display:flex;
     justify-content: space-between;
@@ -70,6 +85,15 @@
     background-color:#27CAFF;
     border-radius: 50%;
     position:relative;
+    &.blue {
+      background-color:#0AB3D7;
+    }
+    &.orange {
+      background-color:#E97000;
+    }
+    &.dark-orange {
+      background-color:#DB6B01;
+    }
     &:before,&:after {
       content:"";
       position:absolute;

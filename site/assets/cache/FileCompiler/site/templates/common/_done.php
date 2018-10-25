@@ -6,13 +6,41 @@
   <?php include_once($config->paths->templates . "common/_head.php"); ?>
 </head>
 
-<body class="<?= $page->template->name; ?>">
+<body class="<?php
+$color = "";
+switch($page->template->name) :
+  case 'layout_contacts':
+  case 'layout_events':
+    $color='orange';
+    break;
+  case 'home':
+    $color='blue';
+    break;
+endswitch;
+echo $color;
+?>">
 
-<div class="menu">
+<div class="menu <?= $color=='orange'||$color=='blue'?'contrast':'' ?>">
   <div class="container container_big">
     <div class="menu__grid">
       <div class="menu__nav">
-        <img src="<?= $config->urls->templates . 'assets/img/logo-white.png'?>" alt="" class="menu__logo">
+        <a href="" class="menu__logo">
+          <img src="<?php
+          $logo = "";
+          switch($page->template->name):
+            case 'layout_contacts':
+            case 'layout_events':
+            case 'home':
+            $logo= 'logo-white.png';
+            break;
+            case 'layout_article':
+            case 'layout_promotions':
+            $logo= 'logo.png';
+            break;
+          endswitch;
+          echo $config->urls->templates . 'assets/img/' . $logo;
+          ?>" alt="">
+        </a>
         <a href="" class="menu__link">Афиша</a>
         <a href="" class="menu__link">Акции</a>
         <a href="" class="menu__link">Схема ТРЦ</a>
@@ -21,34 +49,28 @@
       </div>
       <div class="menu__navigation">
         <a href="">Навигация</a>
-        <a href="" class="menu__toggle"></a>
+        <?php
+          $toggle = "";
+          switch($page->template->name):
+            case 'layout_contacts':
+            $toggle= 'orange';
+            break;
+            case 'layout_events':
+            $toggle= 'dark-orange';
+            break;
+          endswitch;
+        ?>
+        <a href="" class="menu__toggle <?= $toggle; ?>"></a>
       </div>
     </div>
   </div>
 </div>
-<div class="menu-wrapper">
-  <div class="menu">
-    <div class="container container_big">
-      <div class="menu__grid">
-        <div class="menu__nav">
-          <img src="<?= $config->urls->templates . 'assets/img/logo-white.png'?>" alt="" class="menu__logo">
-          <a href="" class="menu__link">Афиша</a>
-          <a href="" class="menu__link">Акции</a>
-          <a href="" class="menu__link">Схема ТРЦ</a>
-          <a href="" class="menu__link">Аренда</a>
-          <a href="" class="menu__link">Контакты</a>
-        </div>
-        <div class="menu__navigation">
-          <a href="">Навигация</a>
-          <a href="" class="menu__toggle"></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
+<div class="menu-wrapper <?= $color; ?>"></div>
 
 <?= $templateRender; ?>
 
+<?php if ($page->template->name!="layout_contacts"): ?>
 <section class="footer">
   <img src="<?= $config->urls->templates . 'assets/img/footer.png' ?>" alt="" class="footer__bg">
   <div class="footer__grid">
@@ -77,6 +99,7 @@
     </div>
   </div>
 </section>
+<?php endif; ?>
 
 <script src=<?= $config->urls->templates . 'assets/js/slick.js'?>></script>
 <script src=<?= $config->urls->templates . 'assets/js/script.js'?>></script>
