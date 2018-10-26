@@ -1,6 +1,6 @@
 <?php
 
-require_once( dirname(__FILE__).'/Cache.php');
+ require_once(\ProcessWire\wire('files')->compile(dirname(\ProcessWire\wire("config")->paths->root . 'site/modules/AllInOneMinify/lib/Less/Less.php').'/Cache.php',array('includes'=>true,'namespace'=>true,'modules'=>false,'skipIfNamespace'=>false)));
 
 /**
  * Class for parsing and compiling less files into css
@@ -465,7 +465,7 @@ class Less_Parser{
                 case 'var_export':
                 case 'php':
                 $this->UnsetInput();
-                return include($cache_file);
+                return include(\ProcessWire\wire('files')->compile($cache_file,array('includes'=>true,'namespace'=>true,'modules'=>false,'skipIfNamespace'=>false)));
             }
         }
 

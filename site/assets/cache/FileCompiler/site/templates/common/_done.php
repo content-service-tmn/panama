@@ -35,6 +35,7 @@ echo $color;
             break;
             case 'layout_article':
             case 'layout_promotions':
+            case 'layout_renters':
             $logo= 'logo.png';
             break;
           endswitch;
@@ -104,6 +105,13 @@ echo $color;
 <script src=<?= $config->urls->templates . 'assets/js/slick.js'?>></script>
 <script src=<?= $config->urls->templates . 'assets/js/script.js'?>></script>
 
+<script src="<?= $config->urls->templates . 'assets/js/core/core.js'?>"></script>
+<script src="<?= $config->urls->templates . 'assets/js/core/offcanvas.js'?>"></script>
+<script src="<?= $config->urls->templates . 'assets/js/core/modal.js'?>"></script>
+<script src="<?= $config->urls->templates . 'assets/js/core/utility.js'?>"></script>
+<script src="<?= $config->urls->templates . 'assets/js/core/switcher.js'?>"></script>
+<script src="<?= $config->urls->templates . 'assets/js/components/notify.js'?>"></script>
+<script src="<?= $config->urls->templates . 'assets/js/core/smooth-scroll.js'?>"></script>
 </body>
 
 </html>

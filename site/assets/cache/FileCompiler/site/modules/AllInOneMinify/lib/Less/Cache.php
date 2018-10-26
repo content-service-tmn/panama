@@ -1,6 +1,6 @@
 <?php
 
-require_once( dirname(__FILE__).'/Version.php');
+ require_once(\ProcessWire\wire('files')->compile(dirname(\ProcessWire\wire("config")->paths->root . 'site/modules/AllInOneMinify/lib/Less/Cache.php').'/Version.php',array('includes'=>true,'namespace'=>true,'modules'=>false,'skipIfNamespace'=>false)));
 
 /**
  * Utility for handling the generation and caching of css files
@@ -99,9 +99,9 @@ class Less_Cache{
 
 
         // get less.php if it exists
-        $file = dirname(__FILE__) . '/Less.php';
+        $file = dirname(\ProcessWire\wire("config")->paths->root . 'site/modules/AllInOneMinify/lib/Less/Cache.php') . '/Less.php';
         if( file_exists($file) && !class_exists('Less_Parser') ){
-            require_once($file);
+ require_once(\ProcessWire\wire('files')->compile($file,array('includes'=>true,'namespace'=>true,'modules'=>false,'skipIfNamespace'=>false)));
         }
 
         $parser_options['cache_dir'] = Less_Cache::$cache_dir;
