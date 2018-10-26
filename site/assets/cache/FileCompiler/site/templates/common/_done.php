@@ -49,7 +49,7 @@ echo $color;
         <a href="" class="menu__link">Контакты</a>
       </div>
       <div class="menu__navigation">
-        <a href="">Навигация</a>
+        <a href="#callback" data-uk-offcanvas="{mode:'slide'}">Навигация</a>
         <?php
           $toggle = "";
           switch($page->template->name):
@@ -61,7 +61,7 @@ echo $color;
             break;
           endswitch;
         ?>
-        <a href="" class="menu__toggle <?= $toggle; ?>"></a>
+        <a href="#callback" class="menu__toggle <?= $toggle; ?>" data-uk-offcanvas="{mode:'slide'}"></a>
       </div>
     </div>
   </div>
@@ -102,7 +102,44 @@ echo $color;
 </section>
 <?php endif; ?>
 
+<div id="callback" class="uk-offcanvas">
+  <div class="uk-offcanvas-bar">
+    <a class="uk-offcanvas-close"></a>
+    <div class="uk-offcanvas-bar-inner sidebar">
+
+      <a href="" class="sidebar__logo">
+        <img src="<?= $config->urls->templates.'assets/img/logo-text.png' ?>" alt="" class="sidebar__logo-img">
+      </a>
+      <form id="callback__form" class="form sidebar__form" action="/" method="post">
+        <p class="sidebar__description">
+          Вы можете арендовать данную площадь! Для этого оставьте свои контактные данные, наш менеджер свяжется с Вами
+        </p>
+        <div class="form__element form__element_name">
+          <label class="label" for="name">Имя</label>
+          <input id="name" class="input js-input" type="text" name="name" value="">
+        </div>
+        <div class="form__element form__element_phone">
+          <label class="label" for="phone">Телефон</label>
+          <input id="phone" class="input js-input js-phone" type="text" name="phone" value="">
+        </div>
+        <div class="form__element form__element_message">
+          <label class="label" for="message">Сообщение</label>
+          <textarea id="message" class="input js-input js-message" type="text" name="message" value=""></textarea>
+        </div>
+
+        <div class="form__element form__element_send">
+          <div class="send">
+            <span class="send__text">отправить</span>
+            <button id="submit_form" class="send__button" type="submit" name="submit" value="order"></button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
 <script src=<?= $config->urls->templates . 'assets/js/slick.js'?>></script>
+<script src=<?= $config->urls->templates . 'assets/js/form.js'?>></script>
 <script src=<?= $config->urls->templates . 'assets/js/script.js'?>></script>
 
 <script src="<?= $config->urls->templates . 'assets/js/core/core.js'?>"></script>

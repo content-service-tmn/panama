@@ -1,0 +1,75 @@
+.sidebar {
+  box-sizing: border-box;
+  padding: 50px 60px;
+  &__logo {
+    display:inline-block;
+  }
+  &__logo-img {
+    width:100%;
+  }
+  &__description {
+    font-size:14px;
+    line-height:1.6;
+    padding:25px 0;
+    color:white;
+  }
+  &__subheading {
+    margin-top:60px;
+    font-size:24px;
+    color:#000;
+    font-weight: bold;
+    text-align: center;
+  }
+  &__contacts {
+    margin-top:25px;
+    text-align: center;
+  }
+  &__contact {
+    font-size:14px;
+    line-height: 2;
+    letter-spacing: 1px;
+    &_phone {
+      font-weight: 800;
+      font-size:18px;
+    }
+  }
+  &__name {
+    display:block;
+    margin:-30px -30px 0 -30px;
+    color:white;
+    font-size:18px;
+    line-height: 15px;
+    font-weight: 700;
+    padding: 32px 75px 28px 30px;
+    text-transform: uppercase;
+  }
+  &__join {
+    text-align: center;
+    font-size:24px;
+    margin-top:40px;
+    line-height: 50px;
+    font-weight: 600;
+    color:black;
+  }
+  &__form {
+    width:260px;
+  }
+  &__close {
+    &:before,&:after {
+      background-color:white;
+    }
+  }
+  &__items {
+    margin-top:50px;
+    font-weight: 500;
+    font-size:14px;
+    line-height: 22px;
+    text-transform: uppercase;
+    a {
+      color:black;
+    }
+    li+li {
+      margin-top:20px;
+    }
+  }
+}
