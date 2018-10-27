@@ -9,13 +9,25 @@
   font-style: normal;
 }
 @font-face {
-    font-family: 'Panton';
-    src: url("../fonts/Panton-BlackCaps.otf") format("opentype");
-}
-@font-face {
-    font-family: 'Sugo Pro Display';
-    src: url("../fonts/Sugo-Pro-Classic-Light.otf") format("opentype");
+    font-family: 'PantonBlackCaps';
+    src: url('../fonts/PantonBlackCaps.eot');
+    src: url('../fonts/PantonBlackCaps.eot') format('embedded-opentype'),
+         url('../fonts/PantonBlackCaps.woff2') format('woff2'),
+         url('../fonts/PantonBlackCaps.woff') format('woff'),
+         url('../fonts/PantonBlackCaps.ttf') format('truetype'),
+         url('../fonts/PantonBlackCaps.svg#PantonBlackCaps') format('svg');
 }
 
-@title-font:"Panton",arial,sans-serif;
+@font-face {
+    font-family: 'SugoProClassicLight';
+    src: url('../fonts/SugoProClassicLight.eot');
+    src: url('../fonts/SugoProClassicLight.eot') format('embedded-opentype'),
+         url('../fonts/SugoProClassicLight.woff2') format('woff2'),
+         url('../fonts/SugoProClassicLight.woff') format('woff'),
+         url('../fonts/SugoProClassicLight.ttf') format('truetype'),
+         url('../fonts/SugoProClassicLight.svg#SugoProClassicLight') format('svg');
+}
+
+
+@title-font:"PantonBlackCaps",arial,sans-serif;
 @main-font:"Montserrat",arial,sans-serif;

@@ -81,7 +81,7 @@
                 <div class="renters-contacts__contact renters-contacts__contact_email"><a href="">s-birykova@tyumen.b-tek.ru</a></div>
               </div>
               <div class="renters-contacts__button-wrapper">
-                <a href="" class="renters-contacts__button">написать сообщение</a>
+                <a href="#callback" class="renters-contacts__button" data-uk-offcanvas="{mode:'slide'}">написать сообщение</a>
               </div>
             </div>
             <div class="renters-contacts__item">
@@ -93,7 +93,7 @@
                 <div class="renters-contacts__contact renters-contacts__contact_email"><a href="">s-birykova@tyumen.b-tek.ru</a></div>
               </div>
               <div class="renters-contacts__button-wrapper">
-                <a href="" class="renters-contacts__button">написать сообщение</a>
+                <a href="#callback" class="renters-contacts__button" data-uk-offcanvas="{mode:'slide'}">написать сообщение</a>
               </div>
             </div>
             <div class="renters-contacts__item">
@@ -105,7 +105,7 @@
                 <div class="renters-contacts__contact renters-contacts__contact_email"><a href="">s-birykova@tyumen.b-tek.ru</a></div>
               </div>
               <div class="renters-contacts__button-wrapper">
-                <a href="" class="renters-contacts__button">написать сообщение</a>
+                <a href="#callback" class="renters-contacts__button" data-uk-offcanvas="{mode:'slide'}">написать сообщение</a>
               </div>
             </div>
           </div>

@@ -24,7 +24,7 @@ echo $color;
   <div class="container container_big">
     <div class="menu__grid">
       <div class="menu__nav">
-        <a href="" class="menu__logo">
+        <a href="/" class="menu__logo">
           <img src="<?php
           $logo = "";
           switch($page->template->name):
@@ -42,14 +42,14 @@ echo $color;
           echo $config->urls->templates . 'assets/img/' . $logo;
           ?>" alt="">
         </a>
-        <a href="" class="menu__link">Афиша</a>
-        <a href="" class="menu__link">Акции</a>
-        <a href="" class="menu__link">Схема ТРЦ</a>
-        <a href="" class="menu__link">Аренда</a>
-        <a href="" class="menu__link">Контакты</a>
+        <a href="/events" class="menu__link">Афиша</a>
+        <a href="/promotions" class="menu__link">Акции</a>
+        <a href="/scheme" class="menu__link">Схема ТРЦ</a>
+        <a href="/renters" class="menu__link">Аренда</a>
+        <a href="/contacts" class="menu__link">Контакты</a>
       </div>
       <div class="menu__navigation">
-        <a href="#callback" data-uk-offcanvas="{mode:'slide'}">Навигация</a>
+        <a href="#modal" data-uk-modal>Навигация</a>
         <?php
           $toggle = "";
           switch($page->template->name):
@@ -61,7 +61,7 @@ echo $color;
             break;
           endswitch;
         ?>
-        <a href="#callback" class="menu__toggle <?= $toggle; ?>" data-uk-offcanvas="{mode:'slide'}"></a>
+        <a href="#modal" class="menu__toggle <?= $toggle; ?>" data-uk-modal></a>
       </div>
     </div>
   </div>
@@ -134,6 +134,46 @@ echo $color;
           </div>
         </div>
       </form>
+    </div>
+  </div>
+</div>
+
+<div id="modal" class="uk-modal">
+  <div class="modal">
+    <a href="" class="modal__logo">
+      <img src="<?= $config->urls->templates . 'assets/img/logo-white.png'?>" alt="">
+    </a>
+    <a href="" class="uk-modal-close modal__close"></a>
+    <div class="modal__socials">
+      <a href="" class="modal__social modal__social_vk"></a>
+      <a href="" class="modal__social modal__social_fb"></a>
+      <a href="" class="modal__social modal__social_inst"></a>
+      <a href="" class="modal__social modal__social_ok"></a>
+    </div>
+    <p class="modal__schedule">Часы работы с 10:00 до 22:00</p>
+    <div class="container">
+      <div class="modal__grid">
+        <div class="modal__cell">
+          <ul>
+            <li><a href="">Афиша</a></li>
+            <li><a href="">Акции</a></li>
+            <li><a href="">Схема ТРЦ</a></li>
+            <li><a href="">Магазины</a></li>
+            <li><a href="">Развлечения</a></li>
+            <li><a href="">Кафе</a></li>
+            <li><a href="">Услуги</a></li>
+          </ul>
+          <ul>
+            <li><a href="">Аренда</a></li>
+            <li><a href="">Контакты</a></li>
+            <li><a href="">Как добраться</a></li>
+          </ul>
+        </div>
+        <div class="modal__cell">
+          <h1 class="modal__title">торгово-развлекательный центр  панама</h1>
+          <div class="modal__img"></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
