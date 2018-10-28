@@ -1,0 +1,28 @@
+.main-scheme {
+  position:relative;
+  padding:7% 0;
+  background-color:white;
+  overflow:hidden;
+  &:before,&:after {
+    content:"";
+    position:absolute;
+    padding-top:14%;
+    background: url(../img/wave-dark.svg) 50% 50% no-repeat;
+    background-size:contain;
+  }
+  &:before {
+    top:0;
+    width:101%;
+    right:0;
+    transform:translateY(-50%);
+  }
+  &:after {
+    bottom:0;
+    width:101%;
+    left:0;
+    transform:translateY(50%) rotate(180deg);
+  }
+  &__wrapper {
+    padding:30px 0;
+  }
+}

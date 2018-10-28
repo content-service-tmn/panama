@@ -16,11 +16,13 @@ switch($page->template->name) :
   case 'home':
     $color='blue';
     break;
+  case 'layout_scheme':
+    $color='cyan';
 endswitch;
 echo $color;
 ?>">
 
-<div class="menu <?= $color=='orange'||$color=='blue'?'contrast':'' ?>">
+<div class="menu <?= $color=='orange'||$color=='blue'||$color=='cyan'?'contrast':'' ?>">
   <div class="container container_big">
     <div class="menu__grid">
       <div class="menu__nav">
@@ -28,15 +30,13 @@ echo $color;
           <img src="<?php
           $logo = "";
           switch($page->template->name):
-            case 'layout_contacts':
-            case 'layout_events':
-            case 'home':
-            $logo= 'logo-white.png';
-            break;
             case 'layout_article':
             case 'layout_promotions':
             case 'layout_renters':
             $logo= 'logo.png';
+            break;
+            default:
+            $logo= 'logo-white.png';
             break;
           endswitch;
           echo $config->urls->templates . 'assets/img/' . $logo;
@@ -59,6 +59,8 @@ echo $color;
             case 'layout_events':
             $toggle= 'dark-orange';
             break;
+            case 'layout_scheme':
+            $toggle= 'blue';
           endswitch;
         ?>
         <a href="#modal" class="menu__toggle <?= $toggle; ?>" data-uk-modal></a>
