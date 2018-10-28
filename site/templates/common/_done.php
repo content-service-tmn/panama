@@ -1,4 +1,4 @@
-<?php namespace Processwire; ?>
+<?php namespace Processwire; $homepage = $pages->get("id=1"); ?>
 
 <?php if ($config->ajax): ?>
    <?= $templateRender; ?>
@@ -83,25 +83,29 @@ echo $color;
   <div class="footer__grid">
     <div class="footer__cell">
       <ul class="footer__list">
-        <li>Тюмень, ул. 2-ая Луговая, 30</li>
-        <li>Тел. <a href="tel:">+7 (3452) 520-779</a></li>
-        <li><a href="mailto:">panama@tyumen.b-tek.ru</a></li>
+        <li><?= $homepage->address; ?></li>
+        <?php foreach(explode(',', $homepage->phone) as $phone):?>
+          <li><a href="tel:<?=phoneLink($phone)?>"><?=$phone?></a></li>
+        <?php endforeach; ?>
+        <?php foreach(explode(',', $homepage->e_mail) as $mail):?>
+          <li><a href="mailto:<?=$mail?>"><?=$mail?></a></li>
+        <?php endforeach; ?>
       </ul>
     </div>
     <div class="footer__cell">
-      <a href="" class="footer__how">как добраться?</a>
+      <a href="/contacts" class="footer__how">как добраться?</a>
       <div class="footer__socials">
-        <a href="" class="footer__social footer__social_vk"></a>
-        <a href="" class="footer__social footer__social_fb"></a>
-        <a href="" class="footer__social footer__social_inst"></a>
-        <a href="" class="footer__social footer__social_ok"></a>
+        <?php if ($homepage->vk!=""):?><a href="<?=$homepage->vk?>" class="footer__social footer__social_vk"></a><?php endif;?>
+        <?php if ($homepage->facebook!=""):?><a href="<?=$homepage->facebook?>" class="footer__social footer__social_fb"></a><?php endif;?>
+        <?php if ($homepage->instagram!=""):?><a href="<?=$homepage->instagram?>" class="footer__social footer__social_inst"></a><?php endif;?>
+        <?php if ($homepage->odnoklassniki!=""):?><a href="<?=$homepage->odnoklassniki?>" class="footer__social footer__social_ok"></a><?php endif;?>
       </div>
     </div>
     <div class="footer__cell">
       <ul class="footer__list">
-        <li><b>Ежедневно</b> с <span>10:00</span> до <span>22:00</span></li>
-        <li><b>Гипермаркет</b> с <span>09:00</span> до <span>21:00</span></li>
-        <li><b>Кинотеатр</b> с <span>09:00</span> до <span>02:00</span></li>
+        <?php if ($homepage->schedule_everyday!=""): $tmp = explode(',', $homepage->schedule_everyday );?><li><b>Ежедневно</b> с <span><?= $tmp[0]; ?></span> до <span><?= $tmp[1]; ?></li><?php endif;?>
+        <?php if ($homepage->schedule_market!=""): $tmp = explode(',', $homepage->schedule_market );?><li><b>Гипермаркет</b> с <span><?= $tmp[0]; ?></span> до <span><?= $tmp[1]; ?></li><?php endif;?>
+        <?php if ($homepage->schedule_cinema!=""): $tmp = explode(',', $homepage->schedule_cinema );?><li><b>Кинотеатр</b> с <span><?= $tmp[0]; ?></span> до <span><?= $tmp[1]; ?></li><?php endif;?>
       </ul>
     </div>
   </div>

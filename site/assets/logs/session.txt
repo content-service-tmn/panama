@@ -17,3 +17,5 @@
 2018-10-28 16:41:22	?	?	User 'developer' - Error: Session fingerprint changed (IP address or useragent) (IP: 127.0.0.1)
 2018-10-28 16:45:00	developer	http://panama.cw40247.tmweb.ru/processwire/login/?id=101	Successful login for 'developer'
 2018-10-28 16:46:52	?	?	User 'developer' - Error: Session fingerprint changed (IP address or useragent) (IP: 127.0.0.1)
+2018-10-28 17:45:01	developer	http://panama.cw40247.tmweb.ru/processwire/login/	Successful login for 'developer'
+2018-10-28 17:46:55	?	?	User 'developer' - Error: Session fingerprint changed (IP address or useragent) (IP: 127.0.0.1)

@@ -19,7 +19,7 @@
           </ul>
         </div>
         <div class="contacts__cell">
-          <p class="contacts__subtitle">как добраться?</p>
+          <p class="contacts__subtitle">контакты</p>
           <ul class="contacts__list">
             <li><b><a href="">trcpanama@gmail.com</a></b></li>
             <li><b><a href="">+7 (3452) 520-779</a></b></li>

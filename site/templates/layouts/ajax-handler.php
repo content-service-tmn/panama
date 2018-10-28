@@ -13,7 +13,8 @@ if ($config->ajax) {
             $name = $sanitizer->text($data["name"]);
             $phone = $sanitizer->text($data["phone"]);
             $msg = $sanitizer->text($data["message"]);
-            $message = "Имя: {$name} , телефон: {$phone}\r\nСообщение:\r\n{$msg}";
+            $source = $sanitizer->text($data["source"]);
+            $message = "Имя: {$name} , телефон: {$phone}, кому: {$source}\r\nТекст сообщения:\r\n{$msg}";
             $m->body($messageBody . $message);
         }
     }

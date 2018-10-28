@@ -1,4 +1,8 @@
+var source = "";
 $(document).ready(function() {
+  $('#callback').click(function(){
+    source = $(this).attr('data-source');
+  });
   $('.js-input').on('focus focusout', function(e) {
     e.preventDefault();
     $(e.target).parent().toggleClass('is_focused');
@@ -54,7 +58,8 @@ $(document).ready(function() {
       var data = {
           name: name_filed.val(),
           phone: phone_filed.val(),
-          message: message_filed.val()
+          message: message_filed.val(),
+          source: source
       };
       $.ajax({
           url: "/ajax-handler/",
