@@ -1,4 +1,4 @@
-<?php namespace Processwire; $homepage = $pages->get("id=1"); ?>
+<?php namespace Processwire; $homepage = $pages->get("id=1"); $contacts = $pages->get("/contacts") ?>
 
 <?php if ($config->ajax): ?>
    <?= $templateRender; ?>
@@ -46,14 +46,14 @@ echo $color;
           echo $config->urls->templates . 'assets/img/' . $logo;
           ?>" alt="">
         </a>
-        <a href="/events" class="menu__link">Афиша</a>
-        <a href="/promotions" class="menu__link">Акции</a>
-        <a href="/scheme" class="menu__link">Схема ТРЦ</a>
-        <a href="/renters" class="menu__link">Аренда</a>
-        <a href="/contacts" class="menu__link">Контакты</a>
+        <a href="/events" class="menu__link"><?= $pages->get("/events")->title ?></a>
+        <a href="/promotions" class="menu__link"><?= $pages->get("/promotions")->title ?></a>
+        <a href="/scheme" class="menu__link"><?= $pages->get("/scheme")->title ?></a>
+        <a href="/renters" class="menu__link"><?= $pages->get("/renters")->title ?></a>
+        <a href="/contacts" class="menu__link"><?= $pages->get("/contacts")->title ?></a>
       </div>
       <div class="menu__navigation">
-        <a href="#modal" data-uk-modal>Навигация</a>
+        <a href="#modal" data-uk-modal><?= $homepage->navigation ?></a>
         <?php
           $toggle = "";
           switch($page->template->name):
@@ -83,29 +83,30 @@ echo $color;
   <div class="footer__grid">
     <div class="footer__cell">
       <ul class="footer__list">
-        <li><?= $homepage->address; ?></li>
-        <?php foreach(explode(',', $homepage->phone) as $phone):?>
+        <li><?= $contacts->contacts_address; ?></li>
+        <?php foreach(explode(',', $contacts->contacts_phone) as $phone):?>
           <li><a href="tel:<?=phoneLink($phone)?>"><?=$phone?></a></li>
         <?php endforeach; ?>
-        <?php foreach(explode(',', $homepage->e_mail) as $mail):?>
+        <?php foreach(explode(',', $contacts->contacts_email) as $mail):?>
           <li><a href="mailto:<?=$mail?>"><?=$mail?></a></li>
         <?php endforeach; ?>
       </ul>
     </div>
     <div class="footer__cell">
-      <a href="/contacts" class="footer__how">как добраться?</a>
+      <a href="/contacts" class="footer__how"><?= $contacts->contacts_transport_title ?></a>
       <div class="footer__socials">
-        <?php if ($homepage->vk!=""):?><a href="<?=$homepage->vk?>" class="footer__social footer__social_vk"></a><?php endif;?>
-        <?php if ($homepage->facebook!=""):?><a href="<?=$homepage->facebook?>" class="footer__social footer__social_fb"></a><?php endif;?>
-        <?php if ($homepage->instagram!=""):?><a href="<?=$homepage->instagram?>" class="footer__social footer__social_inst"></a><?php endif;?>
-        <?php if ($homepage->odnoklassniki!=""):?><a href="<?=$homepage->odnoklassniki?>" class="footer__social footer__social_ok"></a><?php endif;?>
+        <?php if ($contacts->vk!=""):?><a href="<?=$contacts->vk?>" class="footer__social footer__social_vk"></a><?php endif;?>
+        <?php if ($contacts->facebook!=""):?><a href="<?=$contacts->facebook?>" class="footer__social footer__social_fb"></a><?php endif;?>
+        <?php if ($contacts->instagram!=""):?><a href="<?=$contacts->instagram?>" class="footer__social footer__social_inst"></a><?php endif;?>
+        <?php if ($contacts->odnoklassniki!=""):?><a href="<?=$contacts->odnoklassniki?>" class="footer__social footer__social_ok"></a><?php endif;?>
       </div>
     </div>
     <div class="footer__cell">
       <ul class="footer__list">
-        <?php if ($homepage->schedule_everyday!=""): $tmp = explode(',', $homepage->schedule_everyday );?><li><b>Ежедневно</b> с <span><?= $tmp[0]; ?></span> до <span><?= $tmp[1]; ?></li><?php endif;?>
-        <?php if ($homepage->schedule_market!=""): $tmp = explode(',', $homepage->schedule_market );?><li><b>Гипермаркет</b> с <span><?= $tmp[0]; ?></span> до <span><?= $tmp[1]; ?></li><?php endif;?>
-        <?php if ($homepage->schedule_cinema!=""): $tmp = explode(',', $homepage->schedule_cinema );?><li><b>Кинотеатр</b> с <span><?= $tmp[0]; ?></span> до <span><?= $tmp[1]; ?></li><?php endif;?>
+        <?php $tmp = $contacts->contacts_schedule; ?>
+        <?php foreach($tmp as $item): $time = explode(',', $item->contacts_schedule_time)?>
+          <li><b><?= $item->contacts_schedule_name ?></b> c <span><?= $time[0] ?></span> до <span><?= $time[1] ?></span></li>
+        <?php endforeach; ?>
       </ul>
     </div>
   </div>

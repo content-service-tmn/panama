@@ -1,29 +1,35 @@
+<?php namespace Processwire; $contacts = $pages->get("/contacts") ?>
+
+
 <section class="header">
   <img src="<?= $config->urls->templates . 'assets/img/frame.png'?>" alt="" class="header__frame">
   <div class="header__slider">
-    <div class="header__item">
-      <img src="<?= $config->urls->templates . 'assets/img/image.png'?>" alt="">
-    </div>
-    <div class="header__item">
-      <img src="<?= $config->urls->templates . 'assets/img/image.png'?>" alt="">
-    </div>
+    <?php foreach($page->home_slider as $image):?>
+      <div class="header__item">
+        <img src="<?= $image->url ?>" alt="">
+      </div>
+    <?php endforeach; ?>
   </div>
   <div class="header__bottom">
     <div class="container container_big">
       <div class="header__grid">
         <div class="header__socials">
-          <a href="" class="header__social header__social_vk"></a>
-          <a href="" class="header__social header__social_fb"></a>
-          <a href="" class="header__social header__social_inst"></a>
-          <a href="" class="header__social header__social_ok"></a>
+          <?php if ($contacts->vk!=""):?><a href="<?=$contacts->vk?>" class="header__social header__social_vk"></a><?php endif;?>
+          <?php if ($contacts->facebook!=""):?><a href="<?=$contacts->facebook?>" class="header__social header__social_fb"></a><?php endif;?>
+          <?php if ($contacts->instagram!=""):?><a href="<?=$contacts->instagram?>" class="header__social header__social_inst"></a><?php endif;?>
+          <?php if ($contacts->odnoklassniki!=""):?><a href="<?=$contacts->odnoklassniki?>" class="header__social header__social_ok"></a><?php endif;?>
         </div>
         <ul class="header__contacts">
-          <li>Тюмень, ул. 2-я Луговая, 30</li>
-          <li><a href="">+7 (3452) 520-779</a></li>
+          <li><?= $contacts->contacts_address; ?></li>
+          <?php foreach(explode(',', $contacts->contacts_phone) as $phone):?>
+            <li><a href="tel:<?=phoneLink($phone)?>"><?=$phone?></a></li>
+          <?php endforeach; ?>
         </ul>
         <ul class="header__schedule">
-          <li><span>ЕЖЕДНЕВНО</span> с <span>10:00</span> до <span>21:00</span></li>
-          <li><a href="">Как добраться?</a></li>
+          <?php $item = $contacts->contacts_schedule->first; ?>
+          <?php $time = explode(',', $item->contacts_schedule_time)?>
+          <li><b><?= $item->contacts_schedule_name ?></b> c <span><?= $time[0] ?></span> до <span><?= $time[1] ?></span></li>
+          <li><a href="/contacts"><?= $contacts->contacts_transport_title ?></a></li>
         </ul>
       </div>
     </div>
@@ -32,7 +38,7 @@
 
 <section class="stocks">
   <div class="container">
-    <h1 class="stocks__title">акции магазинов</h1>
+    <h1 class="stocks__title"><?= $page->home_promotions_title ?></h1>
     <div class="stocks__slider">
       <div class="stocks__item stocks-item">
         <div class="stocks-item__img" style="background-image:url(<?=$config->urls->templates . 'assets/img/pic.jpg';?>)"></div>
@@ -73,7 +79,7 @@
     </div>
   </div>
   <div class="stocks__button-wrapper">
-    <a href="" class="stocks__button">все акции</a>
+    <a href="" class="stocks__button"><?= $page->home_promotions_button ?></a>
   </div>
 </section>
 
@@ -81,9 +87,9 @@
   <div class="container">
     <div class="about__grid">
       <div class="about__cell">
-        <h1 class="about__title">у нас есть <span>много</span> всего</h1>
+        <h1 class="about__title"><?= formatString($page->home_about_title,"/","<span>","</span>") ?></h1>
         <p class="about__description">
-          причём уровень контроля над Силой различен в зависимости от врождённых способностей и тренированности. Сила описана в фильме Оби-Ваном Кеноби как «энергетическое поле.  Сила описана в фильме Оби-Ваном Кеноби как «энергетическое поле.
+          <?= $page->home_about_text ?>
         </p>
       </div>
       <div class="about__cell">
@@ -124,20 +130,19 @@
       <div class="cinema__cell">
         <div class="cinema__item">
           <div class="cinema__img"></div>
-          <h1 class="cinema__title">кинотеатр</h1>
+          <h1 class="cinema__title"><?= $page->home_cinema_title ?></h1>
         </div>
       </div>
       <div class="cinema__cell">
         <div class="cinema__slider">
-          <div class="cinema__element" style="background-image:url(<?=$config->urls->templates . 'assets/img/pic.jpg';?>)"></div>
-          <div class="cinema__element" style="background-image:url(<?=$config->urls->templates . 'assets/img/pic.jpg';?>)"></div>
-          <div class="cinema__element" style="background-image:url(<?=$config->urls->templates . 'assets/img/pic.jpg';?>)"></div>
-          <div class="cinema__element" style="background-image:url(<?=$config->urls->templates . 'assets/img/pic.jpg';?>)"></div>
+          <?php foreach($page->home_cinema_gallery as $image):?>
+            <div class="cinema__element" style="background-image:url(<?= $image->url ?>)"></div>
+          <?php endforeach; ?>
         </div>
-        <p class="cinema__text">причём уровень контроля над Силой различен в зависимости от врождённых способностей и тренированности. Сила описана в фильме Оби-Ваном Кеноби как «энергетическое поле, создаваемое всеми живыми существами, которое окружает нас, находится</p>
+        <p class="cinema__text"><?= $page->home_cinema_text ?></p>
         <ul class="cinema__links">
-          <li><a href="" class="cinema__link">Перейти на сайт кинотеатра</a></li>
-          <li><a href="" class="cinema__link">Показать на схеме</a></li>
+          <li><a href="<?= $page->home_cinema_website_link ?>" class="cinema__link"><?= $page->home_cinema_website_name ?></a></li>
+          <li><a href="/scheme" class="cinema__link"><?= $page->home_cinema_show ?></a></li>
         </ul>
       </div>
     </div>
@@ -148,26 +153,20 @@
   <div class="gallery__wrapper">
     <div class="gallery__slider-wrapper">
       <div class="gallery__container">
-        <h1 class="gallery__title">галерея торгового центра</h1>
+        <h1 class="gallery__title"><?= $page->home_gallery_title ?></h1>
       </div>
       <div class="gallery__slider">
-        <div class="gallery__item" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
-        <div class="gallery__item" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
-        <div class="gallery__item" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
-        <div class="gallery__item" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
-        <div class="gallery__item" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
-        <div class="gallery__item" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
+        <?php foreach($page->home_gallery_images as $image):?>
+          <div class="gallery__item" style="background-image:url(<?= $image->url ?>)"></div>
+        <?php endforeach; ?>
       </div>
     </div>
   </div>
   <div class="container">
     <div class="gallery__bottom-slider">
-      <div class="gallery__bottom-item" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
-      <div class="gallery__bottom-item" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
-      <div class="gallery__bottom-item" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
-      <div class="gallery__bottom-item" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
-      <div class="gallery__bottom-item" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
-      <div class="gallery__bottom-item" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
+      <?php foreach($page->home_gallery_images as $image):?>
+        <div class="gallery__bottom-item" style="background-image:url(<?= $image->url ?>)"></div>
+      <?php endforeach; ?>
     </div>
   </div>
 </section>

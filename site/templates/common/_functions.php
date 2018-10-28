@@ -1,5 +1,27 @@
 <?php namespace ProcessWire;
 
+function formatString($string, $symbol, $left, $right){
+  $i = 0;
+  $resultString = "";
+  foreach (str_split($string) as $char){
+    if ($char == $symbol) {
+      if ($i % 2 == 0){
+        $resultString .= $left;
+      } else {
+        $resultString .= $right;
+      }
+      $i++;
+    }
+    else {
+      $resultString .= $char;
+    }
+  }
+  if ($i%2 == 0) {
+      return $resultString;
+  }
+  return $string;
+}
+
 function notify($name, $text, $result) {
 	$notify = isset($notify) ? $notify : array();
 	$notify[$name]["text"] = $text;
