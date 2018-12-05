@@ -26,6 +26,24 @@ endswitch;
 echo $color;
 ?>">
 
+<div class="loaderArea">
+  <div class="loaderArea__preloader"></div>
+   <div class="loader">
+     <div class="loader__grid">
+       <div class="loader__cell">
+         <img src="<?= $config->urls->templates . 'assets/img/Panama_horizontal.png' ?>" alt="">
+       </div>
+       <div class="loader__cell">
+         <p>
+           <span>для всей</span>
+           <span>семьи</span>
+           <span>и точка</span>
+         </p>
+       </div>
+     </div>
+   </div>
+</div>
+
 <div class="menu <?= $color=='orange'||$color=='blue'||$color=='cyan'?'contrast':'' ?>">
   <div class="container container_big">
     <div class="menu__grid">
@@ -189,6 +207,7 @@ echo $color;
   </div>
 </div>
 
+
 <script src=<?= $config->urls->templates . 'assets/js/slick.js'?>></script>
 <script src=<?= $config->urls->templates . 'assets/js/form.js'?>></script>
 <script src=<?= $config->urls->templates . 'assets/js/script.js'?>></script>
@@ -200,6 +219,8 @@ echo $color;
 <script src="<?= $config->urls->templates . 'assets/js/core/switcher.js'?>"></script>
 <script src="<?= $config->urls->templates . 'assets/js/components/notify.js'?>"></script>
 <script src="<?= $config->urls->templates . 'assets/js/core/smooth-scroll.js'?>"></script>
+
+<script src=<?= $config->urls->templates . 'assets/js/preloader.js'?>></script>
 </body>
 
 </html>
