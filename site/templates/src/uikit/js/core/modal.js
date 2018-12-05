@@ -112,9 +112,11 @@
 
                 var $this = this;
 
-                this.one(UI.support.transition.end, function() {
-                    $this._hide();
-                }).removeClass('uk-open');
+                // this.one(UI.support.transition.end, function() {
+                //     $this._hide();
+                // }).removeClass('uk-open');
+                $this._hide();
+                this.removeClass('uk-open');//kostyl
 
             } else {
 

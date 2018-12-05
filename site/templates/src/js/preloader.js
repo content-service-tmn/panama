@@ -14,7 +14,6 @@ var currentCount = 0;
 $('img,div').each(function() {
   $(this).ready(function() {
     currentCount++;
-    console.log(currentCount);
     $('.loaderArea__preloader').width(currentCount*100.0/imagesCount+'%');
   });
 });

@@ -169,7 +169,7 @@ echo $color;
 
 <div id="modal" class="uk-modal">
   <div class="modal">
-    <a href="" class="modal__logo">
+    <a href="/" class="modal__logo">
       <img src="<?= $config->urls->templates . 'assets/img/logo-white.png'?>" alt="">
     </a>
     <a href="" class="uk-modal-close modal__close"></a>
@@ -184,11 +184,11 @@ echo $color;
       <div class="modal__grid">
         <div class="modal__cell">
           <ul>
-            <li><a href="">Афиша</a></li>
-            <li><a href="">Акции</a></li>
-            <li><a href="">Схема ТРЦ</a></li>
-            <li><a href="">Магазины</a></li>
-            <li><a href="">Развлечения</a></li>
+            <li><a href="" data-id="megaphone" data-color="#ED7709">Афиша</a></li>
+            <li><a href="" data-id="aktsii" data-color="#FF8207">Акции</a></li>
+            <li><a href="" data-id="karta" data-color="#4CC1DA">Схема ТРЦ</a></li>
+            <li><a href="" data-id="confetti">Магазины</a></li>
+            <li><a href="" data-id="kino">Развлечения</a></li>
             <li><a href="">Кафе</a></li>
             <li><a href="">Услуги</a></li>
           </ul>
@@ -200,7 +200,26 @@ echo $color;
         </div>
         <div class="modal__cell">
           <h1 class="modal__title">торгово-развлекательный центр  панама</h1>
-          <div class="modal__img"></div>
+          <div class="modal__img" data-id="confetti">
+            <img src="<?= $config->urls->templates . 'assets/img/confetti_back.png'?>" alt="">
+            <img src="<?= $config->urls->templates . 'assets/img/confetti_front.png'?>" alt="">
+          </div>
+          <div class="modal__img" data-id="aktsii">
+            <img src="<?= $config->urls->templates . 'assets/img/aktsii_back.png'?>" alt="">
+            <img src="<?= $config->urls->templates . 'assets/img/aktsii_front.png'?>" alt="">
+          </div>
+          <div class="modal__img" data-id="karta">
+            <img src="<?= $config->urls->templates . 'assets/img/karta_back.png'?>" alt="">
+            <img src="<?= $config->urls->templates . 'assets/img/karta_front.png'?>" alt="">
+          </div>
+          <div class="modal__img" data-id="kino">
+            <img src="<?= $config->urls->templates . 'assets/img/kino_back.png'?>" alt="">
+            <img src="<?= $config->urls->templates . 'assets/img/kino_front.png'?>" alt="">
+          </div>
+          <div class="modal__img" data-id="megaphone">
+            <img src="<?= $config->urls->templates . 'assets/img/megaphone_back.png'?>" alt="">
+            <img src="<?= $config->urls->templates . 'assets/img/megaphone_front.png'?>" alt="">
+          </div>
         </div>
       </div>
     </div>
@@ -211,6 +230,7 @@ echo $color;
 <script src=<?= $config->urls->templates . 'assets/js/slick.js'?>></script>
 <script src=<?= $config->urls->templates . 'assets/js/form.js'?>></script>
 <script src=<?= $config->urls->templates . 'assets/js/script.js'?>></script>
+<script src=<?= $config->urls->templates . 'assets/js/hover.js'?>></script>
 
 <script src="<?= $config->urls->templates . 'assets/js/core/core.js'?>"></script>
 <script src="<?= $config->urls->templates . 'assets/js/core/offcanvas.js'?>"></script>

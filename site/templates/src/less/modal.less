@@ -6,13 +6,16 @@
   background-color:#41CC55;
   padding:90px;
   position:relative;
+  display:flex;
+  align-items: center;
+  transition:background-color 0.6s;
   &__close {
     position:absolute;
     top:30px;
     right:30px;
     width:44px;
     height:44px;
-    background-color:#1CB432;
+    background-color:rgba(0,0,0,0.12);
     border-radius: 50%;
     &:before,&:after {
       content:"";
@@ -47,7 +50,7 @@
     width:44px;
     height:44px;
     border-radius: 50%;
-    background-color:#1CB432;
+    background-color:rgba(0,0,0,0.12);
     &:after {
       font-family: "FontAwesome";
       position:absolute;
@@ -93,15 +96,20 @@
       a {
         position:relative;
         display:inline-block;
-        &:hover:after {
+        &:after {
           content:"";
           position:absolute;
           left:0;
           right:0;
           bottom:0;
           height:2px;
+          opacity:0;
+          transition:opacity 0.3s;
           background-color:#fff;
           transform:translateY(5px);
+        }
+        &:hover:after {
+          opacity:1;
         }
       }
     }
@@ -113,17 +121,48 @@
   &__img {
     z-index:1;
     position:absolute;
-    padding-top:100%;
+    left:90px;
     top:50%;
-    left:0;
-    right:0;
-    background:url(../img/megaphone.png) 100% 0% no-repeat;
-    background-size:contain;
-    transform:translateY(-50%) translateX(60px);
+    width:100%;
+    height:110%;
+    transform:translateY(-50%);
+    transition:all 0.5s;
+    img {
+      opacity:0;
+      display:block;
+      max-width: 100%;
+      max-height: 100%;
+    }
+    img:last-child {
+      position:absolute;
+      left:0;
+      top:0;
+    }
+    &.active {
+      img {
+        opacity:1;
+      }
+      img:first-child {
+        animation:appearFirst 0.4s ease;
+      }
+      img:last-child {
+        animation:appearLast 0.5s ease;
+      }
+    }
   }
   &__title {
     font-size:4vw;
     line-height: 1.4;
-    color:#2BBC31;
+    color:rgba(0,0,0,0.12);
   }
+}
+
+@keyframes appearFirst {
+  from {opacity:0; transform:translateX(10%);}
+  to {opacity:1; transform:none;}
+}
+@keyframes appearLast {
+  0% { opacity:0; transform:translateX(5%); }
+  50% { opacity:0; transform:translateX(5%); }
+  100% {opacity: 1; transform: none; }
 }
