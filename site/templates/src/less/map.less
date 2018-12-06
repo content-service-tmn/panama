@@ -1,0 +1,186 @@
+.map {
+  padding: 30px 0;
+  &__grid {
+    display:flex;
+  }
+  &__cell {
+    &:first-child { width: 80%; }
+    &:last-child { width: 20%; }
+  }
+  &__switcher {
+    width:740px;
+    display:flex;
+    margin:0 auto;
+    justify-content: center;
+    border-bottom:3px solid #27CAFF;
+    li {
+      font-size:36px;
+      line-height: 1;
+      font-weight: 700;
+      color:#C3C3C3;
+      display:block;
+      cursor:pointer;
+      padding:30px 45px;
+      &.active {
+        color:#27CAFF;
+      }
+    }
+  }
+  &__scheme {
+    width:800px;
+    margin:0 auto;
+    overflow:hidden;
+    position:relative;
+    &:after {
+      content:"";
+      display:block;
+      padding-top:75%;
+    }
+  }
+  &__group {
+    width:100%;
+    position:absolute;
+    opacity:1;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    transition:all 0.5s;
+    opacity:0;
+    &.hide {
+      top:0;
+      opacity:1;
+      transform:translate(-50%,-100%);
+    }
+    &.active {
+      opacity:1;
+    }
+    &.second {
+      opacity:1;
+      top:55%;
+    }
+    &.third {
+      opacity:1;
+      top:60%;
+    }
+  }
+  &__floor {
+    width:100%;
+    display:block;
+  }
+  &__marker {
+    cursor:pointer;
+    position:absolute;
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: 50% 50%;
+    width:10%;
+    transform:translate(-50%,-300%);
+    opacity:0;
+    &.visible {
+      transition:all 0.5s;
+      opacity:1;
+      transform:translate(-50%,-100%);
+    }
+    &:before {
+      content:"";
+      display:block;
+      padding-top:100%;
+    }
+    &_exit {
+      width:6%;
+      background-image:url(../img/exit.svg);
+    }
+    &_fun {
+      background-image:url(../img/1_razvlechenia.svg);
+    }
+    &_haircut {
+      background-image:url(../img/2_usligi.svg);
+    }
+    &_service {
+      background-image:url(../img/2_uslugi_0_1.svg);
+    }
+    &_beauty {
+      background-image:url(../img/2_uslugi_0_2.svg);
+    }
+    &_mini-restoran {
+      background-image:url(../img/3_mini_restoran.svg);
+    }
+    &_restoran {
+      background-image:url(../img/3_restoran.svg);
+    }
+    &_bakaleia {
+      background-image:url(../img/4_magazin_bakaleya.svg);
+    }
+    &_cosmetics {
+      background-image:url(../img/4_magazin_kosmetiki.svg);
+    }
+    &_shop {
+      background-image:url(../img/4_magazin_odezhdy.svg);
+    }
+  }
+  &__search {
+    height:96px;
+    box-sizing: border-box;
+    position:relative;
+    &:before {
+      content:"";
+      display:block;
+      width:23px;
+      height:24px;
+      background:url(../img/search.svg) 50% 50% no-repeat;
+      background-size:contain;
+      position:absolute;
+      left:0;
+      top:50%;
+      transform:translateY(-50%);
+    }
+    input {
+      font-size:32px;
+      height:96px;
+      box-sizing: border-box;
+      padding: 30px 30px 30px 40px;
+      width:100%;
+      line-height: 1;
+      font-weight: 700;
+      color:#27CAFF;
+      border:none;
+      &::placeholder {
+        color: #27CAFF;
+        opacity: 1;
+      }
+      &:-ms-input-placeholder {
+        color: #27CAFF;
+      }
+      &::-ms-input-placeholder {
+        color: #27CAFF;
+      }
+    }
+  }
+  &__catalog {
+    overflow-y: scroll;
+    background-color:#4CC1DA;
+    padding:30px;
+    box-sizing: border-box;
+    max-width:300px;
+    color:white;
+    height:600px;
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+    &::-webkit-scrollbar-track {
+    background: #0AB3D7;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+    ul+ul {
+
+    }
+    li:first-child {
+
+    }
+    li:not(:first-child) {
+      cursor:pointer;
+    }
+  }
+}

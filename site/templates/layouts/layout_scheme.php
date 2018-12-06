@@ -40,5 +40,43 @@
 </section>
 
 <section class="main-scheme">
-  
+  <div class="map">
+    <div class="map__grid">
+      <div class="map__cell">
+        <ul class="map__switcher">
+          <li>Этаж 1</li>
+          <li>Этаж 2</li>
+          <li>Этаж 3</li>
+        </ul>
+        <div class="map__scheme">
+          <div class="map__group">
+            <img class="map__floor" src="<?= $config->urls->templates . 'assets/img/first-floor.png'?>" alt="">
+          </div>
+          <div class="map__group">
+            <img class="map__floor" src="<?= $config->urls->templates . 'assets/img/first-floor.png'?>" alt="">
+          </div>
+          <div class="map__group">
+            <img class="map__floor" src="<?= $config->urls->templates . 'assets/img/first-floor.png'?>" alt="">
+            <div class="map__marker map__marker_exit" style="left:10%; top:20%"></div>
+            <div class="map__marker map__marker_exit" style="left:30%; top:20%"></div>
+            <div class="map__marker map__marker_service" style="left:25%; top:40%"></div>
+            <div class="map__marker map__marker_exit" style="left:35%; top:10%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="map__cell">
+        <div class="map__search">
+          <input type="text" placeholder="Поиск">
+        </div>
+        <div class="map__catalog">
+          <ul>
+            <li>Магазины</li>
+            <li>Перекрёсток</li>
+            <li>Галамарт</li>
+            <li>Ostin</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

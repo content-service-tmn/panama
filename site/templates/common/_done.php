@@ -231,6 +231,7 @@ echo $color;
 <script src=<?= $config->urls->templates . 'assets/js/form.js'?>></script>
 <script src=<?= $config->urls->templates . 'assets/js/script.js'?>></script>
 <script src=<?= $config->urls->templates . 'assets/js/hover.js'?>></script>
+<script src=<?= $config->urls->templates . 'assets/js/map.js'?>></script>
 
 <script src="<?= $config->urls->templates . 'assets/js/core/core.js'?>"></script>
 <script src="<?= $config->urls->templates . 'assets/js/core/offcanvas.js'?>"></script>
