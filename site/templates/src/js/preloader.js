@@ -6,15 +6,18 @@ $(window).on('load', function () {
 });
 
 $('.loader').ready(function() {
-  $('.loaderArea__preloader').width('100%');
   $('.loader').addClass('active');
 });
 
-var imagesCount = $('img').length + $('div').length+1;
+function Progress() {
+  $('.loaderArea__preloader').width(currentCount*100.0/imagesCount+'%');
+}
+
+var imagesCount = $('img').length;
 var currentCount = 0;
-$('img,div').each(function() {
-  $(this).ready(function() {
+$('img').each(function() {
+  $(this).on('load',function() {
     currentCount++;
-    $('.loaderArea__preloader').width(currentCount*100.0/imagesCount+'%');
+    Progress();
   });
 });
