@@ -16,7 +16,7 @@
             <p class="event__title">СКИДКИ НА ПРОШЛУЮ КОЛЛЕКцию</p>
             <p class="event__description">Увлекательное шоу роботов, которые оставят бурю незабываемых эмоций для гостей любого возраста</p>
             <p class="event__shop">LEVIS STORE</p>
-            <a href="" class="event__link">подробнее</a>
+            <a href="/promotions/aktciia" class="event__link">подробнее</a>
           </div>
         </div>
         <div class="events__cell">
@@ -27,7 +27,7 @@
             <p class="event__title">СКИДКИ НА ПРОШЛУЮ КОЛЛЕКцию</p>
             <p class="event__description">Увлекательное шоу роботов, которые оставят бурю незабываемых эмоций для гостей любого возраста</p>
             <p class="event__shop">LEVIS STORE</p>
-            <a href="" class="event__link">подробнее</a>
+            <a href="/promotions/aktciia" class="event__link">подробнее</a>
           </div>
         </div>
         <div class="events__cell">
@@ -38,7 +38,7 @@
             <p class="event__title">СКИДКИ НА ПРОШЛУЮ КОЛЛЕКцию</p>
             <p class="event__description">Увлекательное шоу роботов, которые оставят бурю незабываемых эмоций для гостей любого возраста</p>
             <p class="event__shop">LEVIS STORE</p>
-            <a href="" class="event__link">подробнее</a>
+            <a href="/promotions/aktciia" class="event__link">подробнее</a>
           </div>
         </div>
         <div class="events__cell">
@@ -49,7 +49,7 @@
             <p class="event__title">СКИДКИ НА ПРОШЛУЮ КОЛЛЕКцию</p>
             <p class="event__description">Увлекательное шоу роботов, которые оставят бурю незабываемых эмоций для гостей любого возраста</p>
             <p class="event__shop">LEVIS STORE</p>
-            <a href="" class="event__link">подробнее</a>
+            <a href="/promotions/aktciia" class="event__link">подробнее</a>
           </div>
         </div>
         <div class="events__cell">
@@ -60,7 +60,7 @@
             <p class="event__title">СКИДКИ НА ПРОШЛУЮ КОЛЛЕКцию</p>
             <p class="event__description">Увлекательное шоу роботов, которые оставят бурю незабываемых эмоций для гостей любого возраста</p>
             <p class="event__shop">LEVIS STORE</p>
-            <a href="" class="event__link">подробнее</a>
+            <a href="/promotions/aktciia" class="event__link">подробнее</a>
           </div>
         </div>
         <div class="events__cell">
@@ -71,7 +71,7 @@
             <p class="event__title">СКИДКИ НА ПРОШЛУЮ КОЛЛЕКцию</p>
             <p class="event__description">Увлекательное шоу роботов, которые оставят бурю незабываемых эмоций для гостей любого возраста</p>
             <p class="event__shop">LEVIS STORE</p>
-            <a href="" class="event__link">подробнее</a>
+            <a href="/promotions/aktciia" class="event__link">подробнее</a>
           </div>
         </div>
       </div>

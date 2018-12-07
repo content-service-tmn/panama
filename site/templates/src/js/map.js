@@ -30,7 +30,7 @@ $(document).ready(function(){
     console.log(id);
     var group = $('.map__marker[data-id="'+id+'"]').closest('.map__group');
     var index = $('.map__group').index(group);
-    ChangeActive(2-index);
+    ChangeActive(index);
     $('.map__marker').removeClass('fade');
     group.find('.map__marker[data-id!="'+id+'"]').addClass('fade');
 
@@ -44,23 +44,23 @@ $(document).ready(function(){
   }
   function SelectFloor(index) {
     groups.removeClass('active').removeClass('hide').removeClass('second').removeClass('third');
-    groups.eq(2-index).addClass('active');
+    groups.eq(index).addClass('active');
     switch (index) {
       case 0:
-        groups.eq(1).addClass('second');
-        groups.eq(0).addClass('third');
+        groups.eq(1).addClass('hide');
+        groups.eq(2).addClass('hide');
         break;
       case 1:
-        groups.eq(2).addClass('hide');
         groups.eq(0).addClass('second');
+        groups.eq(2).addClass('hide');
         break;
       case 2:
-        groups.eq(2).addClass('hide');
-        groups.eq(1).addClass('hide');
+        groups.eq(0).addClass('third');
+        groups.eq(1).addClass('second');
         break;
     }
     $('.map__marker').removeClass('visible').removeClass('fade');
-    var markers = groups.eq(2-index).find(".map__marker");
+    var markers = groups.eq(index).find(".map__marker");
     var delay = 500.0/markers.length;
     var i = 0;
     markers.each(function(index){
