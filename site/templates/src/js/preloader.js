@@ -6,10 +6,11 @@ $(window).on('load', function () {
 });
 
 $('.loader').ready(function() {
+  $('.loaderArea__preloader').width('100%');
   $('.loader').addClass('active');
 });
 
-var imagesCount = $('img').length + $('div').length;
+var imagesCount = $('img').length + $('div').length+1;
 var currentCount = 0;
 $('img,div').each(function() {
   $(this).ready(function() {
