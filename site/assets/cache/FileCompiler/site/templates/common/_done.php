@@ -26,6 +26,7 @@ endswitch;
 echo $color;
 ?>">
 
+<?php if ($page->template->name!="layout_privacy"): ?>
 <div class="loaderArea">
   <div class="loaderArea__preloader"></div>
    <div class="loader">
@@ -92,10 +93,11 @@ echo $color;
 </div>
 
 <div class="menu-wrapper <?= $color; ?>"></div>
+<?php endif; ?>
 
 <?= $templateRender; ?>
 
-<?php if ($page->template->name!="layout_contacts"): ?>
+<?php if ($page->template->name!="layout_contacts" && $page->template->name!="layout_privacy"): ?>
 <section class="footer">
   <img src="<?= $config->urls->templates . 'assets/img/footer.png' ?>" alt="" class="footer__bg">
   <div class="footer__grid">
@@ -135,42 +137,6 @@ echo $color;
 </section>
 <?php endif; ?>
 
-<div id="callback" class="uk-offcanvas">
-  <div class="uk-offcanvas-bar">
-    <a class="uk-offcanvas-close"></a>
-    <div class="uk-offcanvas-bar-inner sidebar">
-
-      <a href="" class="sidebar__logo">
-        <img src="<?= $config->urls->templates.'assets/img/logo-text.png' ?>" alt="" class="sidebar__logo-img">
-      </a>
-      <form id="callback__form" class="form sidebar__form" action="/" method="post">
-        <p class="sidebar__description">
-          Вы можете арендовать данную площадь! Для этого оставьте свои контактные данные, наш менеджер свяжется с Вами
-        </p>
-        <div class="form__element form__element_name">
-          <label class="label" for="name">Имя</label>
-          <input id="name" class="input js-input" type="text" name="name" value="">
-        </div>
-        <div class="form__element form__element_phone">
-          <label class="label" for="phone">Телефон</label>
-          <input id="phone" class="input js-input js-phone" type="text" name="phone" value="">
-        </div>
-        <div class="form__element form__element_message">
-          <label class="label" for="message">Сообщение</label>
-          <textarea id="message" class="input js-input js-message" type="text" name="message" value=""></textarea>
-        </div>
-
-        <div class="form__element form__element_send">
-          <div class="send">
-            <span class="send__text">отправить</span>
-            <button id="submit_form" class="send__button" type="submit" name="submit" value="order"></button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-
 <div id="modal" class="uk-modal">
   <div class="modal">
     <a href="/" class="modal__logo">
@@ -178,32 +144,32 @@ echo $color;
     </a>
     <a href="" class="uk-modal-close modal__close"></a>
     <div class="modal__socials">
-      <a href="" class="modal__social modal__social_vk"></a>
-      <a href="" class="modal__social modal__social_fb"></a>
-      <a href="" class="modal__social modal__social_inst"></a>
-      <a href="" class="modal__social modal__social_ok"></a>
+      <?php if ($contacts->vk!=""):?><a href="<?=$contacts->vk?>" class="modal__social modal__social_vk"></a><?php endif;?>
+      <?php if ($contacts->facebook!=""):?><a href="<?=$contacts->facebook?>" class="modal__social modal__social_fb"></a><?php endif;?>
+      <?php if ($contacts->instagram!=""):?><a href="<?=$contacts->instagram?>" class="modal__social modal__social_inst"></a><?php endif;?>
+      <?php if ($contacts->odnoklassniki!=""):?><a href="<?=$contacts->odnoklassniki?>" class="modal__social modal__social_ok"></a><?php endif;?>
     </div>
-    <p class="modal__schedule">Часы работы с 10:00 до 22:00</p>
+    <p class="modal__schedule"><?=$contacts->contacts_schedule[0]->contacts_schedule_name?> <?php $sch=explode(',', $contacts->contacts_schedule[0]->contacts_schedule_time); echo " с ".$sch[0]." до ".$sch[1]?></p>
     <div class="container">
       <div class="modal__grid">
         <div class="modal__cell">
           <ul>
-            <li><a href="" data-id="megaphone" data-color="#ED7709">Афиша</a></li>
-            <li><a href="" data-id="aktsii" data-color="#FF8207">Акции</a></li>
-            <li><a href="" data-id="karta" data-color="#4CC1DA">Схема ТРЦ</a></li>
-            <li><a href="" data-id="confetti">Магазины</a></li>
-            <li><a href="" data-id="kino">Развлечения</a></li>
-            <li><a href="">Кафе</a></li>
-            <li><a href="">Услуги</a></li>
+            <li><a href="/events" data-id="megaphone" data-color="#ED7709"><?= $pages->get("/events")->title ?></a></li>
+            <li><a href="/promotions" data-id="aktsii" data-color="#FF8207"><?= $pages->get("/promotions")->title ?></a></li>
+            <li><a href="/scheme" data-id="karta" data-color="#4CC1DA"><?= $pages->get("/scheme")->title ?></a></li>
+            <li><a href="/scheme" data-id="confetti" data-color="#4CC1DA">Магазины</a></li>
+            <li><a href="/scheme" data-id="kino">Развлечения</a></li>
+            <li><a href="/scheme">Кафе</a></li>
+            <li><a href="/scheme">Услуги</a></li>
           </ul>
           <ul>
-            <li><a href="">Аренда</a></li>
-            <li><a href="">Контакты</a></li>
-            <li><a href="">Как добраться</a></li>
+            <li><a href="/renters"><?= $pages->get("/renters")->title ?></a></li>
+            <li><a href="/contacts"><?= $pages->get("/contacts")->title ?></a></li>
+            <li><a href="/contacts"><?= $contacts->contacts_transport_title ?></a></li>
           </ul>
         </div>
         <div class="modal__cell">
-          <h1 class="modal__title">торгово-развлекательный центр  панама</h1>
+          <h1 class="modal__title">торгово-развлекательный центр панама</h1>
           <div class="modal__img" data-id="confetti">
             <img src="<?= $config->urls->templates . 'assets/img/confetti_back.png'?>" alt="">
             <img src="<?= $config->urls->templates . 'assets/img/confetti_front.png'?>" alt="">

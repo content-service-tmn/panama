@@ -42,3 +42,4 @@
 2018-10-26 14:16:45	guest	http://panama.cw40247.tmweb.ru/renters/	Compiled file: /site/modules/AllInOneMinify/lib/Less/Less.php
 2018-10-26 14:16:46	guest	http://panama.cw40247.tmweb.ru/renters/	Compiled file: /site/modules/AllInOneMinify/lib/Less/Cache.php
 2018-10-27 20:20:26	developer	http://panama.cw40247.tmweb.ru/scheme/	Compiled file: /site/templates/layout_scheme.php
+2018-12-09 20:06:59	developer	http://panama.cw40247.tmweb.ru/privacy/	Compiled file: /site/templates/layout_privacy.php

@@ -65,7 +65,7 @@
         </div>
       </div>
       <div class="map__cell">
-        <a href="" class="map__search">Поиск</a>
+        <a  href="#search" class="map__search" data-uk-modal>Поиск</a>
         <div class="map__catalog">
           <ul>
             <li>Магазины</li>
@@ -84,6 +84,15 @@
     </div>
   </div>
 </section>
+
+<div id="search" class="uk-modal">
+  <div class="search">
+    <a href="" class="uk-modal-close search__close"></a>
+    <div class="container">
+      <input type="text">
+    </div>
+  </div>
+</div>
 
 <section class="info" data-id="1">
   <div class="container">

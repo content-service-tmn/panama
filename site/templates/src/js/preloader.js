@@ -4,8 +4,11 @@ $(window).on('load', function () {
   // $loader.fadeOut();
   $preloader.fadeOut('slow');
   //make animations
-  $(".header__slider").addClass('animate');
-  
+  setTimeout(function () {
+        $(".header__slider").addClass('animate');
+  }, 1000);
+
+  $()
 });
 
 $('.loader').ready(function() {

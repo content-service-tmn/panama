@@ -40,42 +40,28 @@
   <div class="container">
     <h1 class="stocks__title"><?= $page->home_promotions_title ?></h1>
     <div class="stocks__slider">
-      <div class="stocks__item stocks-item">
-        <div class="stocks-item__img" style="background-image:url(<?=$config->urls->templates . 'assets/img/pic.jpg';?>)"></div>
-        <p class="stocks-item__type">акция</p>
-        <p class="stocks-item__date">С 9.06 по 15.06</p>
-        <p class="stocks-item__title">СКИДКИ НА ПРОШЛУЮ КОЛЛЕКцию</p>
-        <p class="stocks-item__description">Увлекательное шоу роботов, которые оставят бурю незабываемых эмоций для гостей любого возраста</p>
-        <p class="stocks-item__shop">LEVIS STORE</p>
-        <a href="" class="stocks-item__link">подробнее</a>
-      </div>
-      <div class="stocks__item stocks-item">
-        <div class="stocks-item__img" style="background-image:url(<?=$config->urls->templates . 'assets/img/pic.jpg';?>)"></div>
-        <p class="stocks-item__type">акция</p>
-        <p class="stocks-item__date">С 9.06 по 15.06</p>
-        <p class="stocks-item__title">СКИДКИ НА ПРОШЛУЮ КОЛЛЕКцию</p>
-        <p class="stocks-item__description">Увлекательное шоу роботов, которые оставят бурю незабываемых эмоций для гостей любого возраста</p>
-        <p class="stocks-item__shop">LEVIS STORE</p>
-        <a href="" class="stocks-item__link">подробнее</a>
-      </div>
-      <div class="stocks__item stocks-item">
-        <div class="stocks-item__img" style="background-image:url(<?=$config->urls->templates . 'assets/img/pic.jpg';?>)"></div>
-        <p class="stocks-item__type">акция</p>
-        <p class="stocks-item__date">С 9.06 по 15.06</p>
-        <p class="stocks-item__title">СКИДКИ НА ПРОШЛУЮ КОЛЛЕКцию</p>
-        <p class="stocks-item__description">Увлекательное шоу роботов, которые оставят бурю незабываемых эмоций для гостей любого возраста</p>
-        <p class="stocks-item__shop">LEVIS STORE</p>
-        <a href="" class="stocks-item__link">подробнее</a>
-      </div>
-      <div class="stocks__item stocks-item">
-        <div class="stocks-item__img" style="background-image:url(<?=$config->urls->templates . 'assets/img/pic.jpg';?>)"></div>
-        <p class="stocks-item__type">акция</p>
-        <p class="stocks-item__date">С 9.06 по 15.06</p>
-        <p class="stocks-item__title">СКИДКИ НА ПРОШЛУЮ КОЛЛЕКцию</p>
-        <p class="stocks-item__description">Увлекательное шоу роботов, которые оставят бурю незабываемых эмоций для гостей любого возраста</p>
-        <p class="stocks-item__shop">LEVIS STORE</p>
-        <a href="" class="stocks-item__link">подробнее</a>
-      </div>
+      <?php $i = 0; foreach ($pages->get("/promotions")->children as $child): $i++; if ($i>6) break; ?>
+        <div class="stocks__item stocks-item">
+          <div class="stocks-item__img" style="background-image:url(<?=$child->article_image->url?>)"></div>
+          <p class="stocks-item__type"><?= $child->article_type?></p>
+          <p class="stocks-item__date"><?= $child->article_subtitle?></p>
+          <p class="stocks-item__title"><?= $child->title?></p>
+          <p class="stocks-item__description">
+            <?php foreach($child->article_content as $item) {
+              if ($item->type=="article_content_text") {
+                $tmp = implode(' ', array_slice(explode(' ', $item->article_text), 0, 12));
+                $last = substr($tmp,-1);
+                if ($last==','||$last=='.'||$last='?'||$last='!'||$last=':'||$last=';') $tmp=substr($tmp, 0, -1);
+                $tmp = $tmp."...";
+                echo $tmp;
+                break;
+              }
+            }?>
+          </p>
+          <p class="stocks-item__shop"><?= $child->article_shop?></p>
+          <a href="<?= $child->path?>" class="stocks-item__link">подробнее</a>
+        </div>
+      <?php endforeach; ?>
     </div>
   </div>
   <div class="stocks__button-wrapper">

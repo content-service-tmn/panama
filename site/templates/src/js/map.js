@@ -4,7 +4,7 @@ $(document).ready(function(){
   var active = -1;
   ChangeActive(0);
 
-  $('.map__search input').on('input',function(){
+  $('.search input').on('input',function(){
     $('.map__catalog li').removeClass('hidden');
     $('.map__catalog ul').removeClass('hidden');
     var substr = $(this).val().toUpperCase();
