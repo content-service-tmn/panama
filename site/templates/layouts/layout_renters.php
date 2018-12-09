@@ -1,3 +1,5 @@
+<?php namespace Processwire; $home=$pages->get("/");?>
+
 <section class="renters">
   <div class="container">
     <div class="renters__grid">
@@ -5,37 +7,37 @@
         <div class="renters__sticker">
           <div class="renters__img"></div>
           <ul class="renters__list">
-            <li style="background-image:url(<?= $config->urls->templates . 'assets/img/info.svg'?>)"><a href="">О ТРЦ</a></li>
-            <li style="background-image:url(<?= $config->urls->templates . 'assets/img/camera.svg'?>)"><a href="">Галерея</a></li>
-            <li style="background-image:url(<?= $config->urls->templates . 'assets/img/floor.svg'?>)"><a href="">Схема ТРЦ</a></li>
-            <li style="background-image:url(<?= $config->urls->templates . 'assets/img/phone.svg'?>)"><a href="">Контакты</a></li>
+              <li style="background-image:url(<?= $config->urls->templates . 'assets/img/info.svg'?>)"><a href="#about" data-uk-smooth-scroll="{offset: 90}">О ТРЦ</a></li>
+              <li style="background-image:url(<?= $config->urls->templates . 'assets/img/camera.svg'?>)"><a href="#gallery" data-uk-smooth-scroll="{offset: 90}">Галерея</a></li>
+              <li style="background-image:url(<?= $config->urls->templates . 'assets/img/floor.svg'?>)"><a href="#scheme" data-uk-smooth-scroll>Схема ТРЦ</a></li>
+              <li style="background-image:url(<?= $config->urls->templates . 'assets/img/phone.svg'?>)"><a href="#contacts" data-uk-smooth-scroll="{offset: 90}">Контакты</a></li>
           </ul>
         </div>
       </div>
       <div class="renters__cell">
-        <h1 class="renters__title">арендаторам</h1>
+        <h1 class="renters__title" id="about"><?= $page->renters_title?></h1>
         <div class="renters__content">
-          <p><b>Один из важнейших элементов вселенной «Звёздных войн» — это «Сила», всеобъемлющее энергетическое поле, подконтрольное достигшим определённого духовного развития живым существам.</b></p>
-          <p>причём уровень контроля над Силой различен в зависимости от врождённых способностей и тренированности. Сила описана в фильме Оби-Ваном Кеноби как «энергетическое поле, создаваемое всеми живыми существами, которое окружает нас, находится внутри нас, и связывает воедино Галактику». Человек, способный ощущать Силу, при условии тренировок с юного возраста, может научиться направлять Силу и, пройдя в Ордене испытания, получить звание рыцаря-джедая. Владение Силой — это управление окружающим пространством (энергия, материя, мысли), влияние на это пространство.</p>
+          <?php foreach($page->renters_content as $item) {
+            if ($item->type=="renters_content_text") echo "<p>".$item->renters_text."</p>";
+            if ($item->type=="renters_content_images") {
+              echo '<div class="renters__images">';
+              foreach ($item->renters_images as $image) echo '<img src="'.$image->url.'">';
+              echo '</div>';
+            }
+          }?>
         </div>
-        <div >
-          <div class="renters__gallery renters-gallery">
-            <h1 class="renters-gallery__title"><span>галерея</span> торгового центра</h1>
+        <div>
+          <div class="renters__gallery renters-gallery" id="gallery">
+            <h1 class="renters-gallery__title"><?php $tmp=explode(" ",$home->home_gallery_title);  $tmp[0]="<span>".$tmp[0]."</span>"; echo join(" ",$tmp);?></h1>
             <div class="renters-gallery__slider">
-              <div class="renters-gallery__item" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
-              <div class="renters-gallery__item" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
-              <div class="renters-gallery__item" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
-              <div class="renters-gallery__item" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
-              <div class="renters-gallery__item" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
-              <div class="renters-gallery__item" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
+              <?php foreach($home->home_gallery_images as $image):?>
+                <div class="renters-gallery__item" style="background-image:url(<?= $image->url ?>)"></div>
+              <?php endforeach; ?>
             </div>
             <div class="renters-gallery__slider-bottom">
-              <div class="renters-gallery__item-bottom" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
-              <div class="renters-gallery__item-bottom" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
-              <div class="renters-gallery__item-bottom" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
-              <div class="renters-gallery__item-bottom" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
-              <div class="renters-gallery__item-bottom" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
-              <div class="renters-gallery__item-bottom" style="background-image:url(<?= $config->urls->templates . 'assets/img/image.png'?>)"></div>
+              <?php foreach($home->home_gallery_images as $image):?>
+                <div class="renters-gallery__item-bottom" style="background-image:url(<?= $image->url ?>)"></div>
+              <?php endforeach; ?>
             </div>
           </div>
         </div>
@@ -44,9 +46,9 @@
   </div>
 </section>
 
-<section class="scheme">
+<section class="scheme" id="scheme">
   <div class="container">
-    <h1 class="scheme__title">Схема торгового центра</h1>
+    <h1 class="scheme__title"><?php $tmp=explode(" ",$page->renters_scheme_title);  $tmp[0]="<span>".$tmp[0]."</span>"; echo join(" ",$tmp);?></h1>
     <ul class="scheme__switcher" data-uk-switcher="{connect:'#my-id'}">
       <li><a href="">Этаж 1</a></li>
       <li><a href="">Этаж 2</a></li>
@@ -65,51 +67,32 @@
     <div class="renters__grid">
       <div class="renters__cell">
         <ul class="renters__list">
-          <li style="background-image:url(<?= $config->urls->templates . 'assets/img/info.svg'?>)"><a href="">О ТРЦ</a></li>
-          <li style="background-image:url(<?= $config->urls->templates . 'assets/img/camera.svg'?>)"><a href="">Галерея</a></li>
-          <li style="background-image:url(<?= $config->urls->templates . 'assets/img/floor.svg'?>)"><a href="">Схема ТРЦ</a></li>
-          <li style="background-image:url(<?= $config->urls->templates . 'assets/img/phone.svg'?>)"><a href="">Контакты</a></li>
+          <li style="background-image:url(<?= $config->urls->templates . 'assets/img/info.svg'?>)"><a href="#about" data-uk-smooth-scroll="{offset: 90}">О ТРЦ</a></li>
+          <li style="background-image:url(<?= $config->urls->templates . 'assets/img/camera.svg'?>)"><a href="#gallery" data-uk-smooth-scroll="{offset: 90}">Галерея</a></li>
+          <li style="background-image:url(<?= $config->urls->templates . 'assets/img/floor.svg'?>)"><a href="#scheme" data-uk-smooth-scroll>Схема ТРЦ</a></li>
+          <li style="background-image:url(<?= $config->urls->templates . 'assets/img/phone.svg'?>)"><a href="#contacts" data-uk-smooth-scroll="{offset: 90}">Контакты</a></li>
         </ul>
       </div>
       <div class="renters__cell">
-        <div class="renters-contacts">
+        <div class="renters-contacts" id="contacts">
           <div class="renters-contacts__grid">
+            <?php foreach ($page->renters_contacts as $item): ?>
             <div class="renters-contacts__item">
-              <p class="renters-contacts__title">Заместитель руководителя проекта<br>(по вопросам аренды и сотрудничества)</p>
-              <div class="renters-contacts__name">Бирюкова Светлана Сергеевна</div>
+              <p class="renters-contacts__title"><?= str_replace("/","<br>",$item->renters_contacts_post) ?></p>
+              <div class="renters-contacts__name"><?=$item->renters_contacts_fio?></div>
               <div class="renters-contacts__grid">
-                <div class="renters-contacts__contact renters-contacts__contact_phone"><a href="">+ 7 (3452) 520-752</a></div>
-                <div class="renters-contacts__contact renters-contacts__contact_phone"><a href="">+ 7 (932)322-99-25</a></div>
-                <div class="renters-contacts__contact renters-contacts__contact_email"><a href="">s-birykova@tyumen.b-tek.ru</a></div>
+                <?php foreach(explode(',', $item->renters_contacts_phones) as $phone):?>
+                  <div class="renters-contacts__contact renters-contacts__contact_phone"><a href="tel:<?=phoneLink($phone)?>"><?=$phone?></a></div>
+                <?php endforeach; ?>
+                <?php foreach(explode(',', $item->renters_contacts_email) as $email):?>
+                  <div class="renters-contacts__contact renters-contacts__contact_email"><a href="mailto:<?=$email?>"><?=$email?></a></div>
+                <?php endforeach; ?>
               </div>
               <div class="renters-contacts__button-wrapper">
                 <a href="#callback" class="renters-contacts__button" data-uk-offcanvas="{mode:'slide'}">написать сообщение</a>
               </div>
             </div>
-            <div class="renters-contacts__item">
-              <p class="renters-contacts__title">Заместитель руководителя проекта<br>(по вопросам аренды и сотрудничества)</p>
-              <div class="renters-contacts__name">Бирюкова Светлана Сергеевна</div>
-              <div class="renters-contacts__grid">
-                <div class="renters-contacts__contact renters-contacts__contact_phone"><a href="">+ 7 (3452) 520-752</a></div>
-                <div class="renters-contacts__contact renters-contacts__contact_phone"><a href="">+ 7 (932)322-99-25</a></div>
-                <div class="renters-contacts__contact renters-contacts__contact_email"><a href="">s-birykova@tyumen.b-tek.ru</a></div>
-              </div>
-              <div class="renters-contacts__button-wrapper">
-                <a href="#callback" class="renters-contacts__button" data-uk-offcanvas="{mode:'slide'}">написать сообщение</a>
-              </div>
-            </div>
-            <div class="renters-contacts__item">
-              <p class="renters-contacts__title">Заместитель руководителя проекта<br>(по вопросам аренды и сотрудничества)</p>
-              <div class="renters-contacts__name">Бирюкова Светлана Сергеевна</div>
-              <div class="renters-contacts__grid">
-                <div class="renters-contacts__contact renters-contacts__contact_phone"><a href="">+ 7 (3452) 520-752</a></div>
-                <div class="renters-contacts__contact renters-contacts__contact_phone"><a href="">+ 7 (932)322-99-25</a></div>
-                <div class="renters-contacts__contact renters-contacts__contact_email"><a href="">s-birykova@tyumen.b-tek.ru</a></div>
-              </div>
-              <div class="renters-contacts__button-wrapper">
-                <a href="#callback" class="renters-contacts__button" data-uk-offcanvas="{mode:'slide'}">написать сообщение</a>
-              </div>
-            </div>
+          <?php endforeach; ?>
           </div>
         </div>
       </div>
