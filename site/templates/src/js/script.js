@@ -28,7 +28,7 @@ $(document).ready(function(){
   });
   $('.header__slider').slick({
     infinite: true,
-    speed: 300,
+    speed: 600,
     autoplay: true,
     autoplaySpeed: 2000,
     arrows:false

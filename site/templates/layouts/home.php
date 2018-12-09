@@ -86,20 +86,20 @@
 <section class="about">
   <div class="container">
     <div class="about__grid">
-      <div class="about__cell">
-        <h1 class="about__title"><?= formatString($page->home_about_title,"/","<span>","</span>") ?></h1>
+      <div class="about__cell" data-uk-scrollspy="{target:'about__discription',cls:'uk-animation-slide-left',delay:700}">
+        <h1 class="about__title" data-uk-scrollspy="{cls:'uk-animation-slide-left'}"><?= formatString($page->home_about_title,"/","<span>","</span>") ?></h1>
         <p class="about__description">
           <?= $page->home_about_text ?>
         </p>
       </div>
       <div class="about__cell">
-        <div class="about__item">
+        <div class="about__item" data-uk-scrollspy="{cls:'uk-animation-slide-right',delay:1000}">
           <div class="about-item" style="background-image:url(<?=$config->urls->templates . 'assets/img/hat.png';?>)">
             <h3 class="about-item__title">магазины</h3>
             <a href="" class="about-item__link"></a>
           </div>
         </div>
-        <div class="about__item">
+        <div class="about__item" data-uk-scrollspy="{cls:'uk-animation-slide-right',delay:1000}">
           <div class="about-item" style="background-image:url(<?=$config->urls->templates . 'assets/img/donut.png';?>)">
             <h3 class="about-item__title">кафе</h3>
             <a href="" class="about-item__link"></a>
@@ -107,13 +107,13 @@
         </div>
       </div>
       <div class="about__cell">
-        <div class="about__item">
+        <div class="about__item" data-uk-scrollspy="{cls:'uk-animation-slide-right',delay:1000}">
           <div class="about-item" style="background-image:url(<?=$config->urls->templates . 'assets/img/confetti.png';?>)">
             <h3 class="about-item__title">развлечения</h3>
             <a href="" class="about-item__link"></a>
           </div>
         </div>
-        <div class="about__item">
+        <div class="about__item" data-uk-scrollspy="{cls:'uk-animation-slide-right',delay:1000}">
           <div class="about-item" style="background-image:url(<?=$config->urls->templates . 'assets/img/scissors.png';?>)">
             <h3 class="about-item__title">услуги</h3>
             <a href="" class="about-item__link"></a>
@@ -128,8 +128,8 @@
   <div class="container">
     <div class="cinema__grid">
       <div class="cinema__cell">
-        <div class="cinema__item">
-          <div class="cinema__img"></div>
+        <div class="cinema__item" data-uk-scrollspy="{target:'cinema__title',cls:'uk-animation-slide-left'}">
+          <div class="cinema__img" data-uk-scrollspy="{cls:'uk-animation-slide-left'}"></div>
           <h1 class="cinema__title"><?= $page->home_cinema_title ?></h1>
         </div>
       </div>
@@ -153,7 +153,7 @@
   <div class="gallery__wrapper">
     <div class="gallery__slider-wrapper">
       <div class="gallery__container">
-        <h1 class="gallery__title"><?= $page->home_gallery_title ?></h1>
+        <h1 class="gallery__title" data-uk-scrollspy="{cls:'uk-animation-slide-right'}"><?= $page->home_gallery_title ?></h1>
       </div>
       <div class="gallery__slider">
         <?php foreach($page->home_gallery_images as $image):?>

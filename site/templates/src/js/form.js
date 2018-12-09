@@ -1,7 +1,8 @@
 var source = "";
 $(document).ready(function() {
-  $('#callback').click(function(){
-    source = $(this).attr('data-source');
+  $('a[href="#callback"]').click(function(){
+    source = $(this).closest('.renters-contacts__item').find('.renters-contacts__name').text();
+    console.log(source);
   });
   $('.js-input').on('focus focusout', function(e) {
     e.preventDefault();

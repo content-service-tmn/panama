@@ -2,13 +2,15 @@
   <div class="container">
     <div class="renters__grid">
       <div class="renters__cell">
-        <div class="renters__img"></div>
-        <ul class="renters__list">
-          <li style="background-image:url(<?= $config->urls->templates . 'assets/img/info.svg'?>)"><a href="">О ТРЦ</a></li>
-          <li style="background-image:url(<?= $config->urls->templates . 'assets/img/camera.svg'?>)"><a href="">Галерея</a></li>
-          <li style="background-image:url(<?= $config->urls->templates . 'assets/img/floor.svg'?>)"><a href="">Схема ТРЦ</a></li>
-          <li style="background-image:url(<?= $config->urls->templates . 'assets/img/phone.svg'?>)"><a href="">Контакты</a></li>
-        </ul>
+        <div class="renters__sticker">
+          <div class="renters__img"></div>
+          <ul class="renters__list">
+            <li style="background-image:url(<?= $config->urls->templates . 'assets/img/info.svg'?>)"><a href="">О ТРЦ</a></li>
+            <li style="background-image:url(<?= $config->urls->templates . 'assets/img/camera.svg'?>)"><a href="">Галерея</a></li>
+            <li style="background-image:url(<?= $config->urls->templates . 'assets/img/floor.svg'?>)"><a href="">Схема ТРЦ</a></li>
+            <li style="background-image:url(<?= $config->urls->templates . 'assets/img/phone.svg'?>)"><a href="">Контакты</a></li>
+          </ul>
+        </div>
       </div>
       <div class="renters__cell">
         <h1 class="renters__title">арендаторам</h1>

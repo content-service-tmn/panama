@@ -1,8 +1,11 @@
 $(window).on('load', function () {
   $preloader = $('.loaderArea'),
-    $loader = $preloader.find('.loader');
-  $loader.fadeOut();
-  $preloader.delay(350).fadeOut('slow');
+  //   $loader = $preloader.find('.loader');
+  // $loader.fadeOut();
+  $preloader.fadeOut('slow');
+  //make animations
+  $(".header__slider").addClass('animate');
+  
 });
 
 $('.loader').ready(function() {

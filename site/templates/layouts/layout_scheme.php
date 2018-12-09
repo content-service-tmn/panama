@@ -48,15 +48,15 @@
           <li>Этаж 2</li>
           <li>Этаж 3</li>
         </ul>
-        <div class="map__scheme">
+        <div class="map__scheme" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:300}">
           <div class="map__group">
-            <img class="map__floor" src="<?= $config->urls->templates . 'assets/img/first-floor.png'?>" alt="">
+            <img class="map__floor" src="<?= $config->urls->templates . 'assets/img/floor.png'?>" alt="">
           </div>
           <div class="map__group">
-            <img class="map__floor" src="<?= $config->urls->templates . 'assets/img/first-floor.png'?>" alt="">
+            <img class="map__floor" src="<?= $config->urls->templates . 'assets/img/floor.png'?>" alt="">
           </div>
           <div class="map__group">
-            <img class="map__floor" src="<?= $config->urls->templates . 'assets/img/first-floor.png'?>" alt="">
+            <img class="map__floor" src="<?= $config->urls->templates . 'assets/img/floor.png'?>" alt="">
             <div class="map__marker map__marker_exit" style="left:10%; top:20%" data-id="1"></div>
             <div class="map__marker map__marker_exit" style="left:30%; top:20%" data-id="2"></div>
             <div class="map__marker map__marker_service" style="left:25%; top:40%" data-id="3"></div>
@@ -65,9 +65,7 @@
         </div>
       </div>
       <div class="map__cell">
-        <div class="map__search">
-          <input type="text" placeholder="Поиск">
-        </div>
+        <a href="" class="map__search">Поиск</a>
         <div class="map__catalog">
           <ul>
             <li>Магазины</li>

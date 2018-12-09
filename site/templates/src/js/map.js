@@ -21,9 +21,7 @@ $(document).ready(function(){
     var id = $(this).attr('data-id');
     $(".info").removeClass('active');
     $(".info[data-id='"+id+"']").addClass('active');
-    $('html, body').animate({
-       scrollTop: $(".info[data-id='"+id+"']").offset().top
-   }, 500);
+    UIkit.Utils.scrollToElement(UIkit.$($(".info[data-id='"+id+"']"), { duration: 500 }));
   });
   $('.map__catalog li:not(:first-child)').click(function(){
     var id = $(this).attr('data-id');

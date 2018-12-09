@@ -1,2 +1,7 @@
 2018-09-11 10:55:57	guest	http://panama.cw40247.tmweb.ru/install.php	Saved module info caches
 2018-09-11 10:55:57	guest	http://panama.cw40247.tmweb.ru/http404/	Saved module info caches
+2018-12-09 00:10:35	developer	http://panama.cw40247.tmweb.ru/processwire/module/?reset=1	Saved module info caches
+2018-12-09 00:12:09	developer	http://panama.cw40247.tmweb.ru/processwire/module/	Installed module 'InputfieldRepeaterMatrix'
+2018-12-09 00:12:09	developer	http://panama.cw40247.tmweb.ru/processwire/module/	Installed module 'FieldtypeRepeaterMatrix'
+2018-12-09 00:12:11	developer	http://panama.cw40247.tmweb.ru/processwire/module/	Saved module info caches
+2018-12-09 00:12:30	developer	http://panama.cw40247.tmweb.ru/processwire/module/edit?name=FieldtypeRepeaterMatrix	Saved module 'FieldtypeRepeaterMatrix' config data

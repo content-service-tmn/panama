@@ -128,6 +128,10 @@ echo $color;
       </ul>
     </div>
   </div>
+  <div class="footer__info">
+    <a href="http://contentservice.agency/" target="_blank">Made by Content Service</a>
+    <a href="/policy" target="_blank">Политика конфеденциальности</a>
+  </div>
 </section>
 <?php endif; ?>
 
@@ -239,6 +243,8 @@ echo $color;
 <script src="<?= $config->urls->templates . 'assets/js/core/utility.js'?>"></script>
 <script src="<?= $config->urls->templates . 'assets/js/core/switcher.js'?>"></script>
 <script src="<?= $config->urls->templates . 'assets/js/components/notify.js'?>"></script>
+<script src="<?= $config->urls->templates . 'assets/js/core/smooth-scroll.js'?>"></script>
+<script src="<?= $config->urls->templates . 'assets/js/core/scrollspy.js'?>"></script>
 <script src="<?= $config->urls->templates . 'assets/js/core/smooth-scroll.js'?>"></script>
 
 <script src=<?= $config->urls->templates . 'assets/js/preloader.js'?>></script>

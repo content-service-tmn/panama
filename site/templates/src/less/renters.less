@@ -24,6 +24,10 @@
       flex-shrink: 1;
     }
   }
+  &__sticker {
+    position:sticky;
+    top:90px;
+  }
   &__img {
     padding-top:100%;
     background: url(../img/logo-big.png) 50% 50% no-repeat;
@@ -219,6 +223,7 @@
     font-weight: 700;
     font-size:14px;
     position:relative;
+    transition:all 0.3s;
     &:after {
       position:absolute;
       font-family: "icomoon";
@@ -232,6 +237,7 @@
     }
     &:hover {
       color:white;
+      background-color:#F88011;
     }
   }
 }
