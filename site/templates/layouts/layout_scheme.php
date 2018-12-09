@@ -1,6 +1,7 @@
 <section class="scheme-start">
   <div class="scheme-start__wrapper">
-    <img src="<?= $config->urls->templates . 'assets/img/map.png'?>" alt="">
+    <img src="<?= $config->urls->templates . 'assets/img/karta_back.png'?>" alt="">
+    <img src="<?= $config->urls->templates . 'assets/img/karta_front.png'?>" alt="">
     <h1 class="scheme-start__hello">Схема <span>торгового центра</span></h1>
   </div>
   <div class="scheme-start__grid">

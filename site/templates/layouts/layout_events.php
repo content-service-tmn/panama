@@ -2,7 +2,8 @@
 
 <section class="events">
   <div class="events__wrapper">
-    <img src="<?= $config->urls->templates . 'assets/img/megaphone.png'?>" alt="">
+    <img src="<?= $config->urls->templates . 'assets/img/megaphone_back.png'?>" alt="">
+    <img src="<?= $config->urls->templates . 'assets/img/megaphone_front.png'?>" alt="">
     <h1 class="events__hello"><?= $page->events_hello ?></h1>
   </div>
   <div class="container">

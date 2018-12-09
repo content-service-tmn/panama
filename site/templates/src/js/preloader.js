@@ -4,11 +4,16 @@ $(window).on('load', function () {
   // $loader.fadeOut();
   $preloader.fadeOut('slow');
   //make animations
-  setTimeout(function () {
-        $(".header__slider").addClass('animate');
-  }, 1000);
 
-  $()
+  setTimeout(function(){
+    $(".header__slider").addClass('animate');
+    $(".events__wrapper").addClass('animate');
+    $(".scheme-start__wrapper").addClass('animate');
+  }, 1000);
+  setTimeout(function(){
+    $(".events__wrapper").addClass('disappear');
+    $(".scheme-start__wrapper").addClass('disappear');
+  }, 3000);
 });
 
 $('.loader').ready(function() {
