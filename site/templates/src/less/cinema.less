@@ -2,18 +2,37 @@
   color:white;
   padding-top:120px;
   // background-color:#06ABE0;
+  @media(max-width: 959px) {
+    padding-top:60px;
+  }
   &__grid {
     display:flex;
     flex-wrap: wrap;
     margin-left: -60px;
     margin-top:-60px;
+    @media(max-width: 959px) {
+      margin-top:-30px;
+    }
   }
   &__cell {
     box-sizing: border-box;
     padding-left: 60px;
     padding-top:60px;
-    &:nth-child(1) { width:45%; }
-    &:nth-child(2) { width:55%; }
+    @media(max-width: 959px) {
+      padding-top:30px;
+    }
+    &:nth-child(1) {
+      width:45%;
+      @media (max-width: 959px) {
+        width:100%;
+      }
+    }
+    &:nth-child(2) {
+      width:55%;
+      @media (max-width: 959px) {
+        width:100%;
+      }
+    }
   }
   &__item {
     position:relative;
@@ -27,6 +46,11 @@
     right:0;
     background:url(../img/popcorn.png) 50% 50% no-repeat;
     background-size:contain;
+    @media(max-width: 959px) {
+      width:100%;
+      bottom:0;
+      top:auto;
+    }
     &:before {
       display:block;
       content:"";
@@ -37,10 +61,45 @@
     padding-top:120%;
     font-size:4vw;
     line-height: 1.2;
+    @media(max-width: 959px) {
+      padding-top:0;
+      padding-bottom:100%;
+      text-align: center;
+      font-size:24px;
+    }
   }
   &__slider {
     margin:60px 90px 0 90px;
     box-sizing: border-box;
+    @media(max-width: 959px) {
+      margin:0 30px 0 30px;
+    }
+    .slick-dots {
+      margin-top:30px;
+      display:flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      li {
+        position:relative;
+        display:block;
+        width:10px;
+        height:10px;
+        border-radius: 50%;
+        background-color:white;
+        margin: 0 5px;
+        &.slick-active {
+          background-color:#FF8000;
+        }
+        button {
+          opacity:0;
+          position:absolute;
+          top:0;
+          left:0;
+          width:100%;
+          height:100%;
+        }
+      }
+    }
     .slick-prev,.slick-next {
       position:absolute;
       overflow:visible;
@@ -112,13 +171,24 @@
     padding-left: 90px;
     font-weight: 500;
     font-size:18px;
+    @media(max-width: 959px) {
+      display:none;
+    }
   }
   &__links {
     margin-top:30px;
     padding-left: 90px;
     font-weight: 700;
+    @media(max-width: 959px) {
+      padding-left: 0;
+      display:flex;
+      margin-left: -30px;
+    }
   }
   &__link {
     display:inline-block;
+    @media(max-width: 959px) {
+      margin-left: 30px;
+    }
   }
 }

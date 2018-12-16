@@ -21,8 +21,8 @@
 
 .loader {
   position: absolute;
-  left:170px;
-  right:170px;
+  left:25px;
+  right:25px;
   top: 50%;
   transform:translateY(-50%);
   display:flex;
@@ -44,6 +44,14 @@
     padding-top:30px;
     &:first-child {
       width:65%;
+      @media(max-width: 767px) {
+        width:100%;
+      }
+    }
+    &:last-child {
+      @media(max-width: 767px) {
+        display:none;
+      }
     }
     img {
       width:100%;

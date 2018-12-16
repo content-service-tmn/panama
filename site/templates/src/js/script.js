@@ -18,13 +18,51 @@ $(document).ready(function(){
     infinite: true,
     speed: 300,
     slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 960,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true
+        }
+      }
+    ]
   });
   $('.cinema__slider').slick({
     infinite: true,
     speed: 300,
     slidesToShow: 3,
     slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 960,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        settings: {
+          dots: true,
+          arrows:false
+        }
+      },
+      {
+        breakpoint: 768,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        settings: {
+          dots: true,
+          arrows:false
+        }
+      }
+    ]
   });
   $('.header__slider').slick({
     infinite: true,

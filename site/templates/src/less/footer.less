@@ -13,17 +13,29 @@
     display:flex;
     justify-content: space-between;
     margin:0 -30px;
+    @media(max-width: 959px) {
+      justify-content: center;
+    }
   }
   &__info {
-    padding:15px 150px;
+    padding:15px 25px;
     background-color:#27ACE0;
     display:flex;
     justify-content: space-between;
+    box-sizing: border-box;
+    margin:0 auto;
+    width:~"calc(100% - 180px)";
+    @media(max-width: 959px) {
+      width:auto;
+    }
     a {
       display:block;
       font-weight: 700;
       font-size:18px;
       line-height: 1.4;
+      @media(max-width: 959px) {
+        font-size:16px;
+      }
       &+a {
         margin-left: 30px;
       }

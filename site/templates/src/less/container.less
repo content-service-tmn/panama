@@ -1,10 +1,16 @@
 .container {
-  padding:0 25px;
+  padding:0 30px;
   margin:0 auto;
   max-width: 1160px;
   width:~"calc(100% - 420px)";
+  @media(max-width: 959px) {
+    width:auto;
+  }
   &_big {
     max-width: 1740px;
     width:~"calc(100% - 180px)";
+    @media(max-width: 959px) {
+      width:auto;
+    }
   }
 }

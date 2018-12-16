@@ -4,13 +4,47 @@
   color:white;
   position:relative;
   z-index:1;
+  @media(max-width: 959px) {
+    padding-top:0;
+  }
   &__title {
     font-size:72px;
     line-height: 1.2;
+    @media(max-width: 959px) {
+      display:none;
+      font-size:24px;
+    }
   }
   &__slider {
     margin-top:60px;
+    .slick-dots {
+      margin-top:15px;
+      display:flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      li {
+        position:relative;
+        display:block;
+        width:10px;
+        height:10px;
+        border-radius: 50%;
+        background-color:white;
+        margin: 0 5px;
+        &.slick-active {
+          background-color:#FF8000;
+        }
+        button {
+          opacity:0;
+          position:absolute;
+          top:0;
+          left:0;
+          width:100%;
+          height:100%;
+        }
+      }
+    }
     .slick-prev,.slick-next {
+      z-index:10;
       overflow:visible;
       position:absolute;
       height:90px;
@@ -21,6 +55,11 @@
       color:transparent;
       cursor: pointer;
       top:50%;
+      @media(max-width: 959px) {
+        height:45px;
+        width:45px;
+        top:70px;
+      }
       &:before {
         position:absolute;
         content:"";
@@ -30,6 +69,10 @@
         background:url(../img/leaf.png) 50% 50% no-repeat;
         background-size:contain;
         transform:translateY(-50%);
+        @media(max-width: 959px) {
+          height:69px;
+          width:69px;
+        }
       }
       &:after {
         position:absolute;
@@ -46,6 +89,10 @@
         line-height: 90px;
         color:white;
         transition:all 0.3s;
+        @media(max-width: 959px) {
+          font-size:21px;
+          line-height: 45px;
+        }
       }
       &:hover:after {
         background-color:#FF8207;
@@ -56,12 +103,18 @@
       &:after { content:"\f104"; }
       left:0;
       transform:translate(-100%,-50%) translateX(-60px);
+      @media(max-width: 959px) {
+        transform:translate(0,-50%);
+      }
     }
     .slick-next {
       &:before { left: 0; transform:scaleX(-1) translateY(-50%);;}
       &:after { content:"\f105"; }
       right:0;
       transform:translate(100%,-50%) translateX(60px);
+      @media(max-width: 959px) {
+        transform:translate(0,-50%);
+      }
     }
     .slick-slide {
       margin: 0 20px;
@@ -77,7 +130,10 @@
     margin-top:30px;
     padding:30px 0;
     text-align: center;
-    // background-color:#06ABE0;
+    @media(max-width: 959px) {
+      margin-top:30px;
+      padding:0;
+    }
   }
   &__button {
     display:inline-block;
@@ -113,10 +169,18 @@
 
 .stocks-item {
   &__img {
-    padding-top:100%;
     border-radius: 50%;
     background: 50% 50% no-repeat;
     background-size:cover;
+    margin:0 auto;
+    &:before {
+      content:"";
+      padding-top:100%;
+      display:block;
+    }
+    @media(max-width: 959px) {
+      width:140px;
+    }
   }
   &__type {
     font-size:16px;
@@ -126,6 +190,10 @@
     border-top:2px solid #fff;
     border-bottom:2px solid #fff;
     text-transform: uppercase;
+    @media(max-width: 959px) {
+      padding:5px 0;
+      margin-top:30px;
+    }
   }
   &__date {
     margin-top:15px;
@@ -134,6 +202,9 @@
     line-height: 1.2;
     font-weight: 300;
     text-transform: uppercase;
+    @media(max-width: 959px) {
+      font-size:24px;
+    }
   }
   &__title {
     margin-top:15px;
@@ -141,6 +212,9 @@
     line-height: 1.2;
     font-weight: 700;
     text-transform: uppercase;
+    @media(max-width: 959px) {
+      font-size:14px;
+    }
   }
   &__description {
     margin-top:15px;
@@ -154,6 +228,9 @@
     line-height: 1.2;
     font-weight: 700;
     text-transform: uppercase;
+    @media(max-width: 959px) {
+      margin-top:15px;
+    }
   }
   &__link {
     display:inline-block;

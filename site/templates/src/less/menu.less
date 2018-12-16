@@ -17,6 +17,9 @@
   &.cyan {
     background-color:#4CC1DA;
   }
+  @media(max-width: 1300px) {
+    background-color:transparent !important;
+  }
   &>* {
     position:relative;
     z-index:0;
@@ -53,6 +56,10 @@
     display:flex;
     justify-content: space-between;
     align-items: center;
+    @media(max-width: 1300px) {
+      justify-content: flex-end;
+      padding:15px 0;
+    }
   }
   &__logo {
     img {
@@ -62,6 +69,9 @@
   &__nav {
     display:flex;
     align-items: center;
+    @media(max-width: 1300px) {
+      display:none;
+    }
   }
   &__link {
     display:inline-block;
@@ -79,6 +89,9 @@
     display:flex;
     font-size:22px;
     font-weight: 700;
+    @media(max-width: 1300px) {
+      >:first-child {display:none;}
+    }
   }
   &__toggle {
     margin-left: 30px;
@@ -88,6 +101,9 @@
     background-color:#27CAFF;
     border-radius: 50%;
     position:relative;
+    @media(max-width: 1300px) {
+      margin-left: 0;
+    }
     &.blue {
       background-color:#0AB3D7;
     }

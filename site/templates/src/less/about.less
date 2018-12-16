@@ -2,6 +2,9 @@
   padding-top:120px;
   // background-color:#06ABE0;
   color:white;
+  @media(max-width: 959px) {
+    padding-top:60px;
+  }
   &__grid {
     display:flex;
     flex-wrap: wrap;
@@ -13,6 +16,10 @@
     padding-left: 60px;
     padding-top:60px;
     width:33.3333%;
+    @media(max-width: 959px) {
+      width:100%;
+      &:first-child { width:100%; }
+    }
   }
   &__title {
     font-size:72px;
@@ -20,10 +27,17 @@
     span {
       color:#ffef52;
     }
+    @media(max-width: 959px) {
+      font-size:24px;
+      max-width: 200px;
+    }
   }
   &__description {
     margin-top:60px;
     font-weight: 500;
+    @media(max-width: 959px) {
+      margin-top:15px;
+    }
   }
   &__item+&__item {
     margin-top:60px;
@@ -47,6 +61,9 @@
     font-size:3vw;
     line-height: 1.2;
     transform:translateX(-50%);
+    @media(max-width: 959px) {
+      font-size:24px;  
+    }
   }
   &__link {
     position:absolute;
