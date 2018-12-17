@@ -143,13 +143,6 @@ echo $color;
       <img src="<?= $config->urls->templates . 'assets/img/logo-white.png'?>" alt="">
     </a>
     <a href="" class="uk-modal-close modal__close"></a>
-    <div class="modal__socials">
-      <?php if ($contacts->vk!=""):?><a href="<?=$contacts->vk?>" class="modal__social modal__social_vk"></a><?php endif;?>
-      <?php if ($contacts->facebook!=""):?><a href="<?=$contacts->facebook?>" class="modal__social modal__social_fb"></a><?php endif;?>
-      <?php if ($contacts->instagram!=""):?><a href="<?=$contacts->instagram?>" class="modal__social modal__social_inst"></a><?php endif;?>
-      <?php if ($contacts->odnoklassniki!=""):?><a href="<?=$contacts->odnoklassniki?>" class="modal__social modal__social_ok"></a><?php endif;?>
-    </div>
-    <p class="modal__schedule"><?=$contacts->contacts_schedule[0]->contacts_schedule_name?> <?php $sch=explode(',', $contacts->contacts_schedule[0]->contacts_schedule_time); echo " с ".$sch[0]." до ".$sch[1]?></p>
     <div class="container">
       <div class="modal__grid">
         <div class="modal__cell">
@@ -193,6 +186,13 @@ echo $color;
         </div>
       </div>
     </div>
+    <div class="modal__socials">
+      <?php if ($contacts->vk!=""):?><a href="<?=$contacts->vk?>" class="modal__social modal__social_vk"></a><?php endif;?>
+      <?php if ($contacts->facebook!=""):?><a href="<?=$contacts->facebook?>" class="modal__social modal__social_fb"></a><?php endif;?>
+      <?php if ($contacts->instagram!=""):?><a href="<?=$contacts->instagram?>" class="modal__social modal__social_inst"></a><?php endif;?>
+      <?php if ($contacts->odnoklassniki!=""):?><a href="<?=$contacts->odnoklassniki?>" class="modal__social modal__social_ok"></a><?php endif;?>
+    </div>
+    <p class="modal__schedule"><?=$contacts->contacts_schedule[0]->contacts_schedule_name?> <?php $sch=explode(',', $contacts->contacts_schedule[0]->contacts_schedule_time); echo " с ".$sch[0]." до ".$sch[1]?></p>
   </div>
 </div>
 

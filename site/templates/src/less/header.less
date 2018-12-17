@@ -11,8 +11,10 @@
     width:100%;
     user-select: none;
     pointer-events: none;
-    @media(max-width: 767px) {
-      display:none;
+    @media(max-width: 959px) {
+      width:150%;
+      left:50%;
+      transform:translateX(-50%);
     }
   }
   &__slider {
@@ -26,11 +28,9 @@
     &.animate {
       opacity:1;
     }
-    @media(max-width: 767px) {
-      position:relative;
-      left:0;
-      top:0;
-      width:100%;
+    @media(max-width: 959px) {
+      width:133%;
+      top:10%;
     }
   }
   &__item {
@@ -48,10 +48,8 @@
     left:0;
     right:0;
     @media(max-width: 959px) {
-      height:30px;
-    }
-    @media(max-width: 767px) {
-      display:none;
+      padding:0;
+      height:60px;
     }
     &:before {
       pointer-events: none;

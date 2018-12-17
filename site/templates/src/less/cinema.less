@@ -11,7 +11,7 @@
     margin-left: -60px;
     margin-top:-60px;
     @media(max-width: 959px) {
-      margin-top:-30px;
+      margin-top:0;
     }
   }
   &__cell {
@@ -19,7 +19,7 @@
     padding-left: 60px;
     padding-top:60px;
     @media(max-width: 959px) {
-      padding-top:30px;
+      padding-top:0;
     }
     &:nth-child(1) {
       width:45%;
@@ -65,6 +65,9 @@
       padding-top:0;
       padding-bottom:100%;
       text-align: center;
+      font-size:48px;
+    }
+    @media(max-width: 767px) {
       font-size:24px;
     }
   }
@@ -155,9 +158,15 @@
     }
     .slick-slide {
       margin: 0 15px;
+      @media(max-width: 959px) {
+        margin: 0 10px;
+      }
     }
     .slick-list {
       margin: 0 -15px;
+      @media(max-width: 959px) {
+        margin:0 -10px;
+      }
     }
   }
   &__element {
@@ -180,9 +189,7 @@
     padding-left: 90px;
     font-weight: 700;
     @media(max-width: 959px) {
-      padding-left: 0;
-      display:flex;
-      margin-left: -30px;
+      display:none;
     }
   }
   &__link {

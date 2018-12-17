@@ -3,12 +3,18 @@
   padding:7% 0;
   background-color:white;
   overflow:hidden;
+  @media(max-width: 959px) {
+    padding:0;
+  }
   &:before,&:after {
     content:"";
     position:absolute;
     padding-top:14%;
     background: url(../img/wave-dark.svg) 50% 50% no-repeat;
     background-size:contain;
+    @media(max-width: 959px) {
+      display:none;
+    }
   }
   &:before {
     top:0;

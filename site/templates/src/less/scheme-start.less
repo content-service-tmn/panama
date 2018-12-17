@@ -1,12 +1,18 @@
 .scheme-start {
   color:white;
   padding:60px 0 150px 0;
+  @media(max-width: 767px) {
+    padding-bottom:60px;
+  }
   &__wrapper {
     position:relative;
     display:block;
     width:46%;
     min-width: 600px;
     margin:0 auto;
+    @media(max-width: 767px) {
+      width:80%;
+    }
     &:before {
       display:block;
       content:"";
@@ -40,6 +46,9 @@
         padding-top:60px;
       }
     }
+    @media(max-width: 959px) {
+      min-width: auto;
+    }
   }
   &__hello {
     position:relative;
@@ -51,10 +60,17 @@
     span {
       color:rgb(255, 239, 82);
     }
+    @media(max-width: 959px) {
+      font-size:24px;
+    }
   }
   &__grid {
     margin-top:90px;
     display:flex;
+    @media(max-width: 959px) {
+      flex-wrap: wrap;
+      margin-top:30px;
+    }
   }
   &__cell {
     box-sizing: border-box;
@@ -62,6 +78,16 @@
     padding:0 30px;
     &:nth-child(even) {
       transform:translateY(60px);
+    }
+    @media(max-width: 959px) {
+      width:50%;
+      padding-top:30px;
+      &:nth-child(even) {
+        transform:none;
+      }
+    }
+    @media(max-width: 767px) {
+      width:100%;
     }
   }
 }

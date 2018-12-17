@@ -46,18 +46,18 @@ $(document).ready(function(){
     responsive: [
       {
         breakpoint: 960,
-        slidesToShow: 3,
-        slidesToScroll: 3,
         settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
           dots: true,
           arrows:false
         }
       },
       {
         breakpoint: 768,
-        slidesToShow: 3,
-        slidesToScroll: 3,
         settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
           dots: true,
           arrows:false
         }
@@ -75,7 +75,25 @@ $(document).ready(function(){
     infinite: true,
     speed: 300,
     autoplay: true,
-    autoplaySpeed: 2000
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 960,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows:false
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows:false
+        }
+      }
+    ]
   });
   $('.gallery__bottom-slider').slick({
     infinite: true,
@@ -83,7 +101,27 @@ $(document).ready(function(){
     slidesToShow: 5,
     centerMode:true,
     centerPadding:0,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 960,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          dots: true,
+          arrows:false
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          dots: true,
+          arrows:false
+        }
+      }
+    ]
   });
 
   //stick 2 sliders

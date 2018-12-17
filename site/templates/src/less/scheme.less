@@ -1,5 +1,8 @@
 .scheme {
   padding:90px 0;
+  @media(max-width: 959px) {
+    padding:60px 0;
+  }
   &__title {
     max-width: 430px;
     font-size:64px;
@@ -8,11 +11,17 @@
     span {
       color:#27CAFF;
     }
+    @media(max-width: 959px) {
+      font-size:24px;
+    }
   }
   &__switcher {
     margin-top:90px;
     display:flex;
     justify-content: center;
+    @media(max-width: 959px) {
+      margin-top:15px;
+    }
     li {
       color:#DADADA;
       transition:all 0.3s;
@@ -29,15 +38,34 @@
       font-size:36px;
       line-height: 1.7;
       font-weight: 700;
+      @media(max-width: 959px) {
+        font-size:20px;
+      }
+      @media(max-width: 767px) {
+        font-size:14px;
+        padding:0 15px;
+      }
     }
     border-bottom:3px solid #27CAFF;
+    @media(max-width: 959px) {
+      border:none;
+    }
   }
   &__items {
     margin-top:60px;
+    @media(max-width: 959px) {
+      margin-top:15px;
+    }
   }
   &__item {
     padding-top:50%;
     background:50% 0% no-repeat;
     background-size:contain;
+    @media(max-width: 959px) {
+      padding-top:75%;
+    }
+    @media(max-width: 767px) {
+      padding-top:100%;
+    }
   }
 }

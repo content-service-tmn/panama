@@ -1,5 +1,8 @@
 .promotions {
   padding:90px 0;
+  @media(max-width: 959px) {
+    padding:60px 0;
+  }
   &__subtitle {
     font-family: "SugoProClassicLight",arial,sans-serif;
     font-size:36px;
@@ -7,6 +10,9 @@
     color:#258931;
     margin-top:90px;
     text-transform: uppercase;
+    @media(max-width: 959px) {
+      font-size:16px;
+    }
   }
   &__title {
     font-family: @title-font;
@@ -14,26 +20,48 @@
     line-height: 1.2;
     color:#FF8207;
     text-transform: uppercase;
+    @media(max-width: 959px) {
+      font-size:24px;
+    }
   }
   &__grid {
     display:flex;
     flex-wrap: wrap;
     margin-left: -40px;
+    @media(max-width: 959px) {
+      margin-top:-15px;
+    }
   }
   &__cell {
     box-sizing: border-box;
     width:33.3333%;
     padding-left: 40px;
     padding-top:90px;
+    @media(max-width: 959px) {
+      padding-top:45px;
+      width:50%;
+    }
+    @media(max-width: 767px) {
+      width:100%;
+    }
   }
 }
 
 .promotion {
   color:#258931;
   &__img {
-    padding-top:100%;
     background: 50% 50% no-repeat;
     background-size:cover;
+    margin:0 auto;
+    &:before {
+      content:"";
+      padding-top:100%;
+      display:block;
+    }
+    @media(max-width: 959px) {
+      width:180px;
+      border-radius: 50%;
+    }
   }
   &__type {
     font-size:16px;
@@ -44,6 +72,10 @@
     border-top:2px solid #FF8207;
     border-bottom:2px solid #FF8207;
     text-transform: uppercase;
+    @media(max-width: 959px) {
+      padding:5px 0;
+      margin-top:30px;
+    }
   }
   &__date {
     margin-top:15px;
@@ -52,6 +84,9 @@
     line-height: 1.2;
     font-weight: 300;
     text-transform: uppercase;
+    @media(max-width: 959px) {
+      font-size:24px;
+    }
   }
   &__title {
     margin-top:15px;
@@ -60,6 +95,9 @@
     font-weight: 700;
     color:#FF8207;
     text-transform: uppercase;
+    @media(max-width: 959px) {
+      font-size:14px;
+    }
   }
   &__description {
     margin-top:15px;
@@ -74,6 +112,9 @@
     font-weight: 700;
     color:#FF8207;
     text-transform: uppercase;
+    @media(max-width: 959px) {
+      margin-top:15px;
+    }
   }
   &__link {
     display:inline-block;

@@ -5,7 +5,7 @@
   position:relative;
   z-index:1;
   @media(max-width: 959px) {
-    padding-top:0;
+    padding-top:15px;
   }
   &__title {
     font-size:72px;
@@ -17,6 +17,9 @@
   }
   &__slider {
     margin-top:60px;
+    @media(max-width: 959px) {
+      margin-top:0;
+    }
     .slick-dots {
       margin-top:15px;
       display:flex;

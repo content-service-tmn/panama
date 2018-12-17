@@ -5,6 +5,9 @@
     padding:90px 0;
     position: relative;
     z-index:1;
+    @media(max-width: 959px) {
+      padding:60px 0;
+    }
     &:before {
       pointer-events: none;
       z-index:-1;
@@ -23,6 +26,9 @@
     color:#FFEF52;
     font-size:72px;
     line-height: 1.2;
+    @media(max-width: 959px) {
+      font-size:24px;
+    }
   }
   &__grid {
     margin-left: -60px;
@@ -34,18 +40,29 @@
     padding-top:60px;
     width:33.3333%;
     box-sizing: border-box;
+    @media(max-width: 959px) {
+      width:100%;
+      padding-top:30px;
+    }
   }
   &__subtitle {
     font-family: "SugoProClassicLight",arial,sans-serif;
     font-size:36px;
     line-height: 1.2;
     text-transform: uppercase;
+    @media(max-width: 959px) {
+      font-size:24px;
+    }
   }
   &__list {
     margin-top:30px;
     font-size:18px;
     line-height: 1.5;
     font-weight: 700;
+    @media(max-width: 959px) {
+      font-size:16px;
+      margin-top:15px;
+    }
     &_schedule {
       font-weight: 500;
       span {
@@ -59,5 +76,11 @@
   &__map {
     height:540px;
     background-color:black;
+    @media(max-width: 1200px) {
+        height:800px;
+    }
+    @media(max-width: 959px) {
+      height:540px;  
+    }
   }
 }

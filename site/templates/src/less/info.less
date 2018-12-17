@@ -2,12 +2,18 @@
   padding:90px 0 90px 0;
   color:white;
   display:none;
+  @media(max-width: 959px) {
+    padding: 60px 0;
+  }
   &.active {
     display:block;
   }
   &__grid {
     display:flex;
     align-items: flex-start;
+    @media(max-width: 959px) {
+      flex-wrap: wrap;
+    }
   }
   &__cell {
     box-sizing: border-box;
@@ -17,22 +23,56 @@
       flex-grow: 0;
       padding-right: 60px;
       border-right: 2px solid #00A2C5;
+      @media(max-width: 1200px) {
+        width:300px;
+        border:none;
+        padding-right: 0;
+      }
+      @media(max-width: 959px) {
+        width:100%;
+      }
     }
     &:nth-child(2) {
       padding-left: 60px;
       flex-grow: 1;
       flex-shrink: 1;
+      @media(max-width: 959px) {
+        width:100%;
+        padding-left: 0;
+      }
     }
   }
   &__img {
     background: 50% 50% no-repeat;
     background-size:cover;
     width:195px;
-    height:195px;
     border-radius: 50%;
+    &:before {
+      content:"";
+      display:block;
+      padding-top:100%;
+    }
+    @media(max-width: 959px) {
+      width:200px;
+      float:left;
+    }
+    @media(max-width: 767px) {
+      width:auto;
+      margin:0 -30px;
+      border-radius: 0;
+      float:none;
+    }
   }
   &__list {
     margin-top:30px;
+    @media(max-width: 959px) {
+      float:left;
+      margin-left: 30px;
+    }
+    @media(max-width: 767px) {
+      float:none;
+      margin-left: 0;
+    }
     li {
       font-weight: 500;
       display:block;
@@ -53,22 +93,35 @@
     line-height: 1.3;
     font-weight: 700;
     text-transform: uppercase;
+    @media(max-width: 959px) {
+      display:none;
+    }
   }
   &__subtitle {
     font-family: "SugoProClassicLight",arial,sans-serif;
     font-size:48px;
     line-height:1.2;
     text-transform: uppercase;
+    @media(max-width: 959px) {
+      font-size:24px;
+      margin-top:30px;
+    }
   }
   &__title {
     margin-top:15px;
     font-size:50px;
     color:#FFEF52;
     line-height: 1.2;
+    @media(max-width: 959px) {
+      font-size:24px;
+    }
   }
   &__content {
     * {
       margin-top:30px;
+      @media(max-width: 959px) {
+        margin-top:15px;
+      }
     }
     b {
       font-weight: 600;
@@ -78,6 +131,10 @@
       font-weight: 500;
       font-size:18px;
       line-height: 1.9;
+      @media(max-width: 959px) {
+        font-size:14px;
+        margin-top:15px;
+      }
     }
     a {
       display:inline-block;
@@ -94,6 +151,11 @@
       width:100%;
       box-sizing: border-box;
       padding-top:15px;
+
+      @media(max-width: 767px) {
+        margin: 0 -30px;
+        width:~"calc(100% + 60px)";
+      }
     }
   }
 }

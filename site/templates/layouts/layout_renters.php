@@ -75,7 +75,6 @@
       </div>
       <div class="renters__cell">
         <div class="renters-contacts" id="contacts">
-          <div class="renters-contacts__grid">
             <?php foreach ($page->renters_contacts as $item): ?>
             <div class="renters-contacts__item">
               <p class="renters-contacts__title"><?= str_replace("/","<br>",$item->renters_contacts_post) ?></p>
@@ -93,7 +92,6 @@
               </div>
             </div>
           <?php endforeach; ?>
-          </div>
         </div>
       </div>
     </div>
