@@ -3,36 +3,98 @@ $(document).ready(function(){
   var groups = $('.map__group');
   var active = -1;
   ChangeActive(0);
+  var category = "";
+  var subcategory = "";
+  var title="";
 
-  $('.search input').on('input',function(){
-    $('.map__catalog li').removeClass('hidden');
-    $('.map__catalog ul').removeClass('hidden');
-    var substr = $(this).val().toUpperCase();
-    $('.map__catalog li').each(function(){
-      if ($(this).is(':first-child')) return;
-      var str = $(this).text().toUpperCase();
-      if (str.indexOf(substr)!=0) $(this).addClass('hidden')
-    });
-    $('.map__catalog ul').each(function(){
-      if ($(this).find('li').length-1==$(this).find('li.hidden').length) $(this).addClass('hidden');
-    });
-  });
-  $('.map__marker').click(function(){
+  var hash = $(location).attr('hash');
+  if (hash!="") {
+    SetFilter(hash);
+    UIkit.Utils.scrollToElement(UIkit.$($("#main-scheme"), { duration: 500 }));
+  }
+  //работа с инпутом
+  function Result() {
+    $('.search__grid').removeClass('active');
+    $('.search__result').addClass('active');
+    $('.search__result p:first-child').text(title);
+    $('.search__result li').removeClass('hidden');
+    if (title!="") {
+      $('.search__result li').addClass('hidden');
+    }
+    if (category!="")
+      $('.search__result li[data-category="'+category+'"]').removeClass('hidden');
+    if (subcategory!="")
+      $('.search__result li[data-subcategory="'+subcategory+'"]').removeClass('hidden');
+  }
+  function Back() {
+    category="";
+    subcategory="";
+    title="";
+    $('.search input').val("");
+    $('.search__result').removeClass('active');
+    $('.search__grid').addClass('active');
+  }
+  function Input(val) {
+    if (val!="") {
+      Result();
+      $('.search__result li').each(function(){
+        var str = $(this).text().toUpperCase();
+        if (str.indexOf(val)!=0) $(this).addClass('hidden')
+      });
+    }
+    else Back();
+  }
+  $('.search__result li').click(function(){
     var id = $(this).attr('data-id');
-    $(".info").removeClass('active');
-    $(".info[data-id='"+id+"']").addClass('active');
-    UIkit.Utils.scrollToElement(UIkit.$($(".info[data-id='"+id+"']"), { duration: 500 }));
-  });
-  $('.map__catalog li:not(:first-child)').click(function(){
-    var id = $(this).attr('data-id');
-    console.log(id);
     var group = $('.map__marker[data-id="'+id+'"]').closest('.map__group');
     var index = $('.map__group').index(group);
     ChangeActive(index);
     $('.map__marker').removeClass('fade');
     group.find('.map__marker[data-id!="'+id+'"]').addClass('fade');
-
+    UIkit.modal("#search").hide();
   });
+  $('.search__result p:last-child').click(function(){
+    Back();
+  });
+  $('.search__cell li').click(function(){
+    category = $(this).attr('data-category');
+    subcategory = $(this).attr('data-subcategory');
+    title = $(this).text();
+    Result();
+  });
+  $('.search input').on('input',function() {
+    Input($(this).val().toUpperCase());
+  });
+  $('.map__marker[data-id]').click(function(){
+    var id = $(this).attr('data-id');
+    $(".info").removeClass('active');
+    $(".info[data-id='"+id+"']").addClass('active');
+    var data_bg = $(".info[data-id='"+id+"'] .info__img").attr("data-bg");
+    $(".info[data-id='"+id+"'] .info__img").css('background-image',data_bg);
+    UIkit.Utils.scrollToElement(UIkit.$($(".info[data-id='"+id+"']"), { duration: 500 }));
+  });
+  $('.scheme-start__cell .about-item__link').click(function(){
+    var filter = $(this).attr('data-filter');
+    SetFilter(filter);
+  });
+  $('.map__catalog li:not(:first-child)').click(function(){
+    var id = $(this).attr('data-id');
+    var group = $('.map__marker[data-id="'+id+'"]').closest('.map__group');
+    var index = $('.map__group').index(group);
+    ChangeActive(index);
+    $('.map__marker').removeClass('fade');
+    group.find('.map__marker[data-id!="'+id+'"]').addClass('fade');
+  });
+  $('.map__catalog li:first-child').click(function(){
+    var cat = $(this).attr('data-category');
+    SetFilter(cat);
+  });
+  function SetFilter(filter) {
+    if (filter=="") return;
+    var group = groups.eq(active);
+    $('.map__marker').removeClass('fade');
+    group.find('.map__marker[data-category!="'+filter+'"]').addClass('fade');
+  }
   function ChangeActive(index) {
     if (index<0 || index>2 || index==active) return;
     active = index;

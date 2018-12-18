@@ -148,13 +148,13 @@
         <div class="about__item" data-uk-scrollspy="{cls:'uk-animation-slide-right',delay:1000}">
           <div class="about-item" style="background-image:url(<?=$config->urls->templates . 'assets/img/hat.png';?>)">
             <h3 class="about-item__title">магазины</h3>
-            <a href="" class="about-item__link"></a>
+            <a href="/scheme#stores" class="about-item__link"></a>
           </div>
         </div>
         <div class="about__item" data-uk-scrollspy="{cls:'uk-animation-slide-right',delay:1000}">
           <div class="about-item" style="background-image:url(<?=$config->urls->templates . 'assets/img/donut.png';?>)">
             <h3 class="about-item__title">кафе</h3>
-            <a href="" class="about-item__link"></a>
+            <a href="/scheme#cafe" class="about-item__link"></a>
           </div>
         </div>
       </div>
@@ -162,13 +162,13 @@
         <div class="about__item" data-uk-scrollspy="{cls:'uk-animation-slide-right',delay:1000}">
           <div class="about-item" style="background-image:url(<?=$config->urls->templates . 'assets/img/confetti.png';?>)">
             <h3 class="about-item__title">развлечения</h3>
-            <a href="" class="about-item__link"></a>
+            <a href="/scheme#fun" class="about-item__link"></a>
           </div>
         </div>
         <div class="about__item" data-uk-scrollspy="{cls:'uk-animation-slide-right',delay:1000}">
           <div class="about-item" style="background-image:url(<?=$config->urls->templates . 'assets/img/scissors.png';?>)">
             <h3 class="about-item__title">услуги</h3>
-            <a href="" class="about-item__link"></a>
+            <a href="/scheme#services" class="about-item__link"></a>
           </div>
         </div>
       </div>

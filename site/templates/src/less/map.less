@@ -48,7 +48,7 @@
       }
       @media(max-width: 767px) {
         font-size:14px;
-        padding:0 15px;
+        padding:10px 15px;
       }
     }
   }
@@ -215,6 +215,10 @@
     li {
       font-size:24px;
       line-height: 1;
+      cursor:pointer;
+      @media(max-width: 1200px) {
+        font-size:18px;
+      }
       &.hidden {
         display:none;
       }
@@ -226,7 +230,6 @@
       }
     }
     li:not(:first-child) {
-      cursor:pointer;
       &+li {
         margin-top:15px;
       }

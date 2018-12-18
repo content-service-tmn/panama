@@ -150,10 +150,10 @@ echo $color;
             <li><a href="/events" data-id="megaphone" data-color="#ED7709"><?= $pages->get("/events")->title ?></a></li>
             <li><a href="/promotions" data-id="aktsii" data-color="#FF8207"><?= $pages->get("/promotions")->title ?></a></li>
             <li><a href="/scheme" data-id="karta" data-color="#4CC1DA"><?= $pages->get("/scheme")->title ?></a></li>
-            <li><a href="/scheme" data-id="confetti" data-color="#4CC1DA">Магазины</a></li>
-            <li><a href="/scheme" data-id="kino">Развлечения</a></li>
-            <li><a href="/scheme">Кафе</a></li>
-            <li><a href="/scheme">Услуги</a></li>
+            <li><a href="/scheme#stores" data-id="confetti" data-color="#4CC1DA">Магазины</a></li>
+            <li><a href="/scheme#fun" data-id="kino">Развлечения</a></li>
+            <li><a href="/scheme#cafe">Кафе</a></li>
+            <li><a href="/scheme#services">Услуги</a></li>
           </ul>
           <ul>
             <li><a href="/renters"><?= $pages->get("/renters")->title ?></a></li>
