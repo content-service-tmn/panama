@@ -21,7 +21,7 @@
             if ($item->type=="renters_content_text") echo "<p>".$item->renters_text."</p>";
             if ($item->type=="renters_content_images") {
               echo '<div class="renters__images">';
-              foreach ($item->renters_images as $image) echo '<img src="'.$image->url.'">';
+              foreach ($item->renters_images as $image) echo '<img data-lazy-img="'.$image->url.'">';
               echo '</div>';
             }
           }?>
@@ -31,12 +31,12 @@
             <h1 class="renters-gallery__title"><?php $tmp=explode(" ",$home->home_gallery_title);  $tmp[0]="<span>".$tmp[0]."</span>"; echo join(" ",$tmp);?></h1>
             <div class="renters-gallery__slider">
               <?php foreach($home->home_gallery_images as $image):?>
-                <div class="renters-gallery__item" style="background-image:url(<?= $image->url ?>)"></div>
+                <div class="renters-gallery__item" data-lazy-bg="background-image:url(<?= $image->url ?>)"></div>
               <?php endforeach; ?>
             </div>
             <div class="renters-gallery__slider-bottom">
               <?php foreach($home->home_gallery_images as $image):?>
-                <div class="renters-gallery__item-bottom" style="background-image:url(<?= $image->url ?>)"></div>
+                <div class="renters-gallery__item-bottom" data-lazy-bg="background-image:url(<?= $image->url ?>)"></div>
               <?php endforeach; ?>
             </div>
           </div>
@@ -55,9 +55,9 @@
       <li><a href="">Этаж 3</a></li>
     </ul>
     <ul id="my-id" class="uk-switcher scheme__items">
-      <li><div class="scheme__item" style="background-image:url(<?= $config->urls->templates . 'assets/img/scheme1.jpg'?>)"></div></li>
-      <li><div class="scheme__item" style="background-image:url(<?= $config->urls->templates . 'assets/img/scheme2.jpg'?>)"></div></li>
-      <li><div class="scheme__item" style="background-image:url(<?= $config->urls->templates . 'assets/img/scheme3.jpg'?>)"></div></li>
+      <li><div class="scheme__item" data-lazy-bg="background-image:url(<?= $config->urls->templates . 'assets/img/scheme1.jpg'?>)"></div></li>
+      <li><div class="scheme__item" data-lazy-bg="background-image:url(<?= $config->urls->templates . 'assets/img/scheme2.jpg'?>)"></div></li>
+      <li><div class="scheme__item" data-lazy-bg="background-image:url(<?= $config->urls->templates . 'assets/img/scheme3.jpg'?>)"></div></li>
     </ul>
   </div>
 </section>
@@ -104,7 +104,7 @@
     <div class="uk-offcanvas-bar-inner sidebar">
 
       <a href="" class="sidebar__logo">
-        <img src="<?= $config->urls->templates.'assets/img/logo-text.png' ?>" alt="" class="sidebar__logo-img">
+        <img data-lazy-img="<?= $config->urls->templates.'assets/img/logo-text.png' ?>" alt="" class="sidebar__logo-img">
       </a>
       <form id="callback__form" class="form sidebar__form" action="/" method="post">
         <p class="sidebar__description">

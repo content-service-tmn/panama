@@ -21,7 +21,7 @@
             if ($item->type=="article_content_text") echo "<p>".$item->article_text."</p>";
             if ($item->type=="article_content_images") {
               echo '<div class="article__images">';
-              foreach ($item->article_images as $image) echo '<img src="'.$image->url.'">';
+              foreach ($item->article_images as $image) echo '<img data-lazy-img="'.$image->url.'">';
               echo '</div>';
             }
           }?>

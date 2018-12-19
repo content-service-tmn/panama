@@ -9,7 +9,7 @@
   <div class="scheme-start__grid">
     <div class="scheme-start__cell">
       <div class="about__item">
-        <div class="about-item" style="background-image:url(<?=$config->urls->templates . 'assets/img/hat.png';?>)">
+        <div class="about-item" data-lazy-bg="background-image:url(<?=$config->urls->templates . 'assets/img/hat.png';?>)">
           <h3 class="about-item__title">магазины</h3>
           <a href="#main-scheme" class="about-item__link" data-uk-smooth-scroll data-filter="stores"></a>
         </div>
@@ -17,7 +17,7 @@
     </div>
     <div class="scheme-start__cell">
       <div class="about__item">
-        <div class="about-item" style="background-image:url(<?=$config->urls->templates . 'assets/img/confetti.png';?>)">
+        <div class="about-item" data-lazy-bg="background-image:url(<?=$config->urls->templates . 'assets/img/confetti.png';?>)">
           <h3 class="about-item__title">развлечения</h3>
           <a href="#main-scheme" class="about-item__link" data-uk-smooth-scroll data-filter="fun"></a>
         </div>
@@ -25,7 +25,7 @@
     </div>
     <div class="scheme-start__cell">
       <div class="about__item">
-        <div class="about-item" style="background-image:url(<?=$config->urls->templates . 'assets/img/donut.png';?>)">
+        <div class="about-item" data-lazy-bg="background-image:url(<?=$config->urls->templates . 'assets/img/donut.png';?>)">
           <h3 class="about-item__title">кафе</h3>
           <a href="#main-scheme" class="about-item__link" data-uk-smooth-scroll data-filter="cafe"></a>
         </div>
@@ -33,7 +33,7 @@
     </div>
     <div class="scheme-start__cell">
       <div class="about__item">
-        <div class="about-item" style="background-image:url(<?=$config->urls->templates . 'assets/img/scissors.png';?>)">
+        <div class="about-item" data-lazy-bg="background-image:url(<?=$config->urls->templates . 'assets/img/scissors.png';?>)">
           <h3 class="about-item__title">услуги</h3>
           <a href="#main-scheme" class="about-item__link" data-uk-smooth-scroll data-filter="services"></a>
         </div>
@@ -53,7 +53,7 @@
         </ul>
         <div class="map__scheme" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:300}">
           <div class="map__group">
-            <img class="map__floor" src="<?= $config->urls->templates . 'assets/img/floor1.png'?>" alt="">
+            <img class="map__floor" data-lazy-img="<?= $config->urls->templates . 'assets/img/floor1.png'?>" alt="">
             <div class="map__marker map__marker_exit" style="left:90%; top:20%"></div>
             <?php $companies = array(); ?>
             <?php foreach($pages->get("/scheme/companies1")->children() as $child): ?>
@@ -93,7 +93,7 @@
             <div class="map__marker map__marker_exit" style="left:47%; top:90%"></div>
           </div>
           <div class="map__group">
-            <img class="map__floor" src="<?= $config->urls->templates . 'assets/img/floor2.png'?>" alt="">
+            <img class="map__floor" data-lazy-img="<?= $config->urls->templates . 'assets/img/floor2.png'?>" alt="">
             <?php foreach($pages->get("/scheme/companies2")->children() as $child): ?>
               <?php
               array_push($companies, $child);
@@ -130,7 +130,7 @@
             <?php endforeach; ?>
           </div>
           <div class="map__group">
-            <img class="map__floor" src="<?= $config->urls->templates . 'assets/img/floor3.png'?>" alt="">
+            <img class="map__floor" data-lazy-img="<?= $config->urls->templates . 'assets/img/floor3.png'?>" alt="">
             <?php foreach($pages->get("/scheme/companies3")->children() as $child): ?>
               <?php
               array_push($companies, $child);
