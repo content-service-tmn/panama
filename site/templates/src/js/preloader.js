@@ -7,7 +7,7 @@ $(window).on('load', function () {
   var lazybg = $('[data-lazy-bg]');
   lazybg.each(function(){
     var self = $(this);
-    self.css('background-image',self.attr('data-lazy-bg'));
+    self.attr('style',self.attr('data-lazy-bg'));
   });
   var lazyimg = $('[data-lazy-img]');
   lazyimg.each(function(){
