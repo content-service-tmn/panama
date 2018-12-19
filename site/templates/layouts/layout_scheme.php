@@ -130,7 +130,7 @@
             <?php endforeach; ?>
           </div>
           <div class="map__group">
-            <img class="map__floor" data-lazy-img="<?= $config->urls->templates . 'assets/img/floor3.png'?>" alt="">
+            <img class="map__floor" src="<?= $config->urls->templates . 'assets/img/floor3.png'?>" alt="">
             <?php foreach($pages->get("/scheme/companies3")->children() as $child): ?>
               <?php
               array_push($companies, $child);
