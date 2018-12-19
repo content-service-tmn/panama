@@ -24,7 +24,7 @@ function Progress() {
   $('.loaderArea__preloader').width(currentCount*100.0/imagesCount+'%');
 }
 
-var imagesCount = $('img').length;// +$('div').length;
+var imagesCount = $('img').length+$('div').length;
 var currentCount = 0;
 $('img').each(function() {
   $(this).on('load',function() {
@@ -32,9 +32,9 @@ $('img').each(function() {
     Progress();
   });
 });
-// $('div').each(function() {
-//   $(this).ready(function() {
-//     currentCount++;
-//     Progress();
-//   });
-// });
+$('div').each(function() {
+  $(this).ready(function() {
+    currentCount++;
+    Progress();
+  });
+});

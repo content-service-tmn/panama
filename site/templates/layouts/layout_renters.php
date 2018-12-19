@@ -55,9 +55,9 @@
       <li><a href="">Этаж 3</a></li>
     </ul>
     <ul id="my-id" class="uk-switcher scheme__items">
-      <li><div class="scheme__item" style="background-image:url(<?= $config->urls->templates . 'assets/img/scheme1.png'?>)"></div></li>
-      <li><div class="scheme__item" style="background-image:url(<?= $config->urls->templates . 'assets/img/scheme2.png'?>)"></div></li>
-      <li><div class="scheme__item" style="background-image:url(<?= $config->urls->templates . 'assets/img/scheme3.png'?>)"></div></li>
+      <li><div class="scheme__item" style="background-image:url(<?= $config->urls->templates . 'assets/img/scheme1.jpg'?>)"></div></li>
+      <li><div class="scheme__item" style="background-image:url(<?= $config->urls->templates . 'assets/img/scheme2.jpg'?>)"></div></li>
+      <li><div class="scheme__item" style="background-image:url(<?= $config->urls->templates . 'assets/img/scheme3.jpg'?>)"></div></li>
     </ul>
   </div>
 </section>

@@ -151,14 +151,14 @@ echo $color;
             <li><a href="/promotions" data-id="aktsii" data-color="#FF8207"><?= $pages->get("/promotions")->title ?></a></li>
             <li><a href="/scheme" data-id="karta" data-color="#4CC1DA"><?= $pages->get("/scheme")->title ?></a></li>
             <li><a href="/scheme#stores" data-id="confetti" data-color="#4CC1DA">Магазины</a></li>
-            <li><a href="/scheme#fun" data-id="kino">Развлечения</a></li>
-            <li><a href="/scheme#cafe">Кафе</a></li>
-            <li><a href="/scheme#services">Услуги</a></li>
+            <li><a href="/scheme#fun" data-id="kino" data-color="#ED7709">Развлечения</a></li>
+            <li><a href="/scheme#cafe" data-color="#FF8207">Кафе</a></li>
+            <li><a href="/scheme#services" data-color="#4CC1DA">Услуги</a></li>
           </ul>
           <ul>
-            <li><a href="/renters"><?= $pages->get("/renters")->title ?></a></li>
-            <li><a href="/contacts"><?= $pages->get("/contacts")->title ?></a></li>
-            <li><a href="/contacts"><?= $contacts->contacts_transport_title ?></a></li>
+            <li><a href="/renters" data-color="#ED7709"><?= $pages->get("/renters")->title ?></a></li>
+            <li><a href="/contacts" data-color="#FF8207"><?= $pages->get("/contacts")->title ?></a></li>
+            <li><a href="/contacts" data-color="#4CC1DA"><?= $contacts->contacts_transport_title ?></a></li>
           </ul>
         </div>
         <div class="modal__cell">
