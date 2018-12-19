@@ -125,10 +125,12 @@ $(document).ready(function(){
     var i = 0;
     markers.each(function(index){
       var self = $(this);
-      setTimeout(function () {
+        setTimeout(function () {
+          if (self.closest('.map__group.active').length) {
             self.addClass('visible');
-      }, i);
-      i+=delay;
+          }
+        }, i);
+        i+=delay;
     });
   }
   tabs.click(function(){

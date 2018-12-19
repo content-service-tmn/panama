@@ -3,8 +3,18 @@ $(window).on('load', function () {
   //   $loader = $preloader.find('.loader');
   // $loader.fadeOut();
   $preloader.fadeOut('slow');
+  //lazyload
+  var lazybg = $('[data-lazy-bg]');
+  lazybg.each(function(){
+    var self = $(this);
+    self.css('background-image',self.attr('data-lazy-bg'));
+  });
+  var lazyimg = $('[data-lazy-img]');
+  lazyimg.each(function(){
+    var self = $(this);
+    self.attr('src',self.attr('data-lazy-img'));
+  });
   //make animations
-
   setTimeout(function(){
     $(".header__slider").addClass('animate');
     $(".events__wrapper").addClass('animate');

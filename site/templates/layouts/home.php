@@ -43,7 +43,7 @@
       <?php $i = 0; foreach ($pages->get("/promotions")->children as $child): $i++; if ($i>6) break; ?>
         <?php for ($i = 0; $i<4; $i++): ?>
         <div class="stocks__item stocks-item">
-          <div class="stocks-item__img" style="background-image:url(<?=$child->article_image->url?>)"></div>
+          <div class="stocks-item__img" data-lazy-bg="background-image:url(<?=$child->article_image->url?>)"></div>
           <p class="stocks-item__type"><?= $child->article_type?></p>
           <p class="stocks-item__date"><?= $child->article_subtitle?></p>
           <p class="stocks-item__title"><?= $child->title?></p>
@@ -82,13 +82,13 @@
       </div>
       <div class="about__cell">
         <div class="about__item" data-uk-scrollspy="{cls:'uk-animation-slide-right',delay:1000}">
-          <div class="about-item" style="background-image:url(<?=$config->urls->templates . 'assets/img/hat.png';?>)">
+          <div class="about-item" data-lazy-bg="background-image:url(<?=$config->urls->templates . 'assets/img/hat.png';?>)">
             <h3 class="about-item__title">магазины</h3>
             <a href="/scheme#stores" class="about-item__link"></a>
           </div>
         </div>
         <div class="about__item" data-uk-scrollspy="{cls:'uk-animation-slide-right',delay:1000}">
-          <div class="about-item" style="background-image:url(<?=$config->urls->templates . 'assets/img/donut.png';?>)">
+          <div class="about-item" data-lazy-bg="background-image:url(<?=$config->urls->templates . 'assets/img/donut.png';?>)">
             <h3 class="about-item__title">кафе</h3>
             <a href="/scheme#cafe" class="about-item__link"></a>
           </div>
@@ -96,13 +96,13 @@
       </div>
       <div class="about__cell">
         <div class="about__item" data-uk-scrollspy="{cls:'uk-animation-slide-right',delay:1000}">
-          <div class="about-item" style="background-image:url(<?=$config->urls->templates . 'assets/img/confetti.png';?>)">
+          <div class="about-item" data-lazy-bg="background-image:url(<?=$config->urls->templates . 'assets/img/confetti.png';?>)">
             <h3 class="about-item__title">развлечения</h3>
             <a href="/scheme#fun" class="about-item__link"></a>
           </div>
         </div>
         <div class="about__item" data-uk-scrollspy="{cls:'uk-animation-slide-right',delay:1000}">
-          <div class="about-item" style="background-image:url(<?=$config->urls->templates . 'assets/img/scissors.png';?>)">
+          <div class="about-item" data-lazy-bg="background-image:url(<?=$config->urls->templates . 'assets/img/scissors.png';?>)">
             <h3 class="about-item__title">услуги</h3>
             <a href="/scheme#services" class="about-item__link"></a>
           </div>
@@ -124,7 +124,7 @@
       <div class="cinema__cell">
         <div class="cinema__slider">
           <?php foreach($page->home_cinema_gallery as $image):?>
-            <div class="cinema__element" style="background-image:url(<?= $image->url ?>)"></div>
+            <div class="cinema__element" data-lazy-bg="background-image:url(<?= $image->url ?>)"></div>
           <?php endforeach; ?>
         </div>
         <p class="cinema__text"><?= $page->home_cinema_text ?></p>
@@ -145,7 +145,7 @@
       </div>
       <div class="gallery__slider">
         <?php foreach($page->home_gallery_images as $image):?>
-          <div class="gallery__item" style="background-image:url(<?= $image->url ?>)"></div>
+          <div class="gallery__item" data-lazy-bg="background-image:url(<?= $image->url ?>)"></div>
         <?php endforeach; ?>
       </div>
     </div>
@@ -153,7 +153,7 @@
   <div class="container">
     <div class="gallery__bottom-slider">
       <?php foreach($page->home_gallery_images as $image):?>
-        <div class="gallery__bottom-item" style="background-image:url(<?= $image->url ?>)"></div>
+        <div class="gallery__bottom-item" data-lazy-bg="background-image:url(<?= $image->url ?>)"></div>
       <?php endforeach; ?>
     </div>
   </div>

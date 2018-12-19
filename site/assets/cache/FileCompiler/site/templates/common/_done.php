@@ -50,7 +50,7 @@ echo $color;
     <div class="menu__grid">
       <div class="menu__nav">
         <a href="/" class="menu__logo">
-          <img src="<?php
+          <img data-lazy-img="<?php
           $logo = "";
           switch($page->template->name):
             case 'layout_article':
@@ -99,7 +99,7 @@ echo $color;
 
 <?php if ($page->template->name!="layout_contacts" && $page->template->name!="layout_privacy"): ?>
 <section class="footer">
-  <img src="<?= $config->urls->templates . 'assets/img/footer.png' ?>" alt="" class="footer__bg">
+  <img data-lazy-img="<?= $config->urls->templates . 'assets/img/footer.png' ?>" alt="" class="footer__bg">
   <div class="footer__grid">
     <div class="footer__cell">
       <ul class="footer__list">
@@ -140,7 +140,7 @@ echo $color;
 <div id="modal" class="uk-modal">
   <div class="modal">
     <a href="/" class="modal__logo">
-      <img src="<?= $config->urls->templates . 'assets/img/logo-white.png'?>" alt="">
+      <img data-lazy-img="<?= $config->urls->templates . 'assets/img/logo-white.png'?>" alt="">
     </a>
     <a href="" class="uk-modal-close modal__close"></a>
     <div class="container">
@@ -164,24 +164,24 @@ echo $color;
         <div class="modal__cell">
           <h1 class="modal__title">торгово-развлекательный центр панама</h1>
           <div class="modal__img" data-id="confetti">
-            <img src="<?= $config->urls->templates . 'assets/img/confetti_back.png'?>" alt="">
-            <img src="<?= $config->urls->templates . 'assets/img/confetti_front.png'?>" alt="">
+            <img data-lazy-img="<?= $config->urls->templates . 'assets/img/confetti_back.png'?>" alt="">
+            <img data-lazy-img="<?= $config->urls->templates . 'assets/img/confetti_front.png'?>" alt="">
           </div>
           <div class="modal__img" data-id="aktsii">
-            <img src="<?= $config->urls->templates . 'assets/img/aktsii_back.png'?>" alt="">
-            <img src="<?= $config->urls->templates . 'assets/img/aktsii_front.png'?>" alt="">
+            <img data-lazy-img="<?= $config->urls->templates . 'assets/img/aktsii_back.png'?>" alt="">
+            <img data-lazy-img="<?= $config->urls->templates . 'assets/img/aktsii_front.png'?>" alt="">
           </div>
           <div class="modal__img" data-id="karta">
-            <img src="<?= $config->urls->templates . 'assets/img/karta_back.png'?>" alt="">
-            <img src="<?= $config->urls->templates . 'assets/img/karta_front.png'?>" alt="">
+            <img data-lazy-img="<?= $config->urls->templates . 'assets/img/karta_back.png'?>" alt="">
+            <img data-lazy-img="<?= $config->urls->templates . 'assets/img/karta_front.png'?>" alt="">
           </div>
           <div class="modal__img" data-id="kino">
-            <img src="<?= $config->urls->templates . 'assets/img/kino_back.png'?>" alt="">
-            <img src="<?= $config->urls->templates . 'assets/img/kino_front.png'?>" alt="">
+            <img data-lazy-img="<?= $config->urls->templates . 'assets/img/kino_back.png'?>" alt="">
+            <img data-lazy-img="<?= $config->urls->templates . 'assets/img/kino_front.png'?>" alt="">
           </div>
           <div class="modal__img" data-id="megaphone">
-            <img src="<?= $config->urls->templates . 'assets/img/megaphone_back.png'?>" alt="">
-            <img src="<?= $config->urls->templates . 'assets/img/megaphone_front.png'?>" alt="">
+            <img data-lazy-img="<?= $config->urls->templates . 'assets/img/megaphone_back.png'?>" alt="">
+            <img data-lazy-img="<?= $config->urls->templates . 'assets/img/megaphone_front.png'?>" alt="">
           </div>
         </div>
       </div>
