@@ -9,7 +9,7 @@
   <div class="scheme-start__grid">
     <div class="scheme-start__cell">
       <div class="about__item">
-        <div class="about-item" data-lazy-bg="background-image:url(<?=$config->urls->templates . 'assets/img/hat.png';?>)">
+        <div class="about-item" style="background-image:url(<?=$config->urls->templates . 'assets/img/hat.png';?>)">
           <h3 class="about-item__title">магазины</h3>
           <a href="#main-scheme" class="about-item__link" data-uk-smooth-scroll data-filter="stores"></a>
         </div>
@@ -17,7 +17,7 @@
     </div>
     <div class="scheme-start__cell">
       <div class="about__item">
-        <div class="about-item" data-lazy-bg="background-image:url(<?=$config->urls->templates . 'assets/img/confetti.png';?>)">
+        <div class="about-item" style="background-image:url(<?=$config->urls->templates . 'assets/img/confetti.png';?>)">
           <h3 class="about-item__title">развлечения</h3>
           <a href="#main-scheme" class="about-item__link" data-uk-smooth-scroll data-filter="fun"></a>
         </div>
@@ -25,7 +25,7 @@
     </div>
     <div class="scheme-start__cell">
       <div class="about__item">
-        <div class="about-item" data-lazy-bg="background-image:url(<?=$config->urls->templates . 'assets/img/donut.png';?>)">
+        <div class="about-item" style="background-image:url(<?=$config->urls->templates . 'assets/img/donut.png';?>)">
           <h3 class="about-item__title">кафе</h3>
           <a href="#main-scheme" class="about-item__link" data-uk-smooth-scroll data-filter="cafe"></a>
         </div>
@@ -33,7 +33,7 @@
     </div>
     <div class="scheme-start__cell">
       <div class="about__item">
-        <div class="about-item" data-lazy-bg="background-image:url(<?=$config->urls->templates . 'assets/img/scissors.png';?>)">
+        <div class="about-item" style="background-image:url(<?=$config->urls->templates . 'assets/img/scissors.png';?>)">
           <h3 class="about-item__title">услуги</h3>
           <a href="#main-scheme" class="about-item__link" data-uk-smooth-scroll data-filter="services"></a>
         </div>

@@ -43,7 +43,7 @@
       <?php $i = 0; foreach ($pages->get("/promotions")->children as $child): $i++; if ($i>6) break; ?>
         <?php for ($i = 0; $i<4; $i++): ?>
         <div class="stocks__item stocks-item">
-          <div class="stocks-item__img" data-lazy-bg="background-image:url(<?=$child->article_image->url?>)"></div>
+          <div class="stocks-item__img" style="background-image:url(<?=$child->article_image->url?>)"></div>
           <p class="stocks-item__type"><?= $child->article_type?></p>
           <p class="stocks-item__date"><?= $child->article_subtitle?></p>
           <p class="stocks-item__title"><?= $child->title?></p>
