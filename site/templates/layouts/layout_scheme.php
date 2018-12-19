@@ -53,7 +53,7 @@
         </ul>
         <div class="map__scheme" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:300}">
           <div class="map__group">
-            <img class="map__floor" src="<?= $config->urls->templates . 'assets/img/floor.png'?>" alt="">
+            <img class="map__floor" src="<?= $config->urls->templates . 'assets/img/floor1.png'?>" alt="">
             <div class="map__marker map__marker_exit" style="left:90%; top:20%"></div>
             <?php $companies = array(); ?>
             <?php foreach($pages->get("/scheme/companies1")->children() as $child): ?>
@@ -93,10 +93,10 @@
             <div class="map__marker map__marker_exit" style="left:47%; top:90%"></div>
           </div>
           <div class="map__group">
-            <img class="map__floor" src="<?= $config->urls->templates . 'assets/img/floor.png'?>" alt="">
+            <img class="map__floor" src="<?= $config->urls->templates . 'assets/img/floor2.png'?>" alt="">
           </div>
           <div class="map__group">
-            <img class="map__floor" src="<?= $config->urls->templates . 'assets/img/floor.png'?>" alt="">
+            <img class="map__floor" src="<?= $config->urls->templates . 'assets/img/floor3.png'?>" alt="">
           </div>
         </div>
       </div>
