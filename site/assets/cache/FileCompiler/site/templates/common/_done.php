@@ -131,7 +131,7 @@ echo $color;
     </div>
   </div>
   <div class="footer__info">
-    <a href="http://contentservice.agency/" target="_blank">Made by Content Service</a>
+    <a href="http://contentservice.agency/" target="_blank"><img src="<?= $config->urls->templates . 'assets/img/cs_logo.png'?>" alt=""></a>
     <a href="/policy" target="_blank">Политика конфеденциальности</a>
   </div>
 </section>
