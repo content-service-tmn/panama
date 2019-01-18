@@ -4,7 +4,9 @@
   <div class="container">
     <div class="article__grid">
       <div class="article__cell">
-        <div class="article__img" style="background-image:url(<?= $page->article_image->url ?>)"></div>
+        <div class="article__img" style="background-image:url(<?= $page->article_image->url ?>)">
+          <a href="<?= $page->article_image->url ?>" data-uk-lightbox></a>
+        </div>
         <ul class="article__list">
           <li style="background-image:url(<?= $config->urls->templates . 'assets/img/clock.svg'?>)"><?=$page->article_schedule?></li>
           <li style="background-image:url(<?= $config->urls->templates . 'assets/img/phone.svg'?>)"><a href="tel:<?=phoneLink($page->article_phone)?>"><?=$page->article_phone?></a></li>
@@ -21,7 +23,7 @@
             if ($item->type=="article_content_text") echo "<p>".$item->article_text."</p>";
             if ($item->type=="article_content_images") {
               echo '<div class="article__images">';
-              foreach ($item->article_images as $image) echo '<img data-lazy-img="'.$image->url.'">';
+              foreach ($item->article_images as $image) echo '<a href="'.$image->url.'" data-uk-lightbox><img data-lazy-img="'.$image->url.'"></a>';
               echo '</div>';
             }
           }?>

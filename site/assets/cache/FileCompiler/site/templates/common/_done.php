@@ -113,12 +113,12 @@ echo $color;
       </ul>
     </div>
     <div class="footer__cell">
-      <a href="/contacts" class="footer__how"><?= $contacts->contacts_transport_title ?></a>
+      <a href="<?= $contacts->contacts_path ?>" target="_blank" class="footer__how"><?= $contacts->contacts_transport_title ?></a>
       <div class="footer__socials">
-        <?php if ($contacts->vk!=""):?><a href="<?=$contacts->vk?>" class="footer__social footer__social_vk"></a><?php endif;?>
-        <?php if ($contacts->facebook!=""):?><a href="<?=$contacts->facebook?>" class="footer__social footer__social_fb"></a><?php endif;?>
-        <?php if ($contacts->instagram!=""):?><a href="<?=$contacts->instagram?>" class="footer__social footer__social_inst"></a><?php endif;?>
-        <?php if ($contacts->odnoklassniki!=""):?><a href="<?=$contacts->odnoklassniki?>" class="footer__social footer__social_ok"></a><?php endif;?>
+        <?php if ($contacts->vk!=""):?><a href="<?=$contacts->vk?>" class="footer__social footer__social_vk" target="_blank"></a><?php endif;?>
+        <?php if ($contacts->facebook!=""):?><a href="<?=$contacts->facebook?>" class="footer__social footer__social_fb" target="_blank"></a><?php endif;?>
+        <?php if ($contacts->instagram!=""):?><a href="<?=$contacts->instagram?>" class="footer__social footer__social_inst" target="_blank"></a><?php endif;?>
+        <?php if ($contacts->odnoklassniki!=""):?><a href="<?=$contacts->odnoklassniki?>" class="footer__social footer__social_ok" target="_blank"></a><?php endif;?>
       </div>
     </div>
     <div class="footer__cell">
@@ -158,7 +158,7 @@ echo $color;
           <ul>
             <li><a href="/renters" data-color="#ED7709"><?= $pages->get("/renters")->title ?></a></li>
             <li><a href="/contacts" data-color="#FF8207"><?= $pages->get("/contacts")->title ?></a></li>
-            <li><a href="/contacts" data-color="#4CC1DA"><?= $contacts->contacts_transport_title ?></a></li>
+            <li><a href="<?= $contacts->contacts_path ?>" target="_blank" data-color="#4CC1DA"><?= $contacts->contacts_transport_title ?></a></li>
           </ul>
         </div>
         <div class="modal__cell">
@@ -187,10 +187,10 @@ echo $color;
       </div>
     </div>
     <div class="modal__socials">
-      <?php if ($contacts->vk!=""):?><a href="<?=$contacts->vk?>" class="modal__social modal__social_vk"></a><?php endif;?>
-      <?php if ($contacts->facebook!=""):?><a href="<?=$contacts->facebook?>" class="modal__social modal__social_fb"></a><?php endif;?>
-      <?php if ($contacts->instagram!=""):?><a href="<?=$contacts->instagram?>" class="modal__social modal__social_inst"></a><?php endif;?>
-      <?php if ($contacts->odnoklassniki!=""):?><a href="<?=$contacts->odnoklassniki?>" class="modal__social modal__social_ok"></a><?php endif;?>
+      <?php if ($contacts->vk!=""):?><a href="<?=$contacts->vk?>" class="modal__social modal__social_vk" target="_blank"></a><?php endif;?>
+      <?php if ($contacts->facebook!=""):?><a href="<?=$contacts->facebook?>" class="modal__social modal__social_fb" target="_blank"></a><?php endif;?>
+      <?php if ($contacts->instagram!=""):?><a href="<?=$contacts->instagram?>" class="modal__social modal__social_inst" target="_blank"></a><?php endif;?>
+      <?php if ($contacts->odnoklassniki!=""):?><a href="<?=$contacts->odnoklassniki?>" class="modal__social modal__social_ok" target="_blank"></a><?php endif;?>
     </div>
     <p class="modal__schedule"><?=$contacts->contacts_schedule[0]->contacts_schedule_name?> <?php $sch=explode(',', $contacts->contacts_schedule[0]->contacts_schedule_time); echo " с ".$sch[0]." до ".$sch[1]?></p>
   </div>
@@ -209,6 +209,7 @@ echo $color;
 <script src="<?= $config->urls->templates . 'assets/js/core/utility.js'?>"></script>
 <script src="<?= $config->urls->templates . 'assets/js/core/switcher.js'?>"></script>
 <script src="<?= $config->urls->templates . 'assets/js/components/notify.js'?>"></script>
+<script src="<?= $config->urls->templates . 'assets/js/components/lightbox.js'?>"></script>
 <script src="<?= $config->urls->templates . 'assets/js/core/smooth-scroll.js'?>"></script>
 <script src="<?= $config->urls->templates . 'assets/js/core/scrollspy.js'?>"></script>
 <script src="<?= $config->urls->templates . 'assets/js/core/smooth-scroll.js'?>"></script>

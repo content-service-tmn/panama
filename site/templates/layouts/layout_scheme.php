@@ -144,7 +144,7 @@
                 case 6: $left=15; $top=80; break;
                 case 7: $left=30; $top=85; break;
 
-                case 8: $left=67; $top=44; break;
+                case 8: $left=33; $top=33; break;
                 case 9: $left=62; $top=48; break;
                 case 10: $left=59; $top=55; break;
                 case 11: $left=43; $top=78; break;
@@ -163,7 +163,7 @@
                 case 23: $left=87; $top=87; break;
               }
               ?>
-              <div class="map__marker map__marker_<?= $child->company_subcategory->name ?>" style="left:<?= $left ?>%; top:<?= $top ?>%;" data-id="<?=$child->name?>.<?= $child->company_place ?>" data-category="<?= $child->company_subcategory->subcategory_category->name ?>"></div>
+              <div class="map__marker map__marker_<?= $child->company_subcategory->name ?>" <?= $child->company_place==8?"data-cinema":"" ?> style="left:<?= $left ?>%; top:<?= $top ?>%;" data-id="<?=$child->name?>.<?= $child->company_place ?>" data-category="<?= $child->company_subcategory->subcategory_category->name ?>"></div>
             <?php endforeach; ?>
           </div>
         </div>

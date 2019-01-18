@@ -4,9 +4,9 @@
 <section class="header">
   <img src="<?= $config->urls->templates . 'assets/img/frame.png'?>" alt="" class="header__frame">
   <div class="header__slider">
-    <?php foreach($page->home_slider as $image):?>
+    <?php $i = 0; foreach ($pages->get("/promotions")->children as $child): $i++; if ($i>6) break; ?>
       <div class="header__item">
-        <img src="<?= $image->url ?>" alt="">
+        <img src="<?=$child->article_image->url?>" alt="">
       </div>
     <?php endforeach; ?>
   </div>
@@ -14,10 +14,10 @@
     <div class="container container_big">
       <div class="header__grid">
         <div class="header__socials">
-          <?php if ($contacts->vk!=""):?><a href="<?=$contacts->vk?>" class="header__social header__social_vk"></a><?php endif;?>
-          <?php if ($contacts->facebook!=""):?><a href="<?=$contacts->facebook?>" class="header__social header__social_fb"></a><?php endif;?>
-          <?php if ($contacts->instagram!=""):?><a href="<?=$contacts->instagram?>" class="header__social header__social_inst"></a><?php endif;?>
-          <?php if ($contacts->odnoklassniki!=""):?><a href="<?=$contacts->odnoklassniki?>" class="header__social header__social_ok"></a><?php endif;?>
+          <?php if ($contacts->vk!=""):?><a href="<?=$contacts->vk?>" class="header__social header__social_vk" target="_blank"></a><?php endif;?>
+          <?php if ($contacts->facebook!=""):?><a href="<?=$contacts->facebook?>" class="header__social header__social_fb" target="_blank"></a><?php endif;?>
+          <?php if ($contacts->instagram!=""):?><a href="<?=$contacts->instagram?>" class="header__social header__social_inst" target="_blank"></a><?php endif;?>
+          <?php if ($contacts->odnoklassniki!=""):?><a href="<?=$contacts->odnoklassniki?>" class="header__social header__social_ok" target="_blank"></a><?php endif;?>
         </div>
         <ul class="header__contacts">
           <li><?= $contacts->contacts_address; ?></li>
@@ -43,7 +43,9 @@
       <?php $i = 0; foreach ($pages->get("/promotions")->children as $child): $i++; if ($i>6) break; ?>
         <?php for ($i = 0; $i<4; $i++): ?>
         <div class="stocks__item stocks-item">
-          <div class="stocks-item__img" style="background-image:url(<?=$child->article_image->url?>)"></div>
+          <div class="stocks-item__img" style="background-image:url(<?=$child->article_image->url?>)">
+            <a href="<?= $child->path?>"></a>
+          </div>
           <p class="stocks-item__type"><?= $child->article_type?></p>
           <p class="stocks-item__date"><?= $child->article_subtitle?></p>
           <p class="stocks-item__title"><?= $child->title?></p>
@@ -67,7 +69,7 @@
     </div>
   </div>
   <div class="stocks__button-wrapper">
-    <a href="" class="stocks__button"><?= $page->home_promotions_button ?></a>
+    <a href="/promotions" class="stocks__button"><?= $page->home_promotions_button ?></a>
   </div>
 </section>
 
@@ -124,13 +126,15 @@
       <div class="cinema__cell">
         <div class="cinema__slider">
           <?php foreach($page->home_cinema_gallery as $image):?>
-            <div class="cinema__element" data-lazy-bg="background-image:url(<?= $image->url ?>)"></div>
+            <div class="cinema__element" data-lazy-bg="background-image:url(<?= $image->url ?>)">
+              <a href="<?= $image->url ?>" data-uk-lightbox="{group:'cinema__slider'}"></a>
+            </div>
           <?php endforeach; ?>
         </div>
         <p class="cinema__text"><?= $page->home_cinema_text ?></p>
         <ul class="cinema__links">
-          <li><a href="<?= $page->home_cinema_website_link ?>" class="cinema__link"><?= $page->home_cinema_website_name ?></a></li>
-          <li><a href="/scheme" class="cinema__link"><?= $page->home_cinema_show ?></a></li>
+          <li><a href="<?= $page->home_cinema_website_link ?>" class="cinema__link" target="_blank"><?= $page->home_cinema_website_name ?></a></li>
+          <li><a href="/scheme#cinema" class="cinema__link"><?= $page->home_cinema_show ?></a></li>
         </ul>
       </div>
     </div>

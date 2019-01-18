@@ -91,6 +91,15 @@ $(document).ready(function(){
   });
   function SetFilter(filter) {
     if (filter=="") return;
+    if (filter=="#cinema") {
+      groups.each(function(i){
+        if ($(this).find("[data-cinema]").length!=0) {
+          ChangeActive(i);
+          $(this).find('.map__marker:not([data-cinema])').addClass('fade');
+        }
+      });
+      return;
+    }
     var group = groups.eq(active);
     $('.map__marker').removeClass('fade');
     group.find('.map__marker[data-category!="'+filter+'"]').addClass('fade');

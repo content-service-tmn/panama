@@ -14,7 +14,9 @@
         <?php $i = 0; foreach ($page->children as $child): $i++; if ($i>6) break; ?>
           <div class="events__cell">
             <div class="event">
-              <div class="event__img" style="background-image:url(<?=$child->article_image->url?>)"></div>
+              <div class="event__img" style="background-image:url(<?=$child->article_image->url?>)">
+                <a href="<?= $child->path?>"></a>
+              </div>
               <p class="event__type"><?= $child->article_type?></p>
               <p class="event__date"><?= $child->article_subtitle?></p>
               <p class="event__title"><?= $child->title?></p>

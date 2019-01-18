@@ -5,3 +5,4 @@
 2018-12-09 00:12:09	developer	http://panama.cw40247.tmweb.ru/processwire/module/	Installed module 'FieldtypeRepeaterMatrix'
 2018-12-09 00:12:11	developer	http://panama.cw40247.tmweb.ru/processwire/module/	Saved module info caches
 2018-12-09 00:12:30	developer	http://panama.cw40247.tmweb.ru/processwire/module/edit?name=FieldtypeRepeaterMatrix	Saved module 'FieldtypeRepeaterMatrix' config data
+2019-01-18 17:24:14	developer	http://panama.cw40247.tmweb.ru/processwire/module/edit?name=AdminOnSteroids&toggle=1	Saved module 'AdminOnSteroids' config data

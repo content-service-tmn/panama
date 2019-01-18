@@ -37,6 +37,14 @@
   &__img {
     background: 50% 50% no-repeat;
     background-size:cover;
+    position:relative;
+    a {
+      position:absolute;
+      left:0;
+      top:0;
+      right:0;
+      bottom:0;
+    }
     &:before {
       content:"";
       display:block;
@@ -138,13 +146,17 @@
   }
   &__images {
     margin-top:15px;
-    &>* {
+    &>a {
       width:100%;
+      display:block;
       box-sizing: border-box;
-
       @media(max-width: 767px) {
         margin: 0 -30px;
         width:~"calc(100% + 60px)";
+      }
+      img {
+        width:100%;
+        display:block;
       }
     }
   }

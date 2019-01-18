@@ -8,7 +8,9 @@
       <?php $i = 0; foreach ($page->children as $child): $i++; if ($i>6) break; ?>
         <div class="promotions__cell">
           <div class="promotion">
-            <div class="promotion__img" style="background-image:url(<?=$child->article_image->url?>)"></div>
+            <div class="promotion__img" style="background-image:url(<?=$child->article_image->url?>)">
+              <a href="<?= $child->path?>"></a>
+            </div>
             <p class="promotion__type"><?= $child->article_type?></p>
             <p class="promotion__date"><?= $child->article_subtitle?></p>
             <p class="promotion__title"><?= $child->title?></p>

@@ -176,6 +176,14 @@
     background: 50% 50% no-repeat;
     background-size:cover;
     margin:0 auto;
+    position:relative;
+    a {
+      position:absolute;
+      left:0;
+      top:0;
+      right:0;
+      bottom:0;
+    }
     &:before {
       content:"";
       padding-top:100%;
@@ -183,6 +191,15 @@
     }
     @media(max-width: 959px) {
       width:140px;
+    }
+
+    position:relative;
+    a {
+      position:absolute;
+      left:0;
+      top:0;
+      right:0;
+      bottom:0;
     }
   }
   &__type {
