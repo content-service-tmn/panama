@@ -71,6 +71,13 @@ $(document).ready(function(){
     autoplaySpeed: 2000,
     arrows:false
   });
+  //pseudo arrows
+  $('.header__prev').click(function() {
+    $('.header__slider').slick('slickPrev');
+  });
+  $('.header__next').click(function() {
+    $('.header__slider').slick('slickNext');
+  });
   $('.gallery__slider').slick({
     infinite: true,
     speed: 300,
@@ -125,6 +132,7 @@ $(document).ready(function(){
   });
 
   //stick 2 sliders
+
   $('.gallery__slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
     $('.gallery__bottom-slider').slick('slickGoTo',nextSlide);
   });

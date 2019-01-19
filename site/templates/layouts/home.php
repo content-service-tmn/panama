@@ -5,10 +5,15 @@
   <img src="<?= $config->urls->templates . 'assets/img/frame.png'?>" alt="" class="header__frame">
   <div class="header__slider">
     <?php $i = 0; foreach ($pages->get("/promotions")->children as $child): $i++; if ($i>6) break; ?>
+      <?php for ($j = 0; $j<4; $j++): ?>
       <div class="header__item">
         <img src="<?=$child->article_image->url?>" alt="">
       </div>
+      <?php endfor; ?>
     <?php endforeach; ?>
+  </div>
+  <button class="header__prev"></button>
+  <button class="header__next"></button>
   </div>
   <div class="header__bottom">
     <div class="container container_big">
@@ -41,7 +46,7 @@
     <h1 class="stocks__title"><?= $page->home_promotions_title ?></h1>
     <div class="stocks__slider">
       <?php $i = 0; foreach ($pages->get("/promotions")->children as $child): $i++; if ($i>6) break; ?>
-        <?php for ($i = 0; $i<4; $i++): ?>
+        <?php for ($j = 0; $j<4; $j++): ?>
         <div class="stocks__item stocks-item">
           <div class="stocks-item__img" style="background-image:url(<?=$child->article_image->url?>)">
             <a href="<?= $child->path?>"></a>

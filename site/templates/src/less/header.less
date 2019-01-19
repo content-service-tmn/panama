@@ -29,8 +29,81 @@
       opacity:1;
     }
     @media(max-width: 959px) {
-      width:133%;
+      width:100%;
       top:10%;
+    }
+  }
+  &__prev,&__next {
+    z-index:10;
+    overflow:visible;
+    position:absolute;
+    height:90px;
+    width:90px;
+    border: none;
+    outline: none;
+    background:transparent;
+    color:transparent;
+    transform:translateY(-50%);
+    cursor: pointer;
+    top:50%;
+    -webkit-tap-highlight-color: transparent;
+    @media(max-width: 767px) {
+      height:45px;
+      width:45px;
+      top:40%;
+    }
+    &:before {
+      position:absolute;
+      content:"";
+      top:50%;
+      width:138px;
+      height:138px;
+      background:url(../img/leaf.png) 50% 50% no-repeat;
+      background-size:contain;
+      transform:translateY(-50%);
+      @media(max-width: 767px) {
+        height:69px;
+        width:69px;
+      }
+    }
+    &:after {
+      position:absolute;
+      border-radius: 50%;
+      background-color:#27CAFF;
+      font-family: "icomoon";
+      content:"";
+      left:0;
+      top:0;
+      right:0;
+      bottom:0;
+      font-weight: 400;
+      font-size:42px;
+      line-height: 90px;
+      color:white;
+      transition:all 0.3s;
+      @media(max-width: 767px) {
+        font-size:21px;
+        line-height: 45px;
+      }
+    }
+    &:hover:after {
+      background-color:#FF8207;
+    }
+  }
+  &__prev {
+    &:before { right: 0; }
+    &:after { content:"\f104"; }
+    left:6.2%;
+    @media(max-width: 767px) {
+      transform:translate(0,-50%);
+    }
+  }
+  &__next {
+    &:before { left: 0; transform:scaleX(-1) translateY(-50%);;}
+    &:after { content:"\f105"; }
+    right:6.2%;
+    @media(max-width: 767px) {
+      transform:translate(0,-50%);
     }
   }
   &__item {
