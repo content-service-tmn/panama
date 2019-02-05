@@ -36,7 +36,9 @@
             </div>
             <div class="renters-gallery__slider-bottom">
               <?php foreach($home->home_gallery_images as $image):?>
-                <div class="renters-gallery__item-bottom" data-lazy-bg="background-image:url(<?= $image->url ?>)"></div>
+                <div class="renters-gallery__item-bottom" data-lazy-bg="background-image:url(<?= $image->url ?>)">
+                  <a href="<?= $image->url ?>" data-uk-lightbox="{group:'renters-gallery__slider-bottom'}"></a>
+                </div>
               <?php endforeach; ?>
             </div>
           </div>

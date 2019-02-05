@@ -8,6 +8,7 @@
       <?php for ($j = 0; $j<4; $j++): ?>
       <div class="header__item">
         <img src="<?=$child->article_image->url?>" alt="">
+        <a href="<?= $child->path?>"></a>
       </div>
       <?php endfor; ?>
     <?php endforeach; ?>
@@ -162,7 +163,9 @@
   <div class="container">
     <div class="gallery__bottom-slider">
       <?php foreach($page->home_gallery_images as $image):?>
-        <div class="gallery__bottom-item" data-lazy-bg="background-image:url(<?= $image->url ?>)"></div>
+        <div class="gallery__bottom-item" data-lazy-bg="background-image:url(<?= $image->url ?>)">
+          <a href="<?= $image->url ?>" data-uk-lightbox="{group:'gallery__bottom-slider'}"></a>
+        </div>
       <?php endforeach; ?>
     </div>
   </div>
