@@ -57,9 +57,21 @@
       <li><a href="">Этаж 3</a></li>
     </ul>
     <ul id="my-id" class="uk-switcher scheme__items">
-      <li><div class="scheme__item" data-lazy-bg="background-image:url(<?= $config->urls->templates . 'assets/img/scheme1.jpg'?>)"></div></li>
-      <li><div class="scheme__item" data-lazy-bg="background-image:url(<?= $config->urls->templates . 'assets/img/scheme2.jpg'?>)"></div></li>
-      <li><div class="scheme__item" data-lazy-bg="background-image:url(<?= $config->urls->templates . 'assets/img/scheme3.jpg'?>)"></div></li>
+      <li>
+        <div class="scheme__item" data-lazy-bg="background-image:url(<?= $config->urls->templates . 'assets/img/scheme1.jpg'?>)">
+          <a href="<?= $config->urls->templates . 'assets/img/scheme1.jpg'?>" data-uk-lightbox></a>
+        </div>
+      </li>
+      <li>
+        <div class="scheme__item" data-lazy-bg="background-image:url(<?= $config->urls->templates . 'assets/img/scheme2.jpg'?>)">
+          <a href="<?= $config->urls->templates . 'assets/img/scheme2.jpg'?>" data-uk-lightbox></a>
+        </div>
+      </li>
+      <li>
+        <div class="scheme__item" data-lazy-bg="background-image:url(<?= $config->urls->templates . 'assets/img/scheme3.jpg'?>)">
+          <a href="<?= $config->urls->templates . 'assets/img/scheme3.jpg'?>" data-uk-lightbox></a>
+        </div>
+      </li>
     </ul>
   </div>
 </section>
