@@ -54,14 +54,14 @@
         <div class="map__scheme" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:300}">
           <div class="map__group">
             <img class="map__floor" data-lazy-img="<?= $config->urls->templates . 'assets/img/floor1.png'?>" alt="">
-            <div class="map__marker map__marker_exit" style="left:90%; top:20%"></div>
+            <div class="map__marker map__marker_exit" style="left:85%; top:25%"></div>
             <?php $companies = array(); ?>
             <?php foreach($pages->get("/scheme/companies1")->children() as $child): ?>
               <?php
               array_push($companies, $child);
               $left = 0; $top = 0;
               switch($child->company_place) {
-                case 1: $left=60; $top=10; break;
+                case 1: $left=55; $top=25; break;
                 case 2: $left=25; $top=25; break;
                 case 3: $left=48; $top=38; break;
                 case 4: $left=69; $top=34; break;
@@ -71,7 +71,7 @@
 
                 case 8: $left=67; $top=44; break;
                 case 9: $left=62; $top=48; break;
-                case 10: $left=59; $top=55; break;
+                case 10: $left=80; $top=65; break;
                 case 11: $left=43; $top=78; break;
                 case 12: $left=55; $top=86; break;
 
@@ -90,7 +90,7 @@
               ?>
               <div class="map__marker map__marker_<?= $child->company_subcategory->name ?>" style="left:<?= $left ?>%; top:<?= $top ?>%;" data-id="<?=$child->name?>.<?= $child->company_place ?>" data-category="<?= $child->company_subcategory->subcategory_category->name ?>"></div>
             <?php endforeach; ?>
-            <div class="map__marker map__marker_exit" style="left:47%; top:90%"></div>
+            <div class="map__marker map__marker_exit" style="left:47.5%; top:87.5%"></div>
           </div>
           <div class="map__group">
             <img class="map__floor" data-lazy-img="<?= $config->urls->templates . 'assets/img/floor2.png'?>" alt="">
@@ -102,7 +102,7 @@
                 case 1: $left=60; $top=10; break;
                 case 2: $left=25; $top=25; break;
                 case 3: $left=48; $top=38; break;
-                case 4: $left=69; $top=34; break;
+                case 4: $left=32; $top=67; break;
                 case 5: $left=23; $top=58; break;
                 case 6: $left=15; $top=80; break;
                 case 7: $left=30; $top=85; break;
@@ -144,9 +144,9 @@
                 case 6: $left=15; $top=80; break;
                 case 7: $left=30; $top=85; break;
 
-                case 8: $left=33; $top=33; break;
+                case 8: $left=35; $top=25; break;
                 case 9: $left=62; $top=48; break;
-                case 10: $left=59; $top=55; break;
+                case 10: $left=75; $top=47.5; break;
                 case 11: $left=43; $top=78; break;
                 case 12: $left=55; $top=86; break;
 

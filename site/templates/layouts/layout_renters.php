@@ -122,7 +122,7 @@
       </a>
       <form id="callback__form" class="form sidebar__form" action="/" method="post">
         <p class="sidebar__description">
-          Вы можете арендовать данную площадь! Для этого оставьте свои контактные данные, наш менеджер свяжется с Вами
+          Оставьте свои контактные данные и напишите сообщение. Мы обязательно свяжемся с Вами.
         </p>
         <div class="form__element form__element_name">
           <label class="label" for="name">Имя</label>

@@ -50,7 +50,7 @@ echo $color;
     <div class="menu__grid">
       <div class="menu__nav">
         <a href="/" class="menu__logo">
-          <img data-lazy-img="<?php
+          <img src="<?php
           $logo = "";
           switch($page->template->name):
             case 'layout_article':
