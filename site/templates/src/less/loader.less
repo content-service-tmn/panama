@@ -41,7 +41,6 @@
     margin-top: -30px;
     @media(max-width: 767px) {
       margin-left: 0;
-      align-items: flex-start;
     }
   }
   &__cell {
@@ -62,17 +61,8 @@
       font-size:3vw;
       margin-left: 15px;
       color:transparent;
-      &:first-child {
+      @media(max-width: 767px) {
         display:none;
-        @media(max-width: 767px) {
-          display:block;
-          margin-left: 5px;
-        }
-      }
-      &:last-child {
-        @media(max-width: 767px) {
-          display:none;
-        }
       }
       span {
         display:block;

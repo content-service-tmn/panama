@@ -36,11 +36,6 @@ echo $color;
        </div>
        <div class="loader__cell">
          <p>
-           <span>торгово-</span>
-           <span>развлекательный</span>
-           <span>центр</span>
-         </p>
-         <p>
            <span>для всей</span>
            <span>семьи</span>
            <span>и точка</span>
