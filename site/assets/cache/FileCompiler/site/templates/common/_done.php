@@ -36,6 +36,11 @@ echo $color;
        </div>
        <div class="loader__cell">
          <p>
+           <span>торгово-</span>
+           <span>развлекательный</span>
+           <span>центр</span>
+         </p>
+         <p>
            <span>для всей</span>
            <span>семьи</span>
            <span>и точка</span>
@@ -132,7 +137,7 @@ echo $color;
   </div>
   <div class="footer__info">
     <a href="http://contentservice.agency/" target="_blank"><img src="<?= $config->urls->templates . 'assets/img/cs_logo.png'?>" alt=""></a>
-    <a href="/policy" target="_blank">Политика конфеденциальности</a>
+    <a href="/privacy" target="_blank">Политика конфеденциальности</a>
   </div>
 </section>
 <?php endif; ?>
