@@ -38,6 +38,7 @@ $config->prependTemplateFile = 'common/_init.php';
 $config->appendTemplateFile = 'common/_done.php';
 $config->defaultAdminTheme = 'AdminThemeUikit';
 
+setlocale(LC_ALL,'en_US.UTF-8');
 
 /*** INSTALLER CONFIG ********************************************************************/
 

@@ -54,5 +54,5 @@
         new google.maps.Marker({map: map, position: coordinates, icon:"<?= $config->urls->templates . 'assets/img/map-marker.png'?>"});
     }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz-fa3z3jDQhfL6rwyNt3DEJ3XHbyoUHk&callback=initMap"
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiUbo6GGlZTZz1iqdKoPIwhZRK8CeXEDQ&callback=initMap"
         async></script>

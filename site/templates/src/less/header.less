@@ -30,7 +30,12 @@
     }
     @media(max-width: 959px) {
       width:100%;
-      top:10%;
+      top:50%;
+      transform:translate(-50%,-50%);
+    }
+    @media(max-width: 767px) {
+      top:40%;
+      transform:translate(-50%,-50%);
     }
   }
   &__prev,&__next {
@@ -108,8 +113,13 @@
   }
   &__item {
     position:relative;
+    padding-top: 45%;
+    overflow: hidden;
     img {
       width:100%;
+      position:absolute;
+      left:0;
+      top:0;
     }
     a {
       position:absolute;
