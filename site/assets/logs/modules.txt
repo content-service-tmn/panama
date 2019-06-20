@@ -6,3 +6,18 @@
 2018-12-09 00:12:11	developer	http://panama.cw40247.tmweb.ru/processwire/module/	Saved module info caches
 2018-12-09 00:12:30	developer	http://panama.cw40247.tmweb.ru/processwire/module/edit?name=FieldtypeRepeaterMatrix	Saved module 'FieldtypeRepeaterMatrix' config data
 2019-01-18 17:24:14	developer	http://panama.cw40247.tmweb.ru/processwire/module/edit?name=AdminOnSteroids&toggle=1	Saved module 'AdminOnSteroids' config data
+2019-06-20 22:20:06	developer	http://panama.cw40247.tmweb.ru/processwire/module/	Installed module 'ProcessLanguage'
+2019-06-20 22:20:08	developer	http://panama.cw40247.tmweb.ru/processwire/module/	Saved module info caches
+2019-06-20 22:20:10	developer	http://panama.cw40247.tmweb.ru/processwire/module/	Installed module 'ProcessLanguageTranslator'
+2019-06-20 22:20:10	developer	http://panama.cw40247.tmweb.ru/processwire/module/	Saved module info caches
+2019-06-20 22:20:10	developer	http://panama.cw40247.tmweb.ru/processwire/module/	Saved module 'LanguageSupport' config data
+2019-06-20 22:20:11	developer	http://panama.cw40247.tmweb.ru/processwire/module/	Saved module 'ProcessProfile' config data
+2019-06-20 22:20:13	developer	http://panama.cw40247.tmweb.ru/processwire/module/	Installed module 'LanguageSupport'
+2019-06-20 22:20:13	developer	http://panama.cw40247.tmweb.ru/processwire/module/	Saved module info caches
+2019-06-20 22:20:36	developer	http://panama.cw40247.tmweb.ru/processwire/module/edit?name=LanguageSupport	Saved module 'LanguageSupport' config data
+2019-06-20 22:20:49	developer	http://panama.cw40247.tmweb.ru/processwire/module/edit?name=LanguageSupport&collapse_info=1	Saved module 'LanguageSupport' config data
+2019-06-20 22:21:47	developer	http://panama.cw40247.tmweb.ru/processwire/setup/languages/add/	Saved module 'LanguageSupport' config data
+2019-06-20 22:24:14	developer	http://panama.cw40247.tmweb.ru/processwire/setup/languages/edit/?id=1165	Saved module 'LanguageSupport' config data
+2019-06-20 22:26:45	developer	http://panama.cw40247.tmweb.ru/processwire/setup/languages/add/	Saved module 'LanguageSupport' config data
+2019-06-20 22:26:47	developer	http://panama.cw40247.tmweb.ru/processwire/setup/languages/add/?_tracy_bar=content-ajax.fea00f54b7&XDEBUG_SESSION_STOP=1&v=0.011712737643892135	Saved module 'LanguageSupport' config data
+2019-06-20 22:26:48	developer	http://panama.cw40247.tmweb.ru/processwire/setup/languages/add/?_tracy_bar=content-ajax.fea00f54b7&XDEBUG_SESSION_STOP=1&v=0.4699992969762301	Saved module 'LanguageSupport' config data
