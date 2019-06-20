@@ -39,7 +39,7 @@ $(document).ready(function(){
       Result();
       $('.search__result li').each(function(){
         var str = $(this).text().toUpperCase();
-        if (str.indexOf(val)!=0) $(this).addClass('hidden')
+        if (str.indexOf(val)==-1) $(this).addClass('hidden')
       });
     }
     else Back();
