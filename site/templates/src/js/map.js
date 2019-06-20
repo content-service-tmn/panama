@@ -7,6 +7,11 @@ $(document).ready(function(){
   var subcategory = "";
   var title="";
 
+  $('.map__marker').each(function(){
+    var mrk = $(this);
+    mrk.css("z-index",mrk[0].style.top.slice(0,-1));
+  });
+
   var hash = $(location).attr('hash');
   if (hash!="") {
     SetFilter(hash);
