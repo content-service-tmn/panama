@@ -5,7 +5,7 @@
     <p class="promotions__subtitle"><?= $page->promotions_subtitle ?></p>
     <h1 class="promotions__title"><?= $page->promotions_title ?></h1>
     <div class="promotions__grid">
-      <?php $i = 0; foreach ($page->children as $child): $i++; if ($i>6) break; ?>
+      <?php $i = 0; foreach ($page->children as $child): ?>
         <div class="promotions__cell">
           <div class="promotion">
             <div class="promotion__img" style="background-image:url(<?=$child->article_image->url?>)">

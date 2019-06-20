@@ -11,7 +11,7 @@
       <p class="events__subtitle"><?= $page->events_subtitle ?></p>
       <h1 class="events__title"><?= $page->events_title ?></h1>
       <div class="events__grid">
-        <?php $i = 0; foreach ($page->children as $child): $i++; if ($i>6) break; ?>
+        <?php $i = 0; foreach ($page->children as $child): ?>
           <div class="events__cell">
             <div class="event">
               <div class="event__img" style="background-image:url(<?=$child->article_image->url?>)">
