@@ -38,21 +38,7 @@
       </div>
     </div>
   </div>
-  <div id="map" class="contacts__map"></div>
+  <div class="contacts__map">
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A996da8375d9d9d5c6e311ab99bb88b04842f4018688670faafbd994230b2e22b&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+  </div>
 </section>
-
-<script type="text/javascript">
-    function initMap() {
-        var coordinates = {lat: <?= $page->latitude; ?>, lng: <?= $page->longitude; ?>},
-            options = {
-                zoom: 16,
-                disableDefaultUI: true,
-                center: coordinates,
-                draggable: !("ontouchend" in document)
-            };
-        var map = new google.maps.Map(document.getElementById('map'), options);
-        new google.maps.Marker({map: map, position: coordinates, icon:"<?= $config->urls->templates . 'assets/img/map-marker.png'?>"});
-    }
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiUbo6GGlZTZz1iqdKoPIwhZRK8CeXEDQ&callback=initMap"
-        async></script>
