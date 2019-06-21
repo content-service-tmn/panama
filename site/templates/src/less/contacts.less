@@ -75,15 +75,13 @@
   }
   &__map {
     background-color:black;
-    iframe {
-      width:100%;
+    overflow:hidden;
+    height:540px;
+    @media(max-width: 1200px) {
+      height:800px;
+    }
+    @media(max-width: 959px) {
       height:540px;
-      @media(max-width: 1200px) {
-        height:800px;
-      }
-      @media(max-width: 959px) {
-        height:540px;
-      }
     }
   }
 }

@@ -39,6 +39,6 @@
     </div>
   </div>
   <div class="contacts__map">
-    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A996da8375d9d9d5c6e311ab99bb88b04842f4018688670faafbd994230b2e22b&amp;source=constructor" frameborder="0"></iframe>
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A996da8375d9d9d5c6e311ab99bb88b04842f4018688670faafbd994230b2e22b&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
   </div>
 </section>
