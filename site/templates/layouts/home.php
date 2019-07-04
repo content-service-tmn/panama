@@ -44,7 +44,7 @@
   <div class="container">
     <h1 class="stocks__title"><?= $page->home_promotions_title ?></h1>
     <div class="stocks__slider">
-      <?php $i = 0; foreach ($pages->get("/promotions")->children as $child): $i++; if ($i>6) break; ?>
+      <?php $i = 0; foreach ($pages->get("/promotions")->children as $child): if ($child->article_is_small_slider==0): continue; endif; ?>
         <div class="stocks__item stocks-item">
           <div class="stocks-item__img" style="background-image:url(<?=$child->article_image->url?>)">
             <a href="<?= $child->path?>"></a>
