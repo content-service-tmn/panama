@@ -121,7 +121,7 @@
     <div class="cinema__grid">
       <div class="cinema__cell">
         <div class="cinema__item" data-uk-scrollspy="{target:'cinema__title',cls:'uk-animation-slide-left'}">
-          <div class="cinema__img" data-uk-scrollspy="{cls:'uk-animation-slide-left'}"></div>
+          <div class="cinema__img" data-lazy-bg="background-image:url(<?=$config->urls->templates . 'assets/img/popcorn.png';?>)" data-uk-scrollspy="{cls:'uk-animation-slide-left'}"></div>
           <h1 class="cinema__title"><?= $page->home_cinema_title ?></h1>
         </div>
       </div>
