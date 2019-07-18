@@ -151,6 +151,7 @@
         <h1 class="gallery__title" data-uk-scrollspy="{cls:'uk-animation-slide-right'}"><?= $page->home_gallery_title ?></h1>
       </div>
       <div class="gallery__slider">
+        <div class="gallery__frame" data-lazy-bg="background-image:url(<?=$config->urls->templates . 'assets/img/gallery.png';?>"></div>
         <?php foreach($page->home_gallery_images as $image):?>
           <div class="gallery__item" data-lazy-bg="background-image:url(<?= $image->url ?>)"></div>
         <?php endforeach; ?>

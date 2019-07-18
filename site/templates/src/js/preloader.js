@@ -8,6 +8,7 @@ $(window).on('load', function () {
   lazybg.each(function(){
     var self = $(this);
     self.attr('style',self.attr('data-lazy-bg'));
+    console.log(self);
   });
   var lazyimg = $('[data-lazy-img]');
   lazyimg.each(function(){
