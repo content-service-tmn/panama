@@ -6,7 +6,7 @@
   <div class="header__slider">
     <?php $i = 0; foreach ($pages->get("/promotions")->children as $child): if ($child->article_header_is_slider==0): continue; endif;?>
       <div class="header__item">
-        <img src="<?=$child->article_header_image->url?>" alt="">
+        <img data-lazy="<?=$child->article_header_image->url?>" alt="">
         <a href="<?= $child->path?>"></a>
       </div>
     <?php endforeach; ?>
