@@ -69,8 +69,8 @@ $(document).ready(function(){
     speed: 600,
     autoplay: true,
     autoplaySpeed: 2000,
-    arrows:false,
-    lazyLoad: 'ondemand'
+    arrows:false
+    //lazyLoad: 'ondemand'
   });
   //pseudo arrows
   $('.header__prev').click(function() {
