@@ -146,7 +146,7 @@
 <section class="gallery">
   <div class="gallery__wrapper">
     <div class="gallery__slider-wrapper">
-      <div class="gallery__frame" data-lazy-bg="url(<?=$config->urls->templates . 'assets/img/gallery.png';?>"></div>
+      <div class="gallery__frame" data-lazy-bg="background-image:url(<?=$config->urls->templates . 'assets/img/gallery.png';?>"></div>
       <div class="gallery__container">
         <h1 class="gallery__title" data-uk-scrollspy="{cls:'uk-animation-slide-right'}"><?= $page->home_gallery_title ?></h1>
       </div>
