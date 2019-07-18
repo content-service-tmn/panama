@@ -151,7 +151,7 @@
       </div>
       <div class="gallery__slider">
         <?php foreach($page->home_gallery_images as $image):?>
-          <div class="gallery__item" data-lazy-bg="background-image:url(<?= $image->url ?>)"></div>
+          <div class="gallery__item" style="background-image:url(<?= $image->url ?>)"></div>
         <?php endforeach; ?>
       </div>
     </div>
